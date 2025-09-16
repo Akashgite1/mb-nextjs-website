@@ -2,6 +2,7 @@
 import Image from "next/image"
 import React from "react"
 import "./Gallery.css"
+import Link from "next/link"
 
 const creators = [
     "/images/gallery/creators/1.png",
@@ -46,12 +47,14 @@ export default function Gallery() {
                                 />
                             </div>
                         ))}
-                        <div>
-                            <button className="text-black">
-                                hello
-                            </button>
-                        </div>
                     </div>
+                </div>
+                <div className="flex justify-center mt-6 text-black">
+                    <Link href="/gallery">
+                        <button className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800">
+                            View Gallery
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Subscribers */}
