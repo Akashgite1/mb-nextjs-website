@@ -1,98 +1,89 @@
 "use client"
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import { faqData } from "./faqData"
 
-// extract categories dynamically + add "All"
-const categories = [
-    "All",
-    ...Array.from(new Set(faqData.map((faq) => faq.category))),
-]
-
 export default function FAQ() {
-    const [search, setSearch] = useState("")
-    const [category, setCategory] = useState("All")
+  const [search, setSearch] = useState("")
+  const [category, setCategory] = useState("All")
 
-    const filteredFaqs = faqData.filter((item) => {
-        const matchesSearch =
-            item.question.toLowerCase().includes(search.toLowerCase()) ||
-            item.answer.toLowerCase().includes(search.toLowerCase())
+  // compute categories during render, memoized for perf
+  const categories = useMemo(
+    () => ["All", ...Array.from(new Set(faqData.map(f => f.category)))],
+    []
+  )
 
-        const matchesCategory = category === "All" || item.category === category
-
-        return matchesSearch && matchesCategory
+  const filteredFaqs = useMemo(() => {
+    return faqData.filter(item => {
+      const matchesSearch =
+        item.question.toLowerCase().includes(search.toLowerCase()) ||
+        item.answer.toLowerCase().includes(search.toLowerCase())
+      const matchesCategory = category === "All" || item.category === category
+      return matchesSearch && matchesCategory
     })
+  }, [search, category])
 
-    return (
-        <section id='faq' className='p-6 max-w-6xl mx-auto'>
-            <h2 className='text-2xl font-bold mb-4 text-center text-black'>
-                Frequently Asked Questions with Solutions
-            </h2>
+  return (
+    <section id="faq" className="p-6 max-w-6xl mx-auto">
+      <h2 className="text-2xl font-bold mb-4 text-center text-black">
+        Frequently Asked Questions with Solutions
+      </h2>
 
-            {/* Search + Category Filter */}
-            <div className='flex gap-4 mb-6'>
-                <input
-                    type='text'
-                    placeholder='Search questions...'
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                    className='flex-1 border rounded-lg p-2 focus:outline-none focus:ring focus:ring-blue-400'
-                />
+      {/* Search + Category Filter */}
+      <div className="flex gap-4 mb-6">
+        <input
+          type="text"
+          placeholder="Search questions..."
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          className="flex-1 border rounded-lg p-2 focus:outline-none focus:ring focus:ring-blue-400"
+        />
 
-                <select
-                    value={category}
-                    onChange={(e) => setCategory(e.target.value)}
-                    className='border rounded-lg p-2 focus:outline-none focus:ring focus:ring-blue-400'
-                >
-                    {categories.map((cat, index) => (
-                        <option key={index} value={cat}>
-                            {cat}
-                        </option>
+        <select
+          value={category}
+          onChange={e => setCategory(e.target.value)}
+          className="border rounded-lg p-2 focus:outline-none focus:ring focus:ring-blue-400"
+        >
+          {categories.map(cat => (
+            <option key={cat} value={cat}>
+              {cat}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* FAQ List */}
+      <div className="space-y-6 h-[200px] overflow-y-auto">
+        {filteredFaqs.length > 0 ? (
+          filteredFaqs.map((faq, index) => (
+            <div key={index} className="border rounded-lg p-4 shadow-sm bg-white">
+              <h3 className="font-semibold text-lg text-black">{faq.question}</h3>
+              <p className="text-gray-700 mt-2">{faq.answer}</p>
+              {faq.videos?.length ? (
+                <div className="mt-3">
+                  <div className="flex flex-wrap gap-4">
+                    <h3 className="font-medium text-m text-gray-600">
+                      Related Links:
+                    </h3>
+                    {faq.videos.map((video, vidIndex) => (
+                      <a
+                        key={vidIndex}
+                        href={video.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:underline"
+                      >
+                        {video.title}
+                      </a>
                     ))}
-                </select>
+                  </div>
+                </div>
+              ) : null}
             </div>
-
-            {/* FAQ List */}
-            <div className='space-y-6 h-[900px] overflow-y-auto'>
-                {filteredFaqs.length > 0 ? (
-                    filteredFaqs.map((faq, index) => (
-                        <div
-                            key={index}
-                            className='border rounded-lg p-4 shadow-sm bg-white'
-                        >
-                            <h3 className='font-semibold text-lg text-black'>
-                                {faq.question}
-                            </h3>
-                            <p className='text-gray-700 mt-2'>{faq.answer}</p>
-
-                            {/* Videos if available */}
-                            {faq.videos && faq.videos.length > 0 && (
-                                <div className='mt-3'>
-                                    <div className='flex flex-wrap gap-4'>
-                                        <h3 className='font-medium text-m text-gray-600'>
-                                            Related Links:
-                                        </h3>
-                                        {faq.videos.map((video, vidIndex) => (
-                                            <a
-                                                key={vidIndex}
-                                                href={video.link}
-                                                target='_blank'
-                                                rel='noopener noreferrer'
-                                                className='text-blue-600 hover:underline'
-                                            >
-                                                {video.title}
-                                            </a>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                    ))
-                ) : (
-                    <p className='text-gray-500 text-center'>
-                        No results found.
-                    </p>
-                )}
-            </div>
-        </section>
-    )
+          ))
+        ) : (
+          <p className="text-gray-500 text-center">No results found.</p>
+        )}
+      </div>
+    </section>
+  )
 }
