@@ -18,24 +18,24 @@ export default function Header() {
                 >
                     Home
                 </button> */}
-                <button
+                {/* <button
                     onClick={() => scrollToSection("testimonials")}
                     className='hover:underline cursor-pointer'
                 >
                     Testimonials
-                </button>
-                <button
+                </button> */}
+                {/* <button
                     onClick={() => scrollToSection("playlists")}
                     className='hover:underline cursor-pointer'
                 >
                     Playlists
-                </button>
-                <button
+                </button> */}
+                {/* <button
                     onClick={() => scrollToSection("confessions")}
                     className='hover:underline cursor-pointer'
                 >
                     Confessions
-                </button>
+                </button> */}
             </nav>
         </header>
     )
