@@ -22,7 +22,7 @@ const creators = [
 export default function Gallery() {
     return (
         <>
-            <h2 className='text-2xl font-bold mt-10 mb-4 text-center'>
+            <h2 className='text-2xl font-bold mt-10 mb-4 text-center text-black'>
                 Gallery
             </h2>
             <div className='w-full bg-gray-50 py-10 overflow-hidden'>
@@ -46,6 +46,11 @@ export default function Gallery() {
                                 />
                             </div>
                         ))}
+                        <div>
+                            <button className="text-black">
+                                hello
+                            </button>
+                        </div>
                     </div>
                 </div>
 

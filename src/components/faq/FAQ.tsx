@@ -24,7 +24,7 @@ export default function FAQ() {
 
     return (
         <section id='faq' className='p-6 max-w-6xl mx-auto'>
-            <h2 className='text-2xl font-bold mb-4 text-center'>
+            <h2 className='text-2xl font-bold mb-4 text-center text-black'>
                 Frequently Asked Questions with Solutions
             </h2>
 
@@ -59,7 +59,7 @@ export default function FAQ() {
                             key={index}
                             className='border rounded-lg p-4 shadow-sm bg-white'
                         >
-                            <h3 className='font-semibold text-lg'>
+                            <h3 className='font-semibold text-lg text-black'>
                                 {faq.question}
                             </h3>
                             <p className='text-gray-700 mt-2'>{faq.answer}</p>
