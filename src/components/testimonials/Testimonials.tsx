@@ -2,6 +2,8 @@
 // import Image from "next/image"
 import React from "react"
 import { testimonials } from "./testimonialsData"
+import Image from "next/image"
+
 
 export default function Testimonials() {
     return (
@@ -22,13 +24,13 @@ export default function Testimonials() {
                             <span className='font-semibold text-gray-900'>
                                 {t.name}
                             </span>
-                            {/* <Image
+                            <Image
                                 src={t.logo}
                                 alt={`${t.name} company logo`}
                                 width={80}
                                 height={40}
-                                className='h-8 object-contain'
-                            /> */}
+                                className='h-8 object-contain bg-red-800'
+                            />
                         </div>
                     </div>
                 ))}
