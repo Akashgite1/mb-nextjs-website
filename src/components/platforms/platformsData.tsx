@@ -3,6 +3,7 @@ import {
     FaLinkedin,
     FaMedium,
     FaUsers,
+    FaWhatsapp,
     FaYoutube,
 } from "react-icons/fa"
 import { PlatformCategory } from "./types"
@@ -59,7 +60,7 @@ export const categories: PlatformCategory[] = [
         ],
     },
     {
-        label: "Courses",
+        label: "Courses & 1:1 Guidance",
         items: [
             {
                 id: 1,
@@ -83,13 +84,8 @@ export const categories: PlatformCategory[] = [
                 link: "https://collegetocorporate.akamai.net.in/new-courses/1-college-students-career-guide",
                 color: "from-red-50 to-red-100",
             },
-        ],
-    },
-    {
-        label: "Guidance",
-        items: [
             {
-                id: 1,
+                id: 3,
                 type: "image",
                 img: "/images/topmate.jpg",
                 title: "1:1 Guidance",
@@ -102,7 +98,7 @@ export const categories: PlatformCategory[] = [
         ],
     },
     {
-        label: "E-Docs",
+        label: "Self-Paced e-Docs",
         items: [
             {
                 id: 1,
@@ -150,10 +146,20 @@ export const categories: PlatformCategory[] = [
             // e-docs platforms
         ],
     },
-    // {
-    //     label: "Community Groups",
-    //     items: [
-    //         // community platforms
-    //     ],
-    // },
+    {
+        label: "Community & Engagement",
+        items: [
+            {
+                id: 1,
+                type: "component",
+                icon: <FaWhatsapp className='text-black text-4xl' />,
+                title: "Whatsapp",
+                followers: "200+ Members",
+                description:
+                    "Latest IT News + Real Employees Experiences",
+                link: "https://chat.whatsapp.com/LfsYDSr4rBL3TA8Y11Vc4V",
+                color: "from-green-50 to-green-100",
+            },
+        ],
+    },
 ]
