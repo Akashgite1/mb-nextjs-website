@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { categories } from "./platformsData"
 import Image from "next/image"
 
+
 export default function Platforms() {
     return (
         <section
