@@ -2,9 +2,10 @@
 export interface GalleryItem {
   src: string
   name: string
-  description: string
+  description?: string
   logo: string
   width?: number
+  height?: number
 }
 
 
@@ -54,32 +55,53 @@ export const creators: GalleryItem[] = [
 ]
 
 
-export const course_members: GalleryItem[] = [
-  {
-    src: "/corporateCourseMembers/shubham_kumar.jpeg",
-    name: "Shubham Kumar",
-    description: "Security Engineer at Google",
-    logo: "/companyLogos/buzzClan.png",
-    width: 220,
-  }
-]
+// export const course_members: GalleryItem[] = [
+//   {
+//     src: "/corporateCourseMembers/shubham_kumar.jpeg",
+//     name: "Shubham Kumar",
+//     description: "Security Engineer at Google",
+//     logo: "/companyLogos/buzzClan.png",
+//     width: 220,
+//   }
+// ]
 
 
-export const corporate_events: GalleryItem[] = [
+// export const corporate_events: GalleryItem[] = [
+//   {
+//     src: "/corporateCourseMembers/shubham_kumar.jpeg",
+//     name: "Shubham Kumar",
+//     description: "Security Engineer at Google",
+//     logo: "/companyLogos/buzzClan.png"
+//   },
+// ]
+
+export const corporate_contacts: GalleryItem[] = [
   {
-    src: "/corporateCourseMembers/shubham_kumar.jpeg",
-    name: "Shubham Kumar",
-    description: "Security Engineer at Google",
-    logo: "/companyLogos/buzzClan.png"
+    src: "/images/corporate/prasanna.jpeg",
+    name: "Prasanna M Sridhara",
+    description: "Associate Partner Digital & iX PAL - Distribution Sector",
+    logo: "/images/companyLogos/ibm.jpg",
+    width: 300,
   },
-]
-
-export const special_People: GalleryItem[] = [
   {
-    src: "/gallery/1.png",
-    name: "Satya Nadella",
-    description: "Microsoft CEO, Tech Talk 2024",
-    logo: "/images/company/microsoft-logo.png",
-    width: 200,
+    src: "/images/corporate/prasanna.jpeg",
+    name: "Prasanna M Sridhara",
+    description: "Associate Partner Digital & iX PAL - Distribution Sector",
+    logo: "/images/companyLogos/ibm.jpg",
+    width: 300,
+  },
+  {
+    src: "/images/corporate/prasanna.jpeg",
+    name: "Prasanna M Sridhara",
+    description: "Associate Partner Digital & iX PAL - Distribution Sector",
+    logo: "/images/companyLogos/ibm.jpg",
+    width: 300,
+  },
+  {
+    src: "/images/corporate/prasanna.jpeg",
+    name: "Prasanna M Sridhara",
+    description: "Associate Partner Digital & iX PAL - Distribution Sector",
+    logo: "/images/companyLogos/ibm.jpg",
+    width: 300,
   },
 ]

@@ -5,10 +5,10 @@ import React from "react"
 import "./Gallery.css"
 import {
   creators,
-  course_members,
-  corporate_events,
+  // course_members,
+  // corporate_events,
   // achievements_Awards,
-  // special_People,
+  corporate_contacts,
   type GalleryItem,
 } from "./pageData"
 
@@ -42,7 +42,7 @@ function GallerySection({
               {/* Name + Description */}
               <div className="mt-2 text-center">
                 <p className="font-semibold text-black">{item.name}</p>
-                <p className="text-sm text-gray-600">{item.description}</p>
+                {item?.description && <p className="text-sm text-gray-600">{item?.description}</p>}
               </div>
 
               {/* Company Logo */}
@@ -71,13 +71,13 @@ export default function GalleryPage() {
       </h1>
 
       <GallerySection title="Creators" items={creators} />
-      <GallerySection title="Course Members" items={course_members} />
-      <GallerySection title="Corporate Events" items={corporate_events} />
+      {/* <GallerySection title="Course Members" items={course_members} /> */}
+      {/* <GallerySection title="Corporate Events" items={corporate_events} /> */}
       {/* <GallerySection title="Special Mentions" items={achievements_Awards} /> */}
-      {/* <GallerySection
-        title="Meet At Random Places In India"
-        items={special_People}
-      /> */}
+      <GallerySection
+        title="Corporate"
+        items={corporate_contacts}
+      />
     </main>
   )
 }
