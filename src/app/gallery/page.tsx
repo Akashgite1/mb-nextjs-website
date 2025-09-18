@@ -73,11 +73,11 @@ export default function GalleryPage() {
       <GallerySection title="Creators" items={creators} />
       <GallerySection title="Course Members" items={course_members} />
       <GallerySection title="Corporate Events" items={corporate_events} />
-      <GallerySection title="Special Mentions" items={achievements_Awards} />
-      <GallerySection
+      {/* <GallerySection title="Special Mentions" items={achievements_Awards} /> */}
+      {/* <GallerySection
         title="Meet At Random Places In India"
         items={special_People}
-      />
+      /> */}
     </main>
   )
 }
