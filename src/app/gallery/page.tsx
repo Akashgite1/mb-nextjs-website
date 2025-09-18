@@ -7,8 +7,8 @@ import {
   creators,
   course_members,
   corporate_events,
-  achievements_Awards,
-  special_People,
+  // achievements_Awards,
+  // special_People,
   type GalleryItem,
 } from "./pageData"
 
