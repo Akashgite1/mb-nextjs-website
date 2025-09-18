@@ -6,64 +6,69 @@ export interface GalleryItem {
   logo: string
   width?: number
   height?: number
+  visible?: boolean
 }
 
 
 export const creators: GalleryItem[] = [
   {
-    src: "/images/creators/sumit.jpeg",
+    src: "/images/creators/sumit_goyal.jpeg",
     name: "Sumit Goyal",
-    description: "Automation Tester",
-    logo: "/images/companyLogos/iris.jpg",
-    width: 220,
+    description: "Senior Automation Tester",
+    logo: "/images/companyLogos/iris.jpg"
   },
   {
-    src: "/images/creators/sumit.jpeg",
+    src: "/images/creators/sumit_goyal.jpeg",
     name: "Sumit Goyal",
     description: "Automation Tester",
     logo: "/images/companyLogos/iris.jpg",
-    width: 220,
+    // width: 220,
   },
   {
-    src: "/images/creators/sumit.jpeg",
+    src: "/images/creators/sumit_goyal.jpeg",
     name: "Sumit Goyal",
     description: "Automation Tester",
     logo: "/images/companyLogos/iris.jpg",
-    width: 220,
+    // width: 220,
   },
   {
-    src: "/images/creators/sumit.jpeg",
+    src: "/images/creators/sumit_goyal.jpeg",
     name: "Sumit Goyal",
     description: "Automation Tester",
     logo: "/images/companyLogos/iris.jpg",
-    width: 220,
+    // width: 220,
   },
   {
-    src: "/images/creators/sumit.jpeg",
+    src: "/images/creators/sumit_goyal.jpeg",
     name: "Sumit Goyal",
     description: "Automation Tester",
     logo: "/images/companyLogos/iris.jpg",
-    width: 220,
+    // width: 220,
   },
   {
-    src: "/images/creators/sumit.jpeg",
+    src: "/images/creators/sumit_goyal.jpeg",
     name: "Sumit Goyal",
     description: "Automation Tester",
     logo: "/images/companyLogos/iris.jpg",
-    width: 220,
+    // width: 220,
   },
 ]
 
-
-// export const course_members: GalleryItem[] = [
-//   {
-//     src: "/corporateCourseMembers/shubham_kumar.jpeg",
-//     name: "Shubham Kumar",
-//     description: "Security Engineer at Google",
-//     logo: "/companyLogos/buzzClan.png",
-//     width: 220,
-//   }
-// ]
+export const course_members: GalleryItem[] = [
+  {
+    src: "/images/corporateCourseMembers/shubham_kumar.jpeg",
+    name: "Shubham Kumar",
+    description: "Security Engineer",
+    logo: "/images/companyLogos/iksula.png",
+    width: 190
+  },
+  {
+    src: "/images/corporateCourseMembers/apekhit_sonawane.jpg",
+    name: "Apekhit Sonawane",
+    description: "UI Developer",
+    logo: "/images/companyLogos/iksula.png",
+  }
+]
 
 
 // export const corporate_events: GalleryItem[] = [

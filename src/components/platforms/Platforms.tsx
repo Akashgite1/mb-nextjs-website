@@ -22,7 +22,7 @@ export default function Platforms() {
                 </motion.h1>
             </header>
 
-            <div className='max-w-7xl mx-auto px-6 pb-20 space-y-12'>
+            <div className='max-w-8xl mx-auto pb-20 space-y-12'>
                 {categories.map((cat) => (
                     <div key={cat.label}>
                         {/* Category Heading */}

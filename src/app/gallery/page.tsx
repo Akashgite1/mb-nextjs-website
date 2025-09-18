@@ -5,7 +5,7 @@ import React from "react"
 import "./Gallery.css"
 import {
   creators,
-  // course_members,
+  course_members,
   // corporate_events,
   // achievements_Awards,
   corporate_contacts,
@@ -24,17 +24,19 @@ function GallerySection({
       <h2 className="text-2xl font-bold mb-4 text-center text-black">{title}</h2>
       <div className="relative w-full overflow-hidden">
         <div className="flex animate-scroll gap-4 min-w-max">
-          {items.map((item, i) => (
+          {items
+          .filter((item) => item.visible !== false) // ✅ hide items where visible = false
+          .map((item, i) => (
             <div
               key={i}
-              style={{ width: item.width || 200 }} // ✅ only width changes
+              style={{ width: item.width || 220 }} // ✅ only width changes
               className="flex-none bg-white shadow-md rounded-xl p-3 flex flex-col items-center"
             >
               {/* Main Image (height fixed) */}
               <Image
                 src={item.src}
                 alt={item.name}
-                width={item.width || 200}
+                width={item.width || 220}
                 height={140} // ✅ fixed height
                 className="rounded-lg object-cover"
               />
@@ -64,6 +66,7 @@ function GallerySection({
 }
 
 export default function GalleryPage() {
+  console.log("hi")
   return (
     <main className="w-full p-6">
       <h1 className="text-3xl font-bold mt-10 mb-8 text-center text-black">
@@ -71,12 +74,12 @@ export default function GalleryPage() {
       </h1>
 
       <GallerySection title="Creators" items={creators} />
-      {/* <GallerySection title="Course Members" items={course_members} /> */}
+      <GallerySection title="Course Members" items={course_members} />
       {/* <GallerySection title="Corporate Events" items={corporate_events} /> */}
       {/* <GallerySection title="Special Mentions" items={achievements_Awards} /> */}
       <GallerySection
-        title="Corporate"
-        items={corporate_contacts}
+      title="Corporate"
+      items={corporate_contacts}
       />
     </main>
   )
