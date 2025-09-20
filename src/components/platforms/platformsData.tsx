@@ -139,8 +139,8 @@ export const categories: PlatformCategory[] = [
                 title: "Medium",
                 followers: "25+ Followers",
                 description:
-                    "Articles and blogs on React.js System Design, Frontend",
-                link: "https://medium.com/@contactmanoharbatra",
+                    "Articles on React.js System Design, Frontend - Detailed Topic and Interview Questions",
+                link: "https://docs.google.com/spreadsheets/d/19H-1eKhdo5P5hRydIDH9C7jkRngWT4q3/edit?usp=drive_link&ouid=114238335183048298956&rtpof=true&sd=true",
                 color: "from-gray-50 to-gray-100",
             },
             // e-docs platforms

@@ -29,14 +29,14 @@ function GallerySection({
           .map((item, i) => (
             <div
               key={i}
-              style={{ width: item.width || 220 }} // ✅ only width changes
+              style={{ width: item?.width || 220 }} // ✅ only width changes
               className="flex-none bg-white shadow-md rounded-xl p-3 flex flex-col items-center"
             >
               {/* Main Image (height fixed) */}
               <Image
                 src={item.src}
                 alt={item.name}
-                width={item.width || 220}
+                width={item?.width || 220}
                 height={140} // ✅ fixed height
                 className="rounded-lg object-cover"
               />

@@ -18,10 +18,10 @@ export const creators: GalleryItem[] = [
     logo: "/images/companyLogos/iris.jpg"
   },
   {
-    src: "/images/creators/sumit_goyal.jpeg",
-    name: "Sumit Goyal",
-    description: "Automation Tester",
-    logo: "/images/companyLogos/iris.jpg",
+    src: "/images/creators/ayushi_sharma.jpeg",
+    name: "Ayushi Sharma",
+    description: "SDE",
+    logo: "/images/companyLogos/microsoft.png"
     // width: 220,
   },
   {
@@ -67,6 +67,12 @@ export const course_members: GalleryItem[] = [
     name: "Apekhit Sonawane",
     description: "UI Developer",
     logo: "/images/companyLogos/iksula.png",
+  },
+  {
+    src: "/images/corporateCourseMembers/om_sharma.jpg",
+    name: "Om Sharma",
+    description: ".NET Full Stack Developer",
+    logo: "/images/companyLogos/McGraw-Hill.png",
   }
 ]
 
@@ -86,14 +92,13 @@ export const corporate_contacts: GalleryItem[] = [
     name: "Prasanna M Sridhara",
     description: "Associate Partner Digital & iX PAL - Distribution Sector",
     logo: "/images/companyLogos/ibm.jpg",
-    width: 300,
+    width: 280,
   },
   {
-    src: "/images/corporate/prasanna.jpeg",
-    name: "Prasanna M Sridhara",
-    description: "Associate Partner Digital & iX PAL - Distribution Sector",
-    logo: "/images/companyLogos/ibm.jpg",
-    width: 300,
+    src: "/images/corporate/amit_prashant.jpeg",
+    name: "Prashant + Amit",
+    description: "Senior Project Managers",
+    logo: "/images/companyLogos/ibm.jpg"
   },
   {
     src: "/images/corporate/prasanna.jpeg",
