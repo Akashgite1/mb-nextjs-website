@@ -137,10 +137,6 @@ function GallerySection({
 export default function Gallery() {
     return (
         <main className='w-full p-6'>
-            {/* <h1 className='text-3xl font-bold mt-10 mb-8 text-center text-black'>
-                
-            </h1> */}
-
             <GallerySection title='Badi baat cheet Industry ke logo se' items={creators} />
         </main>
     )

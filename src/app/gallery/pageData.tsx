@@ -127,20 +127,6 @@ export const corporate_contacts: GalleryItem[] = [
     src: "/images/corporate/amit_prashant.jpeg",
     name: "Prashant + Amit",
     description: "Senior Project Managers",
-    logo: "/images/companyLogos/ibm.jpg"
-  },
-  {
-    src: "/images/corporate/prasanna.jpeg",
-    name: "Prasanna M Sridhara",
-    description: "Associate Partner Digital & iX PAL - Distribution Sector",
-    logo: "/images/companyLogos/ibm.jpg",
-    width: 300,
-  },
-  {
-    src: "/images/corporate/prasanna.jpeg",
-    name: "Prasanna M Sridhara",
-    description: "Associate Partner Digital & iX PAL - Distribution Sector",
-    logo: "/images/companyLogos/ibm.jpg",
-    width: 300,
+    logo: "/images/companyLogos/qad.jpg"
   },
 ]
