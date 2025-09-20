@@ -3,7 +3,7 @@ export interface GalleryItem {
   src: string
   name: string
   description?: string
-  logo: string
+  logo?: string
   width?: number
   height?: number
   visible?: boolean
@@ -13,44 +13,31 @@ export interface GalleryItem {
 export const creators: GalleryItem[] = [
   {
     src: "/images/creators/sumit_goyal.jpeg",
-    name: "Sumit Goyal",
-    description: "Senior Automation Tester",
-    logo: "/images/companyLogos/iris.jpg"
+    name: "Sumit Goyal"
+  },
+  {
+    src: "/images/creators/ajay_suneja.jpeg",
+    name: "Ajay Suneja"
+  },
+  {
+    src: "/images/creators/piyush.jpeg",
+    name: "Piyush - Roadside Coder",
+  },
+  {
+    src: "/images/creators/striver.jpeg",
+    name: "Raj Vikramaditya",
+  },
+  {
+    src: "/images/creators/harkirat.jpeg",
+    name: "Harkirat"
   },
   {
     src: "/images/creators/ayushi_sharma.jpeg",
-    name: "Ayushi Sharma",
-    description: "SDE",
-    logo: "/images/companyLogos/microsoft.png"
-    // width: 220,
+    name: "Ayushi Sharma"
   },
   {
-    src: "/images/creators/sumit_goyal.jpeg",
-    name: "Sumit Goyal",
-    description: "Automation Tester",
-    logo: "/images/companyLogos/iris.jpg",
-    // width: 220,
-  },
-  {
-    src: "/images/creators/sumit_goyal.jpeg",
-    name: "Sumit Goyal",
-    description: "Automation Tester",
-    logo: "/images/companyLogos/iris.jpg",
-    // width: 220,
-  },
-  {
-    src: "/images/creators/sumit_goyal.jpeg",
-    name: "Sumit Goyal",
-    description: "Automation Tester",
-    logo: "/images/companyLogos/iris.jpg",
-    // width: 220,
-  },
-  {
-    src: "/images/creators/sumit_goyal.jpeg",
-    name: "Sumit Goyal",
-    description: "Automation Tester",
-    logo: "/images/companyLogos/iris.jpg",
-    // width: 220,
+    src: "/images/creators/saumya_sriv.jpeg",
+    name: "Saumya",
   },
 ]
 
@@ -79,12 +66,54 @@ export const course_members: GalleryItem[] = [
 
 // export const corporate_events: GalleryItem[] = [
 //   {
-//     src: "/corporateCourseMembers/shubham_kumar.jpeg",
+//     src: "/images/corporateCourseMembers/shubham_kumar.jpeg",
 //     name: "Shubham Kumar",
 //     description: "Security Engineer at Google",
-//     logo: "/companyLogos/buzzClan.png"
+//     logo: "/imeages/companyLogos/buzzClan.png"
 //   },
 // ]
+
+export const special_momemts: GalleryItem[] = [
+  {
+    src: "/images/specialMomemts/topmate_cover_page.png",
+    name: "Topmate Official Page",
+    description: "Featured on official page",
+    width: 320,
+  },
+    {
+    src: "/images/specialMomemts/topmate_cover_page.png",
+    name: "Topmate Official Page",
+    description: "Featured on official page",
+    width: 320,
+  },
+    {
+    src: "/images/specialMomemts/topmate_cover_page.png",
+    name: "Topmate Official Page",
+    description: "Featured on official page",
+    width: 320,
+  },
+]
+
+export const random_places: GalleryItem[] = [
+  {
+    src: "/images/randomPlaces/vrindavan1.jpeg",
+    name: "Vrindavan",
+    // description: "Featured on official page",
+    // width: 320,
+  },
+    {
+    src: "/images/randomPlaces/vrindavan2.jpeg",
+    name: "Vrindavan",
+    // description: "Featured on official page",
+    // width: 320,
+  },
+  //   {
+  //   src: "/images/special_momemts/topmate_cover_page.png",
+  //   name: "Topmate Official Page",
+  //   description: "Featured on official page",
+  //   // width: 320,
+  // },
+]
 
 export const corporate_contacts: GalleryItem[] = [
   {

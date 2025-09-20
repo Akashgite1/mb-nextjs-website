@@ -10,7 +10,7 @@ import { PlatformCategory } from "./types"
 
 export const categories: PlatformCategory[] = [
     {
-        label: "Socials",
+        label: "FREE Content",
         items: [
             {
                 id: 1,

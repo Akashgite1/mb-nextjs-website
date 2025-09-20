@@ -38,18 +38,7 @@ export const faqData: FAQItem[] = [
                 title: "Playlist",
                 link: "https://www.youtube.com/watch?v=Ms8h7ivA8b8&list=PL2YCMAeLwTfEH1DKBacWBYJ1AvzH90s0x",
             },
-        ],
-    },
-    {
-        question: "I have multiple job offers - Which one to select?",
-        answer: "Watch these videos/playlist to decide or book 1:1 session.",
-        category: "Multiple Job Offers",
-        visible: true,
-        videos: [
-            {
-                title: "Playlist",
-                link: "https://www.youtube.com/watch?v=ZJCvjq1xkq0&list=PL2YCMAeLwTfHNUBjfGPzaxfHFo3Zk2TWJ",
-            },
+            //   { title: "Deploy on Netlify", link: "https://youtu.be/netlify-demo" },
         ],
     },
 ]
