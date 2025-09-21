@@ -15,19 +15,19 @@ export default function Header() {
             <nav className="flex gap-3">
                 <Link 
                     href="/gallery" 
-                    className="bg-white text-blue-600 font-medium px-3 py-1 rounded hover:bg-gray-200 transition"
+                    className="bg-white text-blue-600 font-medium px-3 py-1 rounded hover:bg-gray-200 transition flex justify-center items-center text-center"
                 >
                     Gallery
                 </Link>
                 <Link 
                     href="/faq" 
-                    className="bg-white text-blue-600 font-medium px-3 py-1 rounded hover:bg-gray-200 transition"
+                    className="bg-white text-blue-600 font-medium px-3 py-1 rounded hover:bg-gray-200 transition flex justify-center items-center text-center"
                 >
                     FAQ
                 </Link>
                 <Link 
                     href="/upcomingEvents" 
-                    className="bg-white text-blue-600 font-medium px-3 py-1 rounded hover:bg-gray-200 transition"
+                    className="bg-white text-blue-600 font-medium px-3 py-1 rounded hover:bg-gray-200 transition flex justify-center items-center text-center"
                 >
                     Upcoming Events
                 </Link>

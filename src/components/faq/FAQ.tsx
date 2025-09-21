@@ -25,33 +25,34 @@ export default function FAQ() {
     }, [search, category])
 
     return (
-        <section id='faq' className='p-6 max-w-6xl mx-auto mt-10'>
-            <div className='flex justify-center items-center gap-2 mb-6'>
-                <h2 className='text-2xl font-bold text-black'>
+        <section id='faq' className='p-4 sm:p-6 max-w-6xl mx-auto mt-10'>
+            {/* Header */}
+            <div className='flex flex-col md:flex-row justify-center md:justify-between items-center gap-3 mb-6 text-center md:text-left'>
+                <h2 className='text-xl sm:text-2xl font-bold text-black'>
                     Frequently Asked Questions with Solutions
                 </h2>
                 <Link
                     href='/faq'
-                    className='bg-white text-blue-600 font-medium px-3 py-1 rounded hover:bg-gray-200 transition'
+                    className='bg-white text-blue-600 font-medium px-3 py-1 rounded hover:bg-gray-200 transition whitespace-nowrap'
                 >
                     Click here to see all FAQs
                 </Link>
             </div>
 
             {/* Search + Category Filter */}
-            <div className='flex gap-4 mb-6'>
+            <div className='flex flex-col md:flex-row gap-3 md:gap-4 mb-6'>
                 <input
                     type='text'
                     placeholder='Search questions...'
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    className='flex-1 border rounded-lg p-2 focus:outline-none focus:ring focus:ring-blue-400'
+                    className='w-full md:flex-1 border rounded-lg p-2 focus:outline-none focus:ring focus:ring-blue-400'
                 />
 
                 <select
                     value={category}
                     onChange={(e) => setCategory(e.target.value)}
-                    className='border rounded-lg p-2 focus:outline-none focus:ring focus:ring-blue-400'
+                    className='w-full md:w-auto border rounded-lg p-2 focus:outline-none focus:ring focus:ring-blue-400'
                 >
                     {categories.map((cat) => (
                         <option key={cat} value={cat}>
@@ -62,21 +63,23 @@ export default function FAQ() {
             </div>
 
             {/* FAQ List */}
-            <div className='space-y-6 h-[800px] overflow-y-auto'>
+            <div className='space-y-6 max-h-[800px] overflow-y-auto'>
                 {filteredFaqs.length > 0 ? (
                     filteredFaqs.map((faq, index) => (
                         <div
                             key={index}
                             className='border rounded-lg p-4 shadow-sm bg-white'
                         >
-                            <h3 className='font-semibold text-lg text-black'>
+                            <h3 className='font-semibold text-base sm:text-lg text-black'>
                                 {faq.question}
                             </h3>
-                            <p className='text-gray-700 mt-2'>{faq.answer}</p>
+                            <p className='text-gray-700 mt-2 text-sm sm:text-base'>
+                                {faq.answer}
+                            </p>
                             {faq.videos?.length ? (
                                 <div className='mt-3'>
-                                    <div className='flex flex-wrap gap-4'>
-                                        <h3 className='font-medium text-m text-gray-600'>
+                                    <div className='flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-4'>
+                                        <h3 className='font-medium text-sm sm:text-base text-gray-600'>
                                             Related Links:
                                         </h3>
                                         {faq.videos.map((video, vidIndex) => (
@@ -85,7 +88,7 @@ export default function FAQ() {
                                                 href={video.link}
                                                 target='_blank'
                                                 rel='noopener noreferrer'
-                                                className='text-blue-600 hover:underline'
+                                                className='text-blue-600 hover:underline text-sm sm:text-base'
                                             >
                                                 {video.title}
                                             </a>
