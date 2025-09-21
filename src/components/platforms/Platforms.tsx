@@ -18,7 +18,7 @@ export default function Platforms() {
                     transition={{ duration: 0.6 }}
                     className='text-4xl md:text-5xl font-bold mb-4'
                 >
-                    Trusted by 130K+ learners worldwide. 🚀
+                    Trusted by 150K+ learners worldwide. 🚀
                 </motion.h1>
             </header>
 

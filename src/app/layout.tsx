@@ -6,8 +6,11 @@ import Footer from "@/components/footer/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "My Next.js Portfolio",
+  title: "Manohar Batra",
+  description: "College to Corporate",
+  icons: {
+    icon: "/images/websiteLogo/websiteLogo.jpeg",  // <- replace with your file in /public
+  },
 };
 
 export default function RootLayout({
