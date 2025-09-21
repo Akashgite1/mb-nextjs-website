@@ -1,0 +1,46 @@
+import TreeNode from "@/components/treeNode/TreeNode"
+import { collegeTopics, corporateTopics } from "./topics"
+
+export default function RoadmapPage() {
+    return (
+        <main className='p-6 max-w-6xl mx-auto'>
+            <h1 className='text-2xl font-bold mb-8 text-center'>
+                Here are free guidance videos, check out course for premium
+                content
+            </h1>
+
+            {/* 2-column responsive grid */}
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+                {/* College / Student Section */}
+                <section>
+                    <h2 className='text-xl font-semibold mb-4 text-red-700'>
+                        College / Student
+                    </h2>
+                    {collegeTopics.map((node, i) => (
+                        <TreeNode key={i} node={node} />
+                    ))}
+                </section>
+
+                {/* Corporate Section */}
+                <section>
+                    <h2 className='text-xl font-semibold mb-4 text-green-700'>
+                        Working Professionals
+                    </h2>
+                    {corporateTopics.map((node, i) => (
+                        <TreeNode key={i} node={node} />
+                    ))}
+                </section>
+
+                {/* Corporate Section */}
+                <section>
+                    <h2 className='text-xl font-semibold mb-4 text-green-700'>
+                        Podcasts
+                    </h2>
+                    {/* {corporateTopics.map((node, i) => (
+            <TreeNode key={i} node={node} />
+          ))} */}
+                </section>
+            </div>
+        </main>
+    )
+}

@@ -141,9 +141,9 @@ function GallerySection({
 export default function GalleryPage() {
     return (
         <main className='w-full p-6'>
-            <h1 className='text-3xl font-bold mt-10 mb-8 text-center text-black'>
+            {/* <h1 className='text-3xl font-bold mt-10 mb-8 text-center text-black'>
                 Image Gallery
-            </h1>
+            </h1> */}
 
             <GallerySection title='Creators' items={creators} />
             <GallerySection
