@@ -31,6 +31,12 @@ export default function Header() {
                 >
                     Roadmap
                 </Link>
+                <Link 
+                    href="/news" 
+                    className="bg-white text-blue-600 font-medium px-3 py-1 rounded hover:bg-gray-200 transition flex justify-center items-center text-center"
+                >
+                    News
+                </Link>
                 {/* <Link 
                     href="/upcomingEvents" 
                     className="bg-white text-blue-600 font-medium px-3 py-1 rounded hover:bg-gray-200 transition flex justify-center items-center text-center"
