@@ -30,9 +30,9 @@ export default function Platforms() {
 
                         {/* Category Grid */}
                         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
-                            {cat.items.map((p) => (
+                            {cat.items.map((p, index) => (
                                 <motion.div
-                                    key={p.id}
+                                    key={`${cat.label}-${p.id}-${index}`}
                                     whileHover={{ scale: 1.05 }}
                                     className={`rounded-2xl shadow-md bg-gradient-to-br ${p.color} p-6 flex flex-col justify-between`}
                                 >
