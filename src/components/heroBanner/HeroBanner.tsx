@@ -53,10 +53,10 @@ export default function HeroBanner() {
 
                     {/* Badges */}
                     <div className='absolute top-2 left-2 md:top-8 md:left-10 bg-white px-2 py-1 md:px-4 md:py-2 rounded-lg shadow-lg text-xs md:text-base'>
-                        <p className='font-semibold'>Sr Cloud Full Stack</p>
+                        <p className='font-semibold text-black'>Sr Cloud Full Stack</p>
                     </div>
                     <div className='absolute bottom-38 right-2 md:bottom-36 md:right-10 bg-white px-3 py-1 md:px-10 md:py-2 rounded-lg shadow-lg text-xs md:text-base'>
-                        <p className='font-semibold'>11 yrs exp</p>
+                        <p className='font-semibold text-black'>11 yrs exp</p>
                     </div>
 
                     {/* Logos */}
