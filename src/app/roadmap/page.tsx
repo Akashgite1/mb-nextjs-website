@@ -1,5 +1,5 @@
 import TreeNode from "@/components/treeNode/TreeNode"
-import { collegeTopics, corporateTopics } from "./topics"
+import { collegeTopics, corporateTopics, podcastTopics } from "./topics"
 
 export default function RoadmapPage() {
     return (
@@ -36,9 +36,9 @@ export default function RoadmapPage() {
                     <h2 className='text-xl font-semibold mb-4 text-green-700'>
                         Podcasts
                     </h2>
-                    {/* {corporateTopics.map((node, i) => (
-            <TreeNode key={i} node={node} />
-          ))} */}
+                    {podcastTopics.map((node, i) => (
+                        <TreeNode key={i} node={node} />
+                    ))}
                 </section>
             </div>
         </main>

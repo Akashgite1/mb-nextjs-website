@@ -1,11 +1,13 @@
 import {
+    FaGithub,
     FaInstagram,
     FaLinkedin,
     FaMedium,
     FaUsers,
     FaWhatsapp,
-    FaYoutube,
+    FaYoutube
 } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6";
 import { PlatformCategory } from "./types"
 
 export const categories: PlatformCategory[] = [
@@ -98,7 +100,7 @@ export const categories: PlatformCategory[] = [
         ],
     },
     {
-        label: "Self-Paced e-Docs",
+        label: "Self-Paced",
         items: [
             {
                 id: 1,
@@ -114,7 +116,7 @@ export const categories: PlatformCategory[] = [
                 id: 2,
                 type: "image",
                 img: "/images/topmate.jpg",
-                title: "Trusted Companies List",
+                title: "Companies Hiring in 2025",
                 followers: "4k+ Bookings",
                 description:
                     "Companies List where my subscribers are placed at good packages",
@@ -170,6 +172,28 @@ export const categories: PlatformCategory[] = [
                     "Latest IT News + Real Employees Experiences",
                 link: "https://chat.whatsapp.com/LfsYDSr4rBL3TA8Y11Vc4V",
                 color: "from-green-50 to-green-100",
+            },
+            {
+                id: 2,
+                type: "component",
+                icon: <FaXTwitter className='text-black text-4xl' />,
+                title: "Twitter",
+                followers: "169+ Members",
+                description:
+                    "Interview Questions + Corporate & Salary Insights",
+                link: "https://x.com/manohar_batra",
+                color: "from-blue-50 to-blue-100",
+            },
+            {
+                id: 2,
+                type: "component",
+                icon: <FaGithub className='text-black text-4xl' />,
+                title: "Github",
+                followers: "63+ Members",
+                description:
+                    "Interview Questions + Corporate & Salary Insights",
+                link: "https://github.com/manoharbatra",
+                color: "from-red-50 to-red-100",
             },
         ],
     },
