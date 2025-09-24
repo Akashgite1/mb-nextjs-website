@@ -15,8 +15,9 @@ export default function FAQPage() {
   const filteredFaqs = useMemo(() => {
     return faqData.filter(item => {
       const matchesSearch =
-        item.question.toLowerCase().includes(search.toLowerCase()) ||
-        item.answer.toLowerCase().includes(search.toLowerCase())
+        item?.question.toLowerCase().includes(search.toLowerCase()) 
+        // ||
+        // item?.answer.toLowerCase().includes(search.toLowerCase())
       const matchesCategory = category === "All" || item.category === category
       return matchesSearch && matchesCategory
     })
@@ -58,7 +59,7 @@ export default function FAQPage() {
           .map((faq, index) => (
             <div key={index} className="border rounded-lg p-4 shadow-sm bg-white">
               <h3 className="font-semibold text-lg text-black">{faq.question}</h3>
-              <p className="text-gray-700 mt-2">{faq.answer}</p>
+              {faq?.answer && <p className="text-gray-700 mt-2">{faq?.answer}</p>}
               {faq.videos?.length ? (
                 <div className="mt-3">
                   <div className="flex flex-wrap gap-4">
