@@ -19,7 +19,7 @@ export default function TreeNode({ node }: { node: Node }) {
   return (
     <div className="ml-4">
       <div
-        className="cursor-pointer font-semibold flex items-center"
+        className="cursor-pointer font-semibold flex items-center text-black"
         onClick={() => setOpen(!open)}
       >
         <span className="mr-1">{open ? "▾" : "▸"}</span>

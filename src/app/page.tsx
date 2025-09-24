@@ -9,10 +9,12 @@ export default function Home() {
     return (
         <div>
             <HeroBanner />
+            <div className="flex-1 pl-6 pr-6 pb-6 bg-gray-50">
             <Platforms />
             <Gallery />
             <Testimonials />
             <FAQ />
+            </div>
         </div>
     )
 }

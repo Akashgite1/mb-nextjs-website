@@ -25,7 +25,7 @@ export default function RootLayout({
       >
         <AnnouncementBanner />
         <Header />
-        <main className="flex-1 pl-6 pr-6 pb-6 bg-gray-50">{children}</main>
+        <main>{children}</main>
         <Footer />
 
         {/* Google Analytics Script */}
