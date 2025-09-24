@@ -1,18 +1,23 @@
 // heroData.ts
 export const heroData = [
   {
-    row1: "36K Followers on LinkedIn",
-    row2: "Sharing corporate experiences + Interview Questions",
-    row3: "React / Next.js / System Design",
+    row1: "Master Corporate Skills",
+    row2: "Learn Corporate Growth and Politics Insights",
+    row3: "Insider Tips",
   },
   {
-    row1: "94K Subscribers on YouTube",
+    row1: "Listen Real Experiences",
     row2: "Stay updated with corporate and salary insights",
-    row3: "",
+    row3: "Real life stories",
   },
   {
-    row1: "4K Followers on Instagram",
-    row2: "Exposing fake influencers",
+    row1: "Crack Interviews",
+    row2: "Learn In depth React, System Design and more",
     row3: "Fun + Learning content",
+  },
+  {
+    row1: "Listen to Podcasts",
+    row2: "Stay upddated with Tech, and Career Growth",
+    row3: "Interviews with Industry Experts",   
   }
 ];

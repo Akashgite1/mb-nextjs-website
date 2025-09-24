@@ -21,12 +21,12 @@ export default function HeroBanner() {
                     <h1 className='text-3xl md:text-5xl font-bold text-gray-900'>
                         College to Corporate
                     </h1>
-                    <h2 className='text-2xl md:text-3xl text-gray-700'>
+                    {/* <h2 className='text-2xl md:text-3xl text-gray-700'>
                         by{" "}
                         <span className='font-semibold text-3xl md:text-4xl'>
                             Manohar Batra
                         </span>
-                    </h2>
+                    </h2> */}
 
                     {/* Rotating Text */}
                     <p className='text-lg md:text-2xl font-medium text-gray-800 transition-opacity duration-500'>
@@ -36,7 +36,7 @@ export default function HeroBanner() {
                         {heroData[index].row2}
                     </p>
                     <p className='text-sm md:text-xl text-gray-600'>
-                        {heroData[index].row3}
+                        {heroData[index]?.row3}
                     </p>
                 </div>
 
