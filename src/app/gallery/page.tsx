@@ -10,6 +10,7 @@ import {
     type GalleryItem,
     special_momemts,
     random_places,
+    company_events,
 } from "./pageData"
 
 function GallerySection({
@@ -159,6 +160,7 @@ export default function GalleryPage() {
                 items={random_places}
             />
             <GallerySection title="Special Momemts" items={special_momemts} />
+            <GallerySection title="Company Events" items={company_events} />
         </main>
     )
 }
