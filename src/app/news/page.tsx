@@ -51,13 +51,12 @@ export default function CorporateNews() {
 
                         {/* Right Side: YouTube Embed */}
                         {item.youtubeEmbed && (
-                            <div className='w-80 h-50 rounded-lg shadow-lg overflow-hidden'>
+                            <div className='w-60 h-30 rounded-lg shadow-lg overflow-hidden'>
                                 <iframe
                                     width='100%'
                                     height='100%'
                                     src={item.youtubeEmbed}
                                     title={`YouTube video ${index + 1}`}
-                                    frameBorder='0'
                                     allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                                     allowFullScreen
                                 ></iframe>

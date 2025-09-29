@@ -106,8 +106,8 @@ export const categories: PlatformCategory[] = [
                 id: 1,
                 type: "image",
                 img: "/images/topmate.jpg",
-                title: "GenAI Full Stack Interview Ready",
-                followers: "1.5k+ Bookings",
+                title: "GenAI Full Stack 100% Interview Ready",
+                followers: "2.5k+ Bookings",
                 description: "Frontend, React, System Design, GenAI - Interview + Topics",
                 link: "https://topmate.io/manohar_batra/1587369?utm_source=public_profile&utm_campaign=manohar_batra",
                 color: "from-blue-50 to-blue-100",
@@ -136,6 +136,17 @@ export const categories: PlatformCategory[] = [
             },
             {
                 id: 4,
+                type: "image",
+                img: "/images/topmate.jpg",
+                title: "Java Backend 100% Interview Ready",
+                followers: "70+ Followers",
+                description:
+                    "Articles on Java, Springboot, Kafka - Detailed Topic and Interview Questions",
+                link: "https://topmate.io/manohar_batra/1751070?utm_source=public_profile&utm_campaign=manohar_batra",
+                color: "from-gray-50 to-gray-100",
+            },
+            {
+                id: 5,
                 type: "component",
                 icon: <FaMedium className='text-black text-4xl' />,
                 title: "Medium",
@@ -146,7 +157,7 @@ export const categories: PlatformCategory[] = [
                 color: "from-gray-50 to-gray-100",
             },
             {
-                id: 4,
+                id: 6,
                 type: "component",
                 icon: <FaUsers className='text-red-600 text-4xl' />,
                 title: "DSA",
@@ -167,7 +178,7 @@ export const categories: PlatformCategory[] = [
                 type: "component",
                 icon: <FaWhatsapp className='text-black text-4xl' />,
                 title: "Whatsapp",
-                followers: "200+ Members",
+                followers: "370+ Members",
                 description:
                     "Latest IT News + Real Employees Experiences",
                 link: "https://chat.whatsapp.com/LfsYDSr4rBL3TA8Y11Vc4V",

@@ -77,7 +77,7 @@ export const special_momemts: GalleryItem[] = [
         name: "Topmate Official Page",
         description: "Featured on official page",
         width: 400,
-    }
+    },
 ]
 
 export const random_places: GalleryItem[] = [
@@ -105,16 +105,22 @@ export const random_places: GalleryItem[] = [
         description: "16-Sep-2025",
         // width: 320,
     },
+    {
+        src: "/images/randomPlaces/shubham_1.jpeg",
+        name: "Shubham - Manekshaw Center, Delhi",
+        description: "16-Sep-2025",
+        // width: 320,
+    },
 ]
 
 export const company_events: GalleryItem[] = [
-  {
+    {
         src: "/images/companyEvents/hyd-1.jpeg",
         name: "Hyderabad, Telangana",
         description: "18-July-2025 Event by Pepsico/IBM",
         width: 240,
     },
-   {
+    {
         src: "/images/companyEvents/manekshaw_delhi1.jpeg",
         name: "Manekshaw Center, Delhi",
         description: "27-Sep-2025 Event by IBM",
