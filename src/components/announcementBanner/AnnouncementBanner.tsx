@@ -13,20 +13,21 @@ export default function AnnouncementBanner() {
 
     if (!visible) return null
     return visible ? (
-        <div className='sticky top-0 z-40 bg-yellow-600 text-white overflow-hidden py-2'>
-            <div className='whitespace-nowrap animate-marquee flex gap-16'>
-                {messages.map((msg, i) => (
-                    <span key={i} className='font-medium'>
-                        {msg}
-                    </span>
-                ))}
-                {/* duplicate set for seamless loop */}
-                {messages.map((msg, i) => (
-                    <span key={`dup-${i}`} className='font-medium'>
-                        {msg}
-                    </span>
-                ))}
-            </div>
+        <div className='sticky top-0 z-40 bg-amber-100 text-black overflow-hidden py-2'>
+            
+            {/* Scrolling content */}
+                <div className='whitespace-nowrap animate-[marquee_30s_linear_infinite] flex gap-16'>
+                    {messages.map((msg, i) => (
+                        <span key={i} className='font-medium'>
+                            {msg}
+                        </span>
+                    ))}
+                    {messages.map((msg, i) => (
+                        <span key={`dup-${i}`} className='font-medium'>
+                            {msg}
+                        </span>
+                    ))}
+                </div>
         </div>
     ) : null
 }

@@ -25,17 +25,17 @@ export default function FAQ() {
     }, [search, category])
 
     return (
-        <section id='faq' className='p-4 sm:p-6 max-w-6xl mx-auto mt-10'>
+        <section id='faq' className='mx-auto'>
             {/* Header */}
-            <div className='flex flex-col md:flex-row justify-center md:justify-between items-center gap-3 mb-6 text-center md:text-left'>
-                <h2 className='text-xl sm:text-2xl font-bold text-black'>
+            <div className='flex flex-col md:flex-row justify-center md:justify-between items-center gap-3 mb-8 text-center md:text-left'>
+                <h2 className='text-2xl sm:text-3xl font-bold text-black'>
                     Frequently Asked Questions with Solutions
                 </h2>
                 <Link
                     href='/faq'
-                    className='bg-white text-blue-600 font-medium px-3 py-1 rounded hover:bg-gray-200 transition whitespace-nowrap'
+                    className='bg-blue-600 text-white font-medium px-6 py-2 rounded-full hover:bg-blue-700 transition shadow-md hover:shadow-lg'
                 >
-                    Click here to see all FAQs
+                    View all FAQs
                 </Link>
             </div>
 

@@ -9,7 +9,7 @@ export default function Footer() {
                     <div className='col-span-1'>
                         <div className='mb-4'>
                             <h2 className='text-xl font-bold'>
-                                Home for Programmer
+                                Home for Corporate people
                             </h2>
                         </div>
                         <p className='text-sm text-gray-400'>
@@ -31,14 +31,14 @@ export default function Footer() {
                                     Courses
                                 </Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link
                                     href='/cohorts'
                                     className='text-gray-400 hover:text-white'
                                 >
                                     Cohorts
                                 </Link>
-                            </li>
+                            </li> */}
                             {/* <li><Link href="/udemy" className="text-gray-400 hover:text-white">Udemy</Link></li> */}
                             {/* <li><Link href="/masterji" className="text-gray-400 hover:text-white">Masterji</Link></li> */}
                             {/* <li><Link href="/freeapi" className="text-gray-400 hover:text-white">FreeAPI</Link></li> */}

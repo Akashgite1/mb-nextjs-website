@@ -21,7 +21,7 @@ export default function Header() {
                     <Link
                         key={item}
                         href={`/${item.toLowerCase()}`}
-                        className="bg-white text-blue-600 font-medium px-3 py-1 rounded hover:bg-gray-200 transition flex justify-center items-center text-center"
+                        className="bg-white text-blue-600 font-medium px-3 py-1 rounded-2xl hover:bg-gray-200 transition flex justify-center items-center text-center"
                     >
                         {item}
                     </Link>

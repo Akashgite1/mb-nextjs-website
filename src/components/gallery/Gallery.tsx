@@ -136,7 +136,7 @@ function GallerySection({
 
 export default function Gallery() {
     return (
-        <main className='w-full p-6'>
+        <main className='w-full'>
             <GallerySection title='Badi baat cheet Industry ke logo se' items={creators} />
         </main>
     )

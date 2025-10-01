@@ -53,34 +53,36 @@ export default function HeroBanner() {
 
                     {/* Badges */}
                     <div className='absolute top-2 left-2 md:top-8 md:left-10 bg-white px-2 py-1 md:px-4 md:py-2 rounded-lg shadow-lg text-xs md:text-base'>
-                        <p className='font-semibold text-black'>Sr Cloud Full Stack</p>
+                        <p className='font-semibold text-black'>
+                            Sr Cloud Full Stack
+                        </p>
                     </div>
                     <div className='absolute bottom-38 right-2 md:bottom-36 md:right-10 bg-white px-3 py-1 md:px-10 md:py-2 rounded-lg shadow-lg text-xs md:text-base'>
                         <p className='font-semibold text-black'>11 yrs exp</p>
                     </div>
 
                     {/* Logos */}
-                    <div className='absolute bottom-2 left-1/2 -translate-x-1/2 bg-white px-3 md:px-6 py-2 rounded-lg shadow-lg flex flex-wrap gap-4 md:gap-4 items-center justify-center max-w-[90%]'>
+                    <div className='absolute bottom-2 left-1/2 -translate-x-1/2 bg-white px-3 md:px-6 py-2 rounded-lg shadow-lg flex items-center justify-start gap-4 overflow-x-auto max-w-[90%]'>
                         <Image
                             src='/images/companyLogos/tcs.jpg'
                             alt='tcs'
                             width={60}
                             height={10}
-                            className='rounded-lg object-cover'
+                            className='rounded-lg object-cover flex-shrink-0'
                         />
                         <Image
                             src='/images/companyLogos/qad.jpg'
                             alt='qad'
                             width={80}
                             height={40}
-                            className='rounded-lg object-cover'
+                            className='rounded-lg object-cover flex-shrink-0'
                         />
                         <Image
                             src='/images/companyLogos/ibm.jpg'
                             alt='ibm'
                             width={60}
                             height={20}
-                            className='rounded-lg object-cover'
+                            className='rounded-lg object-cover flex-shrink-0'
                         />
                     </div>
                 </div>
