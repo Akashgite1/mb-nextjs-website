@@ -1,46 +1,44 @@
-import TreeNode from "@/components/treeNode/TreeNode"
-import { collegeTopics, corporateTopics, podcastTopics } from "./topics"
+"use client"
+import { useState } from "react"
+import CareerSection from "@/components/roadmapSections/CareerSection"
+import TechnicalSection from "@/components/roadmapSections/TechnicalSection"
 
 export default function RoadmapPage() {
+    const [activeTab, setActiveTab] = useState<"career" | "technical">("career")
+
     return (
-        <main className='p-6 max-w-6xl mx-auto'>
-            <h1 className='text-2xl font-bold mb-8 text-center'>
+        <main className="pl-6 pr-6 pb-6 pt-4 max-w-6xl mx-auto">
+            <h1 className="text-2xl font-bold mb-4 text-center">
                 Here are free guidance videos, check out course for premium
-                content
+                content 🚀
             </h1>
 
-            {/* 2-column responsive grid */}
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-                {/* College / Student Section */}
-                <section>
-                    <h2 className='text-xl font-semibold mb-4 text-red-700'>
-                        College / Student
-                    </h2>
-                    {collegeTopics.map((node, i) => (
-                        <TreeNode key={i} node={node} />
-                    ))}
-                </section>
-
-                {/* Corporate Section */}
-                <section>
-                    <h2 className='text-xl font-semibold mb-4 text-green-700'>
-                        Working Professionals
-                    </h2>
-                    {corporateTopics.map((node, i) => (
-                        <TreeNode key={i} node={node} />
-                    ))}
-                </section>
-
-                {/* Corporate Section */}
-                <section>
-                    <h2 className='text-xl font-semibold mb-4 text-green-700'>
-                        Podcasts
-                    </h2>
-                    {podcastTopics.map((node, i) => (
-                        <TreeNode key={i} node={node} />
-                    ))}
-                </section>
+            {/* Tab Buttons */}
+            <div className="flex justify-center gap-4 mb-8">
+                <button
+                    onClick={() => setActiveTab("career")}
+                    className={`px-4 py-2 rounded-lg font-medium transition ${
+                        activeTab === "career"
+                            ? "bg-blue-600 text-white shadow"
+                            : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                    }`}
+                >
+                    Career
+                </button>
+                <button
+                    onClick={() => setActiveTab("technical")}
+                    className={`px-4 py-2 rounded-lg font-medium transition ${
+                        activeTab === "technical"
+                            ? "bg-blue-600 text-white shadow"
+                            : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                    }`}
+                >
+                    Technical
+                </button>
             </div>
+
+            {/* Conditional Rendering */}
+            {activeTab === "career" ? <CareerSection /> : <TechnicalSection />}
         </main>
     )
 }

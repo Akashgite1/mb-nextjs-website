@@ -56,7 +56,7 @@ export default function HeroBanner() {
                     </div>
 
                     {/* Logos */}
-                    <div className='absolute bottom-2 left-1/2 -translate-x-1/2 bg-white px-3 md:px-6 py-2 rounded-lg shadow-lg flex items-center justify-start gap-4 overflow-x-auto max-w-[90%]'>
+                    <div className='absolute bottom-0 left-1/2 -translate-x-1/2 bg-white px-3 md:px-6 py-2 rounded-lg shadow-lg flex items-center justify-start gap-4 overflow-x-auto md:w-auto'>
                         <Image
                             src='/images/companyLogos/tcs.jpg'
                             alt='tcs'

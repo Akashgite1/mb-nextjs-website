@@ -99,11 +99,11 @@ export const podcastTopics = [
                                 url: "https://youtu.be/9hd34sAB-jQ?si=msj3GexMJYElmS3m",
                             },
                             {
-                                label: "Video 1 - Semicolon Guy",
+                                label: "Video 2 - Semicolon Guy",
                                 url: "https://youtu.be/STy0LcUKA8M?si=p216ngoPOhirlVXj",
                             },
                             {
-                                label: "Video 1 - Bhaskar - Code4Education",
+                                label: "Video 3 - Bhaskar - Code4Education",
                                 url: "https://youtu.be/TstctXzKFpg?si=k0QvLCYvYdKmiRbl",
                             },
                         ],
@@ -136,7 +136,7 @@ export const podcastTopics = [
                                 url: "https://youtu.be/TzvxmrxTOXo?si=lomEY0Xagd1-xgSO",
                             },
                             {
-                                label: "Video 1 - Priyojit",
+                                label: "Video 2 - Priyojit",
                                 url: "https://youtu.be/F_untHUPz2Q?si=_ztXNJURohbmd6wO",
                             },
                         ],
