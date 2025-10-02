@@ -12,6 +12,13 @@ interface NewsData {
 }
 
 export const newsData: NewsData[] = [
+    {
+        date: "October 2, 2025",
+        title: "Why employees are frustrated and resigining?",
+        description:
+            "Why employees are frustrated and resigining?",
+        youtubeEmbed: "https://www.youtube.com/embed/TI4DXVcN_CY?si=MllkVl2J4Cqul2Ua"
+    },
      {
         date: "September 29, 2025",
         title: "Accenture laid off 11000 employees | 2025",

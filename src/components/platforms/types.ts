@@ -1,5 +1,12 @@
 import { JSX } from "react";
 
+type ITestimonial = {
+    name: string;
+    src: string;
+    number?: number | undefined;
+    height?: number | undefined;
+}
+
 type Platform = {
   id: number;
   type: "image" | "component";
@@ -10,6 +17,7 @@ type Platform = {
   description: string;
   link: string;
   color: string;
+  testimonials?: ITestimonial[]
 };
 
 export type PlatformCategory = {

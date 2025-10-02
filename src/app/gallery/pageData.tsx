@@ -60,7 +60,15 @@ export const course_members: GalleryItem[] = [
         description: ".NET Full Stack Developer",
         logo: "/images/companyLogos/McGraw-Hill.png",
     },
+    {
+        src: "/images/corporateCourseMembers/manish_goyal.jpeg",
+        name: "Manish Goyal",
+        description: "SDE-2 Backend Developer",
+        logo: "/images/companyLogos/linkedin.png",
+        height: 100,
+    },
 ]
+
 
 // export const corporate_events: GalleryItem[] = [
 //   {

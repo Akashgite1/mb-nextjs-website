@@ -110,7 +110,7 @@ function GallerySection({
                             src={item.src}
                             alt={item.name}
                             width={item?.width || 220}
-                            height={140}
+                            height={item?.height || 140}
                             className='rounded-lg object-cover'
                         />
                         <div className='mt-2 text-center'>

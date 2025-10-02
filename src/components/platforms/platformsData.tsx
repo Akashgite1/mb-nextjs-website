@@ -5,9 +5,9 @@ import {
     FaMedium,
     FaUsers,
     FaWhatsapp,
-    FaYoutube
+    FaYoutube,
 } from "react-icons/fa"
-import { FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6"
 import { PlatformCategory } from "./types"
 
 export const categories: PlatformCategory[] = [
@@ -24,6 +24,25 @@ export const categories: PlatformCategory[] = [
                     "Main channel with deep insights, tutorials, and trending discussions.",
                 link: "https://www.youtube.com/@ManoharBatra/playlists",
                 color: "from-red-50 to-red-100",
+                testimonials: [
+                    {
+                        name: "msg1",
+                        src: "/images/fansMessages/msg2.png",
+                    },
+                    {
+                        name: "msg1",
+                        src: "/images/fansMessages/msg3.png",
+                        height: 100,
+                    },
+                    {
+                        name: "msg1",
+                        src: "/images/fansMessages/msg4.png",
+                    },
+                    {
+                        name: "msg1",
+                        src: "/images/fansMessages/msg5.png",
+                    },
+                ],
             },
             {
                 id: 2,
@@ -69,7 +88,7 @@ export const categories: PlatformCategory[] = [
                 type: "component",
                 icon: <FaUsers className='text-red-600 text-4xl' />,
                 title: "Corporate Coaching + Whatsapp",
-                followers: "80 Members",
+                followers: "80+ Members",
                 description:
                     "Raw content with whatsapp group support for career growth, referrals, and interview prep.",
                 link: "https://collegetocorporate.akamai.net.in/new-courses/2-working-professionals-career-guide",
@@ -80,7 +99,7 @@ export const categories: PlatformCategory[] = [
                 type: "component",
                 icon: <FaUsers className='text-red-600 text-4xl' />,
                 title: "College Coaching + Whatsapp",
-                followers: "2 Members",
+                followers: "2+ Members",
                 description:
                     "Raw content with whatsapp group support for career growth, referrals, and interview prep.",
                 link: "https://collegetocorporate.akamai.net.in/new-courses/1-college-students-career-guide",
@@ -108,7 +127,8 @@ export const categories: PlatformCategory[] = [
                 img: "/images/topmate.jpg",
                 title: "GenAI Full Stack 100% Interview Ready",
                 followers: "2.5k+ Bookings",
-                description: "Frontend, React, System Design, GenAI - Interview + Topics",
+                description:
+                    "Frontend, React, System Design, GenAI - Interview + Topics",
                 link: "https://topmate.io/manohar_batra/1587369?utm_source=public_profile&utm_campaign=manohar_batra",
                 color: "from-blue-50 to-blue-100",
             },
@@ -149,7 +169,7 @@ export const categories: PlatformCategory[] = [
                 id: 5,
                 type: "component",
                 icon: <FaMedium className='text-black text-4xl' />,
-                title: "Medium",
+                title: "Medium for FREE",
                 followers: "31+ Followers",
                 description:
                     "Articles on React.js System Design, Frontend - Detailed Topic and Interview Questions",
@@ -160,10 +180,9 @@ export const categories: PlatformCategory[] = [
                 id: 6,
                 type: "component",
                 icon: <FaUsers className='text-red-600 text-4xl' />,
-                title: "DSA",
+                title: "DSA for FREE",
                 followers: "100+ Followers",
-                description:
-                    "Practise DSA by Manish",
+                description: "Practise DSA with Manish",
                 link: "https://manishdsa.netlify.app/",
                 color: "from-gray-50 to-gray-100",
             },
@@ -180,7 +199,7 @@ export const categories: PlatformCategory[] = [
                 title: "Whatsapp",
                 followers: "370+ Members",
                 description:
-                    "Latest IT News + Real Employees Experiences",
+                    "Latest Updates & IT News + Real Employees Experiences",
                 link: "https://chat.whatsapp.com/LfsYDSr4rBL3TA8Y11Vc4V",
                 color: "from-green-50 to-green-100",
             },
@@ -190,8 +209,7 @@ export const categories: PlatformCategory[] = [
                 icon: <FaXTwitter className='text-black text-4xl' />,
                 title: "Twitter",
                 followers: "169+ Members",
-                description:
-                    "Interview Questions + Corporate & Salary Insights",
+                description: "My feelings in 280 characters",
                 link: "https://x.com/manohar_batra",
                 color: "from-blue-50 to-blue-100",
             },
@@ -202,7 +220,7 @@ export const categories: PlatformCategory[] = [
                 title: "Github",
                 followers: "63+ Members",
                 description:
-                    "Interview Questions + Corporate & Salary Insights",
+                    "Frontend Interview Repository - React, System Design, Projects",
                 link: "https://github.com/manoharbatra",
                 color: "from-red-50 to-red-100",
             },

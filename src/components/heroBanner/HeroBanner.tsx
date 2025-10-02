@@ -21,12 +21,6 @@ export default function HeroBanner() {
                     <h1 className='text-3xl md:text-5xl font-bold text-gray-900'>
                         College to Corporate
                     </h1>
-                    {/* <h2 className='text-2xl md:text-3xl text-gray-700'>
-                        by{" "}
-                        <span className='font-semibold text-3xl md:text-4xl'>
-                            Manohar Batra
-                        </span>
-                    </h2> */}
 
                     {/* Rotating Text */}
                     <p className='text-lg md:text-2xl font-medium text-gray-800 transition-opacity duration-500'>
@@ -66,7 +60,7 @@ export default function HeroBanner() {
                         <Image
                             src='/images/companyLogos/tcs.jpg'
                             alt='tcs'
-                            width={60}
+                            width={40}
                             height={10}
                             className='rounded-lg object-cover flex-shrink-0'
                         />

@@ -16,6 +16,7 @@ const data: IFansFeedback[] = [
   { source: "youtube", img: "/images/fansMessages/msg2.png", position: "middle"},
   { source: "youtube", img: "/images/fansMessages/msg3.png", position: "middle"},
   { source: "youtube", img: "/images/fansMessages/msg4.png", position: "middle"},
+  { source: "youtube", img: "/images/fansMessages/msg5.png", position: "middle"},
 ]
 
 export default function FansFeedback() {
