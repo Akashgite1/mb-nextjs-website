@@ -19,7 +19,7 @@ export const categories: PlatformCategory[] = [
                 type: "component",
                 icon: <FaYoutube className='text-red-600 text-4xl' />,
                 title: "College to Corporate",
-                followers: "94K Followers",
+                followers: "97K+ Followers",
                 description:
                     "Main channel with deep insights, tutorials, and trending discussions.",
                 link: "https://www.youtube.com/@ManoharBatra/playlists",
@@ -49,18 +49,24 @@ export const categories: PlatformCategory[] = [
                 type: "component",
                 icon: <FaYoutube className='text-red-600 text-4xl' />,
                 title: "Code & Tech",
-                followers: "1.6K Followers",
+                followers: "1.7K+ Followers",
                 description:
                     "Focused technical coding tutorials & problem-solving.",
                 link: "https://www.youtube.com/@RoadToCodeWithMB",
                 color: "from-purple-50 to-purple-100",
+                testimonials: [
+                    {
+                        name: "msg6",
+                        src: "/images/fansMessages/msg6.jpg",
+                    },
+                ]
             },
             {
                 id: 3,
                 type: "component",
                 icon: <FaLinkedin className='text-blue-700 text-4xl' />,
                 title: "LinkedIn",
-                followers: "36K Followers",
+                followers: "36K+ Followers",
                 description:
                     "Summaries of corporate employee experiences, latest news, trends, and tech (React/Next.js + System Design).",
                 link: "https://www.linkedin.com/in/manoharbatra/",

@@ -52,7 +52,7 @@ export const topics = [
                 links: [
                     {
                         label: "Article",
-                        url: "https://medium.com/@contactmanoharbatra/js-closures-8f9101a4a6ea",
+                        // url: "https://medium.com/@contactmanoharbatra/js-closures-8f9101a4a6ea",
                     },
                 ],
             },
@@ -61,7 +61,7 @@ export const topics = [
                 links: [
                     {
                         label: "Article",
-                        url: "https://medium.com/@contactmanoharbatra/js-split-and-splice-e9faef55f818",
+                        // url: "https://medium.com/@contactmanoharbatra/js-split-and-splice-e9faef55f818",
                     },
                 ],
             },
@@ -79,7 +79,7 @@ export const topics = [
                 links: [
                     {
                         label: "Article",
-                        url: "https://medium.com/@contactmanoharbatra/generator-functions-vs-async-await-24270dc7bee0",
+                        // url: "https://medium.com/@contactmanoharbatra/generator-functions-vs-async-await-24270dc7bee0",
                     },
                 ],
             },
@@ -120,7 +120,7 @@ export const topics = [
                 links: [
                     {
                         label: "Article",
-                        url: "https://medium.com/@contactmanoharbatra/middlewares-in-react-3e4391c7f7cf",
+                        // url: "https://medium.com/@contactmanoharbatra/middlewares-in-react-3e4391c7f7cf",
                     },
                 ],
             },
@@ -129,7 +129,7 @@ export const topics = [
                 links: [
                     {
                         label: "Article",
-                        url: "https://medium.com/@contactmanoharbatra/reactjs-find-the-mistake-in-code-0acf30a0200f",
+                        // url: "https://medium.com/@contactmanoharbatra/reactjs-find-the-mistake-in-code-0acf30a0200f",
                     },
                 ],
             },
@@ -147,7 +147,7 @@ export const topics = [
                 links: [
                     {
                         label: "Article",
-                        url: "https://medium.com/@contactmanoharbatra/crack-react-interview-easily-47cabcd8be22",
+                        // url: "https://medium.com/@contactmanoharbatra/crack-react-interview-easily-47cabcd8be22",
                     },
                 ],
             },
@@ -174,7 +174,7 @@ export const topics = [
                 links: [
                     {
                         label: "Article",
-                        url: "https://medium.com/@contactmanoharbatra/redux-toolkit-vs-usecontext-9b7ff23052f0",
+                        // url: "https://medium.com/@contactmanoharbatra/redux-toolkit-vs-usecontext-9b7ff23052f0",
                     },
                 ],
             },

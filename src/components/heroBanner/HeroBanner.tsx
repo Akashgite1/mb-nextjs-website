@@ -29,9 +29,9 @@ export default function HeroBanner() {
                     <p className='text-base md:text-2xl text-gray-600'>
                         {heroData[index].row2}
                     </p>
-                    <p className='text-sm md:text-xl text-gray-600'>
+                    {/* <p className='text-sm md:text-xl text-gray-600'>
                         {heroData[index]?.row3}
-                    </p>
+                    </p> */}
                 </div>
 
                 {/* Right Side */}

@@ -8,10 +8,6 @@ export default function RoadmapPage() {
 
     return (
         <main className="pl-6 pr-6 pb-6 pt-4 max-w-6xl mx-auto">
-            <h1 className="text-2xl font-bold mb-4 text-center">
-                Here are free guidance videos, check out course for premium
-                content 🚀
-            </h1>
 
             {/* Tab Buttons */}
             <div className="flex justify-center gap-4 mb-8">
@@ -36,6 +32,10 @@ export default function RoadmapPage() {
                     Technical
                 </button>
             </div>
+            <h1 className="text-2xl font-bold mb-4 text-center">
+                {`Here are ${activeTab === "technical" ? "FREE articles" : "FREE Videos"}, check out course for premium
+                content 🚀`}
+            </h1>
 
             {/* Conditional Rendering */}
             {activeTab === "career" ? <CareerSection /> : <TechnicalSection />}

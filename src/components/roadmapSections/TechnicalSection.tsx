@@ -25,10 +25,10 @@ function Accordion({
     }, [globalExpand])
 
     return (
-        <div className="border rounded-lg mb-4 overflow-hidden">
+        <div className='border rounded-lg mb-4 overflow-hidden'>
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full flex justify-between items-center px-4 py-3 text-left text-lg font-semibold bg-gray-100 hover:bg-gray-200"
+                className='w-full flex justify-between items-center px-4 py-3 text-left text-lg font-semibold bg-gray-100 hover:bg-gray-200'
             >
                 {title} {""} {length ? `(${length})` : ""}
                 <span
@@ -44,7 +44,7 @@ function Accordion({
                     isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
                 } overflow-hidden`}
             >
-                <div className="p-4">{children}</div>
+                <div className='p-4'>{children}</div>
             </div>
         </div>
     )
@@ -55,51 +55,61 @@ function DataTable({ rows }: { rows: any[] }) {
     const [expandedRow, setExpandedRow] = useState<number | null>(null)
 
     return (
-        <table className="w-full border-collapse border border-gray-300">
+        <table className='w-full border-collapse border border-gray-300'>
             <thead>
-                <tr className="bg-gray-200">
-                    <th className="border border-gray-300 px-4 py-2 w-12">#</th>
-                    <th className="border border-gray-300 px-4 py-2">Title</th>
-                    <th className="border border-gray-300 px-4 py-2">Links</th>
-                    <th className="border border-gray-300 px-4 py-2 w-12"></th>
+                <tr className='bg-gray-200'>
+                    <th className='border border-gray-300 px-4 py-2 w-12'>#</th>
+                    <th className='border border-gray-300 px-4 py-2'>Title</th>
+                    <th className='border border-gray-300 px-4 py-2'>Links</th>
+                    <th className='border border-gray-300 px-4 py-2 w-12'></th>
                 </tr>
             </thead>
             <tbody>
                 {rows.map((row, idx) => (
                     <>
-                        <tr key={idx} className="hover:bg-gray-50">
-                            <td className="border px-4 py-2 text-center">
+                        <tr key={idx} className='hover:bg-gray-50'>
+                            <td className='border px-4 py-2 text-center'>
                                 {idx + 1}
                             </td>
-                            <td className="border px-4 py-2">{row.title}</td>
-                            <td className="border px-4 py-2">
-                                <div className="flex gap-2">
+                            <td className='border px-4 py-2'>{row.title}</td>
+                            <td className='border px-4 py-2'>
+                                <div className='flex gap-2 flex-wrap'>
                                     {row.links?.map(
                                         (
-                                            link: { label: string; url: string },
+                                            link: {
+                                                label: string
+                                                url?: string
+                                            },
                                             li: number
-                                        ) => (
-                                            <a
-                                                key={li}
-                                                href={link.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-blue-600 underline"
-                                            >
-                                                {link.label}
-                                            </a>
-                                        )
+                                        ) =>
+                                            link.url ? (
+                                                <a
+                                                    key={li}
+                                                    href={link.url}
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
+                                                    className='text-blue-600 underline'
+                                                >
+                                                    {link.label}
+                                                </a>
+                                            ) : (
+                                                <span
+                                                    key={li}
+                                                    className='text-gray-500 italic'
+                                                >
+                                                    {link.label}
+                                                </span>
+                                            )
                                     )}
                                 </div>
                             </td>
-                            <td className="border px-4 py-2 text-center">
+
+                            <td className='border px-4 py-2 text-center'>
                                 {row.rowData && (
                                     <button
                                         onClick={() =>
                                             setExpandedRow(
-                                                expandedRow === idx
-                                                    ? null
-                                                    : idx
+                                                expandedRow === idx ? null : idx
                                             )
                                         }
                                         className={`transform transition-transform ${
@@ -116,7 +126,7 @@ function DataTable({ rows }: { rows: any[] }) {
 
                         {row.rowData && (
                             <tr>
-                                <td colSpan={4} className="p-0">
+                                <td colSpan={4} className='p-0'>
                                     <div
                                         className={`transition-all duration-500 ease-in-out ${
                                             expandedRow === idx
@@ -124,7 +134,7 @@ function DataTable({ rows }: { rows: any[] }) {
                                                 : "max-h-0 opacity-0"
                                         } overflow-hidden`}
                                     >
-                                        <div className="p-4 bg-gray-50">
+                                        <div className='p-4 bg-gray-50'>
                                             <DataTable rows={row.rowData} />
                                         </div>
                                     </div>
@@ -145,13 +155,13 @@ export default function TechnicalSection() {
     return (
         <div>
             {/* Expand/Collapse toggle */}
-            <div className="flex items-center justify-end mb-4 gap-2">
-                <span className="font-medium">Expand/Collapse all sections</span>
+            <div className='flex items-center justify-end mb-4 gap-2'>
+                <span className='font-medium'>
+                    Expand/Collapse all sections
+                </span>
                 <button
                     onClick={() =>
-                        setAllExpanded(
-                            allExpanded === true ? false : true
-                        )
+                        setAllExpanded(allExpanded === true ? false : true)
                     }
                     className={`w-8 h-8 rounded-full flex items-center justify-center border transition ${
                         allExpanded
