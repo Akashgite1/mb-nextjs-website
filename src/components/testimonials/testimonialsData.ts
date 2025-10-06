@@ -35,4 +35,9 @@ export const testimonials: Testimonial[] = [
         name: "Arjun",
         logo: "/images/gallery/company/amazon.webp",
     },
+    {
+        text: "Share real life insights, roadmaps and his personal experience which could be really helpful. Great practical knowledge on the IT industry and shared some great advices as well",
+        name: "Arjun",
+        logo: "/images/gallery/company/amazon.webp",
+    },
 ]
