@@ -38,7 +38,7 @@ const platforms = [
         id: 3,
         type: "component",
         icon: <FaYoutube className='text-red-600 text-4xl' />,
-        title: "Road to Code",
+        title: "Code & Tech",
         followers: "1.6K Followers",
         description: "Focused technical coding tutorials & problem-solving.",
         link: "https://youtube.com/yourchannel",
