@@ -131,7 +131,7 @@ export const categories: PlatformCategory[] = [
                 id: 1,
                 type: "image",
                 img: "/images/topmate.jpg",
-                title: "GenAI Full Stack 100% Interview Ready",
+                title: "Frontend 100% Interview Ready",
                 followers: "2.5k+ Bookings",
                 description:
                     "Frontend, React, System Design, GenAI - Interview + Topics",

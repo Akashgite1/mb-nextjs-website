@@ -1,3 +1,8 @@
+export const COURSE_LINK = {
+    ReactJS: "www.link1.com",
+    Javascript: "www.link2.com",
+}
+
 export const collegeTopics = [
     {
         title: "Student – How to get a job",
@@ -72,7 +77,7 @@ export const podcastTopics = [
     {
         title: "Podcast",
         children: [
-          {
+            {
                 title: "Product Based Companies",
                 links: [
                     {
