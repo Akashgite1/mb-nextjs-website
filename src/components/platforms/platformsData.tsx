@@ -59,7 +59,7 @@ export const categories: PlatformCategory[] = [
                         name: "msg6",
                         src: "/images/fansMessages/msg6.jpg",
                     },
-                ]
+                ],
             },
             {
                 id: 3,
@@ -71,6 +71,32 @@ export const categories: PlatformCategory[] = [
                     "Summaries of corporate employee experiences, latest news, trends, and tech (React/Next.js + System Design).",
                 link: "https://www.linkedin.com/in/manoharbatra/",
                 color: "from-blue-50 to-blue-100",
+                testimonials: [
+                    {
+                        name: "linkedinmsg1",
+                        src: "/images/fansMessages/linkedinmsg1.png",
+                        width: 400,
+                        height: 100,
+                    },
+                    {
+                        name: "linkedinmsg2",
+                        src: "/images/fansMessages/linkedinmsg2.png",
+                        width: 400,
+                        height: 100,
+                    },
+                    {
+                        name: "linkedinmsg3",
+                        src: "/images/fansMessages/linkedinmsg3.png",
+                        width: 400,
+                        height: 130,
+                    },
+                    {
+                        name: "linkedinmsg4",
+                        src: "/images/fansMessages/linkedinmsg4.png",
+                        width: 400,
+                        height: 130,
+                    },
+                ],
             },
             {
                 id: 4,
@@ -87,7 +113,7 @@ export const categories: PlatformCategory[] = [
         ],
     },
     {
-        label: "Courses & 1:1 Guidance",
+        label: "Career Coaching",
         items: [
             {
                 id: 1,
@@ -99,6 +125,12 @@ export const categories: PlatformCategory[] = [
                     "Raw content with whatsapp group support for career growth, referrals, and interview prep.",
                 link: "https://collegetocorporate.akamai.net.in/new-courses/2-working-professionals-career-guide",
                 color: "from-red-50 to-red-100",
+                testimonials: [
+                    {
+                        name: "coursemsg1",
+                        src: "/images/fansMessages/coursemsg1.png",
+                    },
+                ],
             },
             {
                 id: 2,
@@ -107,26 +139,85 @@ export const categories: PlatformCategory[] = [
                 title: "College Coaching + Whatsapp",
                 followers: "2+ Members",
                 description:
-                    "Raw content with whatsapp group support for career growth, referrals, and interview prep.",
+                    "Raw content with whatsapp group support for jobs, referrals, and interview prep.",
                 link: "https://collegetocorporate.akamai.net.in/new-courses/1-college-students-career-guide",
                 color: "from-red-50 to-red-100",
             },
+        ],
+    },
+    {
+        label: "1:1 Mentorship/Guidance",
+        items: [
             {
-                id: 3,
+                id: 1,
                 type: "image",
                 img: "/images/topmate.jpg",
-                title: "1:1 Guidance",
+                title: "Career + React Guidance",
                 followers: "2k+ Bookings",
                 description:
                     "1:1 Guidance on frontend, career, and corporate insights.",
                 link: "https://www.topmate.io/manohar",
                 color: "from-blue-50 to-blue-100",
+                testimonials: [
+                    {
+                        name: "topmatemsg1",
+                        src: "/images/fansMessages/topmatemsg1.png",
+                        width: 400,
+                        height: 230,
+                    },
+                    {
+                        name: "topmatemsg2",
+                        src: "/images/fansMessages/topmatemsg2.png",
+                        width: 400,
+                        height: 230,
+                    },
+                    {
+                        name: "topmatemsg3",
+                        src: "/images/fansMessages/topmatemsg3.png",
+                        width: 400,
+                        height: 230,
+                    },
+                    {
+                        name: "topmatemsg5",
+                        src: "/images/fansMessages/topmatemsg5.png",
+                        width: 400,
+                        height: 230,
+                    },
+                    {
+                        name: "topmatemsg4",
+                        src: "/images/fansMessages/topmatemsg4.png",
+                        width: 400,
+                        height: 150,
+                    },
+                ],
+            },
+            {
+                id: 2,
+                type: "image",
+                img: "/images/topmate.jpg",
+                title: "Java Backend Guidance",
+                followers: "70+ Bookings",
+                description:
+                    "1:1 Guidance on Java, Springboot, Kafka, System Design, and career.",
+                link: "https://topmate.io/naveen_metta",
+                color: "from-blue-50 to-blue-100",
             },
         ],
     },
     {
-        label: "Self-Paced",
+        label: "Courses & E-Docs",
         items: [
+            {
+                id: 1,
+                type: "image",
+                img: "/images/topmate.jpg",
+                title: "Companies Hiring in 2025",
+                followers: "4k+ Bookings",
+                description:
+                    "Companies List where my subscribers are placed at good packages",
+                link: "https://www.topmate.io/manohar",
+                color: "from-blue-50 to-blue-100",
+            },
             {
                 id: 1,
                 type: "image",
@@ -139,18 +230,28 @@ export const categories: PlatformCategory[] = [
                 color: "from-blue-50 to-blue-100",
             },
             {
-                id: 2,
+                id: 3,
                 type: "image",
-                img: "/images/topmate.jpg",
-                title: "Companies Hiring in 2025",
-                followers: "4k+ Bookings",
+                img: "/images/techLogos/javaLogo.jpg",
+                title: "Java Backend 100% Interview Ready",
+                followers: "70+ Followers",
                 description:
-                    "Companies List where my subscribers are placed at good packages",
-                link: "https://www.topmate.io/manohar",
-                color: "from-blue-50 to-blue-100",
+                    "Articles on Java, Springboot, Kafka - Detailed Topic and Interview Questions",
+                link: "https://topmate.io/manohar_batra/1751070?utm_source=public_profile&utm_campaign=manohar_batra",
+                color: "from-purple-50 to-purple-100",
             },
             {
-                id: 3,
+                id: 4,
+                type: "component",
+                icon: <FaUsers className='text-red-600 text-4xl' />,
+                title: "DSA for FREE",
+                followers: "100+ Followers",
+                description: "Practise DSA with Manish",
+                link: "https://manishdsa.netlify.app/",
+                color: "from-purple-50 to-purple-100",
+            },
+            {
+                id: 5,
                 type: "image",
                 img: "/images/topmate.jpg",
                 title: "College Students - Interview Pkg - FREE",
@@ -159,38 +260,6 @@ export const categories: PlatformCategory[] = [
                     "Interview Prep for Top 15 Service-Based Companies",
                 link: "https://topmate.io/manohar_batra/1623127?utm_source=public_profile&utm_campaign=manohar_batra",
                 color: "from-blue-50 to-blue-100",
-            },
-            {
-                id: 4,
-                type: "image",
-                img: "/images/topmate.jpg",
-                title: "Java Backend 100% Interview Ready",
-                followers: "70+ Followers",
-                description:
-                    "Articles on Java, Springboot, Kafka - Detailed Topic and Interview Questions",
-                link: "https://topmate.io/manohar_batra/1751070?utm_source=public_profile&utm_campaign=manohar_batra",
-                color: "from-gray-50 to-gray-100",
-            },
-            {
-                id: 5,
-                type: "component",
-                icon: <FaMedium className='text-black text-4xl' />,
-                title: "Medium for FREE",
-                followers: "31+ Followers",
-                description:
-                    "Articles on React.js System Design, Frontend - Detailed Topic and Interview Questions",
-                link: "https://medium.com/@contactmanoharbatra",
-                color: "from-gray-50 to-gray-100",
-            },
-            {
-                id: 6,
-                type: "component",
-                icon: <FaUsers className='text-red-600 text-4xl' />,
-                title: "DSA for FREE",
-                followers: "100+ Followers",
-                description: "Practise DSA with Manish",
-                link: "https://manishdsa.netlify.app/",
-                color: "from-gray-50 to-gray-100",
             },
             // e-docs platforms
         ],
@@ -226,9 +295,20 @@ export const categories: PlatformCategory[] = [
                 title: "Github",
                 followers: "63+ Members",
                 description:
-                    "Frontend Interview Repository - React, System Design, Projects",
+                    "React, Machine Coding Rounds, Projects",
                 link: "https://github.com/manoharbatra",
                 color: "from-red-50 to-red-100",
+            },
+            {
+                id: 4,
+                type: "component",
+                icon: <FaMedium className='text-black text-4xl' />,
+                title: "Medium",
+                followers: "31+ Followers",
+                description:
+                    "Articles on React.js System Design, Frontend - Detailed Topic and Interview Questions",
+                link: "https://medium.com/@contactmanoharbatra",
+                color: "from-gray-50 to-gray-100",
             },
         ],
     },

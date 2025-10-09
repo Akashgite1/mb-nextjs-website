@@ -26,6 +26,13 @@ export const creators: GalleryItem[] = [
     width: 280,
   },
   {
+    src: "/images/corporate/sufiya_khan.png",
+    name: "Sufiya Khan",
+    description: "Associate Partner - Front End Exp",
+    logo: "/images/companyLogos/ibm.jpg",
+    width: 230,
+  },
+  {
     src: "/images/corporate/amit_prashant.jpeg",
     name: "Prashant + Amit",
     description: "Senior Project Managers",

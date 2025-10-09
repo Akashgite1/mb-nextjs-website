@@ -15,7 +15,7 @@ export default function Platforms() {
             id='home'
             className='min-h-screen bg-gradient-to-b from-white to-gray-100 text-gray-900'
         >
-            <header className='text-center pt-0 pr-10 pb-4 pl-6 px-6'>
+            <header className='text-center pt-0 pr-10 pb-2 pl-6 px-6'>
                 <motion.h1
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -26,7 +26,7 @@ export default function Platforms() {
                 </motion.h1>
             </header>
 
-            <div className='max-w-8xl mx-auto pb-20 space-y-12'>
+            <div className='max-w-8xl mx-auto pb-8 space-y-12'>
                 {categories.map((cat) => (
                     <div key={cat.label}>
                         {/* Category Heading */}

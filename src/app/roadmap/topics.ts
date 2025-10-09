@@ -52,11 +52,15 @@ export const corporateTopics = [
                 ],
             },
             {
-                title: "Dual Employment",
+                title: "Background Verification",
                 links: [
                     {
-                        label: "Dual Employment",
+                        label: "Dual Employment Video-1",
                         url: "https://www.youtube.com/watch?v=cO3PE7h3ByE",
+                    },
+                    {
+                        label: "Dual Employment Video-2",
+                        url: "https://youtu.be/mlriEZCj_p4",
                     },
                 ],
             },
@@ -66,6 +70,14 @@ export const corporateTopics = [
                     {
                         label: "Video-1",
                         url: "https://www.youtube.com/watch?v=ZEfUwTdMlXU",
+                    },
+                    {
+                        label: "Video-2",
+                        url: "https://youtu.be/dbC0qbGyqm4",
+                    },
+                    {
+                        label: "Video-2",
+                        url: "hhttps://youtu.be/hsQpAPWKwO8",
                     },
                 ],
             },
@@ -110,6 +122,10 @@ export const podcastTopics = [
                             {
                                 label: "Video 3 - Bhaskar - Code4Education",
                                 url: "https://youtu.be/TstctXzKFpg?si=k0QvLCYvYdKmiRbl",
+                            },
+                            {
+                                label: "Video 4 - Aman",
+                                url: "https://youtu.be/Yab3lQMzs4I",
                             },
                         ],
                     },

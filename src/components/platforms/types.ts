@@ -4,6 +4,7 @@ type ITestimonial = {
     name: string;
     src: string;
     number?: number | undefined;
+    width?: number | undefined;
     height?: number | undefined;
 }
 
