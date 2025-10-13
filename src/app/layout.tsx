@@ -9,7 +9,8 @@ export const metadata: Metadata = {
   title: "Manohar Batra",
   description: "College to Corporate",
   icons: {
-    icon: "/images/websiteLogo/websiteLogo.jpeg",  // <- replace with your file in /public
+    // icon: "/images/websiteLogo/websiteLogo.jpeg",  // <- replace with your file in /public
+    icon: "/lappi.ico",  // <- replace with your file in /public
   },
 };
 
