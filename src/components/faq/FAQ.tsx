@@ -27,7 +27,7 @@ export default function FAQ() {
     return (
         <section id='faq' className='mx-auto'>
             {/* Header */}
-            <div className='flex flex-col md:flex-row justify-center md:justify-between items-center gap-3 mb-8 text-center md:text-left'>
+            <div className='flex flex-col md:flex-row justify-center items-center gap-3 mb-8 text-center md:text-left'>
                 <h2 className='text-2xl sm:text-3xl font-bold text-black'>
                     Frequently Asked Questions with Solutions
                 </h2>

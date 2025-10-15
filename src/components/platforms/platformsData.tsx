@@ -21,7 +21,7 @@ export const categories: PlatformCategory[] = [
                 title: "College to Corporate",
                 followers: "97K+ Followers",
                 description:
-                    "Main channel with deep insights, tutorials, and trending discussions.",
+                    "Listen Career and Salary insights, Corporate News and Growth Tips.",
                 link: "https://www.youtube.com/@ManoharBatra/playlists",
                 color: "from-red-50 to-red-100",
                 testimonials: [
@@ -113,40 +113,7 @@ export const categories: PlatformCategory[] = [
         ],
     },
     {
-        label: "Career Coaching",
-        items: [
-            {
-                id: 1,
-                type: "component",
-                icon: <FaUsers className='text-red-600 text-4xl' />,
-                title: "Corporate Coaching + Whatsapp",
-                followers: "80+ Members",
-                description:
-                    "Raw content with whatsapp group support for career growth, referrals, and interview prep.",
-                link: "https://collegetocorporate.akamai.net.in/new-courses/2-working-professionals-career-guide",
-                color: "from-red-50 to-red-100",
-                testimonials: [
-                    {
-                        name: "coursemsg1",
-                        src: "/images/fansMessages/coursemsg1.png",
-                    },
-                ],
-            },
-            {
-                id: 2,
-                type: "component",
-                icon: <FaUsers className='text-red-600 text-4xl' />,
-                title: "College Coaching + Whatsapp",
-                followers: "2+ Members",
-                description:
-                    "Raw content with whatsapp group support for jobs, referrals, and interview prep.",
-                link: "https://collegetocorporate.akamai.net.in/new-courses/1-college-students-career-guide",
-                color: "from-red-50 to-red-100",
-            },
-        ],
-    },
-    {
-        label: "1:1 Mentorship/Guidance",
+        label: "1:1 Guidance & Career Coaching",
         items: [
             {
                 id: 1,
@@ -193,12 +160,45 @@ export const categories: PlatformCategory[] = [
             },
             {
                 id: 2,
+                type: "component",
+                icon: <FaUsers className='text-red-600 text-4xl' />,
+                title: "Corporate Coaching + Whatsapp",
+                followers: "80+ Members",
+                description:
+                    "Raw content with whatsapp group support for career growth, referrals, and interview prep.",
+                link: "https://collegetocorporate.akamai.net.in/new-courses/2-working-professionals-career-guide",
+                color: "from-red-50 to-red-100",
+                testimonials: [
+                    {
+                        name: "coursemsg1",
+                        src: "/images/fansMessages/coursemsg1.png",
+                    },
+                ],
+            },
+            {
+                id: 3,
+                type: "component",
+                icon: <FaUsers className='text-red-600 text-4xl' />,
+                title: "College Coaching + Whatsapp",
+                followers: "2+ Members",
+                description:
+                    "Raw content with whatsapp group support for jobs, referrals, and interview prep.",
+                link: "https://collegetocorporate.akamai.net.in/new-courses/1-college-students-career-guide",
+                color: "from-red-50 to-red-100",
+            },
+        ],
+    },
+    {
+        label: "1:1 Guidance in other Technologies",
+        items: [
+            {
+                id: 1,
                 type: "image",
                 img: "/images/topmate.jpg",
-                title: "Java Backend Guidance",
+                title: "1:1 in Java Backend",
                 followers: "70+ Bookings",
                 description:
-                    "1:1 Guidance on Java, Springboot, Kafka, System Design, and career.",
+                    "1:1 Guidance or Mock Interview on Java, Springboot, Kafka, System Design, and career.",
                 link: "https://topmate.io/naveen_metta",
                 color: "from-blue-50 to-blue-100",
             },
@@ -214,14 +214,14 @@ export const categories: PlatformCategory[] = [
                 title: "Companies Hiring in 2025",
                 followers: "4k+ Bookings",
                 description:
-                    "Companies List where my subscribers are placed at good packages",
+                    "700+ Companies List (inclding Remote) where my subscribers are placed at 50+ LPA packages too",
                 link: "https://www.topmate.io/manohar",
                 color: "from-blue-50 to-blue-100",
             },
             {
                 id: 1,
                 type: "image",
-                img: "/images/topmate.jpg",
+                img: "/images/techLogos/reactJS.png",
                 title: "Frontend 100% Interview Ready",
                 followers: "2.5k+ Bookings",
                 description:
@@ -232,7 +232,7 @@ export const categories: PlatformCategory[] = [
             {
                 id: 3,
                 type: "image",
-                img: "/images/techLogos/javaLogo.jpg",
+                img: "/images/techLogos/java.jpg",
                 title: "Java Backend 100% Interview Ready",
                 followers: "70+ Followers",
                 description:
@@ -294,8 +294,7 @@ export const categories: PlatformCategory[] = [
                 icon: <FaGithub className='text-black text-4xl' />,
                 title: "Github",
                 followers: "63+ Members",
-                description:
-                    "React, Machine Coding Rounds, Projects",
+                description: "React, Machine Coding Rounds, Projects",
                 link: "https://github.com/manoharbatra",
                 color: "from-red-50 to-red-100",
             },

@@ -80,7 +80,7 @@ function GallerySection({
 
     return (
         <section className='w-full py-10 overflow-hidden'>
-            <h1 className='text-2xl font-bold mb-4 text-center text-black'>
+            <h1 className='text-2xl sm:text-3xl font-bold mb-4 text-center text-black'>
                 {title}
             </h1>
             <div
