@@ -2,7 +2,6 @@
 
 import React, { useRef, useState, useEffect } from "react"
 import Image from "next/image"
-import "./Gallery.css"
 import {
     creators,
     course_members,
@@ -12,6 +11,7 @@ import {
     random_places,
     company_events,
 } from "./pageData"
+import "./Gallery.css"
 
 function GallerySection({
     title,

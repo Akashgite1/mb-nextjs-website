@@ -173,6 +173,12 @@ export const categories: PlatformCategory[] = [
                         name: "coursemsg1",
                         src: "/images/fansMessages/coursemsg1.png",
                     },
+                    {
+                        name: "coursemsg2",
+                        src: "/images/fansMessages/coursemsg2.png",
+                        width: 400,
+                        height: 180,
+                    },
                 ],
             },
             {

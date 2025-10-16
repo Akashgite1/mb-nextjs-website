@@ -18,7 +18,6 @@ export default function Home() {
             <FAQ />
             <FansFeedback />
             {/* <Testimonials /> */}
-
             </div>
         </div>
     )
