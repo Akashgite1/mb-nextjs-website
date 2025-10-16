@@ -44,11 +44,10 @@ export default function SudokuPage() {
                         key={size}
                         onClick={() => setSelectedSize(size)}
                         className={`px-4 py-2 rounded-full text-sm font-medium transition 
-                        ${
-                            selectedSize === size
+                        ${selectedSize === size
                                 ? "bg-blue-600 text-white"
                                 : "bg-gray-200 hover:bg-blue-100"
-                        }`}
+                            }`}
                     >
                         {size}
                     </button>
@@ -56,7 +55,9 @@ export default function SudokuPage() {
             </div>
 
             {/* Board Renderer */}
-            <div className="flex justify-center">{renderBoard()}</div>
+            <div className="flex justify-center">
+                {renderBoard()}
+            </div>
         </main>
     )
 }

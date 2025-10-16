@@ -28,7 +28,27 @@ export default function SudokuBoard4x4() {
     const [board, setBoard] = useState(
         sudokuPuzzles[puzzleIndex].map((row) => [...row])
     )
-    const [showModal, setShowModal] = useState(false) // 👈 for centered popup
+    const [showModal, setShowModal] = useState(false)
+    const [time, setTime] = useState(0)
+    const [isRunning, setIsRunning] = useState(true)
+
+    // Timer effect
+    React.useEffect(() => {
+        let intervalId: NodeJS.Timeout
+        if (isRunning) {
+            intervalId = setInterval(() => {
+                setTime((prevTime) => prevTime + 1)
+            }, 1000)
+        }
+        return () => clearInterval(intervalId)
+    }, [isRunning])
+
+    // Format time to MM:SS
+    const formatTime = (seconds: number) => {
+        const mins = Math.floor(seconds / 60)
+        const secs = seconds % 60
+        return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`
+    }
 
     const handleChange = (row: number, col: number, value: string) => {
         if (/^[1-4]?$/.test(value)) {
@@ -45,16 +65,13 @@ export default function SudokuBoard4x4() {
         )
 
         if (valid && complete) {
+            setIsRunning(false)
             const isLast = puzzleIndex === sudokuPuzzles.length - 1
-            if (isLast) {
-                setShowModal(true)
-            } else {
-                setShowModal(true)
-            }
+            setShowModal(true)
         } else if (valid) {
             toast("✅ Looks good so far… keep going!", { icon: "🧠" })
         } else {
-            toast.error("❌ There’s a mistake somewhere.")
+            toast.error("❌ There's a mistake somewhere.")
         }
     }
 
@@ -63,23 +80,30 @@ export default function SudokuBoard4x4() {
         if (nextIndex < sudokuPuzzles.length) {
             setPuzzleIndex(nextIndex)
             setBoard(sudokuPuzzles[nextIndex].map((row) => [...row]))
+            setTime(0)
+            setIsRunning(true)
         }
     }
 
     const resetBoard = () => {
         setBoard(sudokuPuzzles[puzzleIndex].map((row) => [...row]))
+        setTime(0)
+        setIsRunning(true)
         toast("♻️ Board reset!")
     }
 
     return (
         <>
-            {/* Main Sudoku UI */}
             <div className='flex flex-col items-center mt-10'>
                 <h1 className='text-3xl font-bold mb-4'>
                     🧩 Easy 4×4 Sudoku #{puzzleIndex + 1}
                 </h1>
+                
+                {/* Timer display */}
+                <div className='text-xl font-mono mb-4'>⏱️ {formatTime(time)}</div>
 
                 <div className='grid grid-cols-4 gap-[2px] border-4 border-black'>
+                    {/* Rest of your existing board rendering code... */}
                     {board.map((row, rowIndex) =>
                         row.map((cell, colIndex) => (
                             <input
@@ -125,13 +149,15 @@ export default function SudokuBoard4x4() {
                 </div>
             </div>
 
-            {/* ✅ Centered Modal */}
             {showModal && (
                 <div className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50'>
                     <div className='bg-white rounded-2xl p-8 max-w-md text-center shadow-lg animate-fadeIn'>
                         <h2 className='text-2xl font-bold mb-3'>
                             🎉 Sudoku Solved!
                         </h2>
+                        <p className='text-gray-700 mb-2'>
+                            Time: {formatTime(time)}
+                        </p>
                         {puzzleIndex === sudokuPuzzles.length - 1 ? (
                             <p className='text-gray-700 mb-6'>
                                 Congrats! You have solved <b>all puzzles</b> 👑
