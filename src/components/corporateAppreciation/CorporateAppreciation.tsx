@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
@@ -38,7 +38,7 @@ const galleryItems = [
         description: "Associate Partner | Enterprise Architect",
         logo: "/images/companyLogos/ibm.jpg",
         organization: "IBM",
-    }
+    },
 ]
 
 export default function CorporateAppreciation() {
@@ -71,6 +71,26 @@ export default function CorporateAppreciation() {
             )
         }
     }
+
+    // ✅ Keyboard navigation for modal
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (selectedIndex === null) return
+
+            if (e.key === "ArrowRight") {
+                handleNext()
+            } else if (e.key === "ArrowLeft") {
+                handlePrev()
+            } else if (e.key === "Escape") {
+                setSelectedIndex(null)
+            }
+        }
+
+        window.addEventListener("keydown", handleKeyDown)
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown)
+        }
+    }, [selectedIndex, handleNext, handlePrev])
 
     return (
         <div className='my-10'>

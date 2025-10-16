@@ -6,7 +6,7 @@ import dynamic from "next/dynamic"
 // ✅ Lazy load board components to optimize bundle size
 const SudokuBoard4x4 = dynamic(() => import("@/components/sudokuBoards/sudokuBoard4x4/SudokuBoard4x4"))
 const SudokuBoard5x5 = dynamic(() => import("@/components/sudokuBoards/sudokuBoard5x5/SudokuBoard5x5"))
-// const SudokuBoard9x9 = dynamic(() => import("@/components/sudokuBoards/sudokuBoard9x9/SudokuBoard9x9"))
+const SudokuBoard6x6 = dynamic(() => import("@/components/sudokuBoards/sudokuBoard6x6/SudokuBoard6x6"))
 
 type BoardSize = "2x2" | "3x3" | "4x4" | "5x5" | "6x6" | "7x7" | "8x8" | "9x9" | null
 
@@ -14,7 +14,7 @@ export default function SudokuPage() {
     const [selectedSize, setSelectedSize] = useState<BoardSize>(null)
 
     // const sizes: BoardSize[] = ["2x2", "3x3", "4x4", "5x5", "6x6", "7x7", "8x8", "9x9"]
-    const sizes: BoardSize[] = ["4x4"]
+    const sizes: BoardSize[] = ["4x4", "5x5", "6x6"] // Temporarily limit to 4x4 and 5x5 for demo
 
     const renderBoard = () => {
         switch (selectedSize) {
@@ -22,8 +22,8 @@ export default function SudokuPage() {
                 return <SudokuBoard4x4 />
             case "5x5":
                 return <SudokuBoard5x5 />
-            // case "9x9":
-            //     return <SudokuBoard9x9 />
+            case "6x6":
+                return <SudokuBoard6x6 />
             default:
                 return (
                     <div className="text-gray-500 mt-10 text-center">

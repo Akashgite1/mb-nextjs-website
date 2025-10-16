@@ -69,7 +69,6 @@ export const course_members: GalleryItem[] = [
     },
 ]
 
-
 // export const corporate_events: GalleryItem[] = [
 //   {
 //     src: "/images/corporateCourseMembers/shubham_kumar.jpeg",
@@ -149,6 +148,13 @@ export const corporate_contacts: GalleryItem[] = [
         description: "Associate Partner Digital & iX PAL - Distribution Sector",
         logo: "/images/companyLogos/ibm.jpg",
         width: 280,
+    },
+    {
+        src: "/images/corporate/sufiya_khan.PNG",
+        name: "Sufiya Khan",
+        description: "Associate Partner - Front End Exp",
+        logo: "/images/companyLogos/ibm.jpg",
+        width: 230,
     },
     {
         src: "/images/corporate/amit_prashant.jpeg",
