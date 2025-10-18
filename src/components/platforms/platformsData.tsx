@@ -112,7 +112,7 @@ export const categories: PlatformCategory[] = [
                     {
                         name: "insta1",
                         src: "/images/fansMessages/insta/insta1.jpeg",
-                        height: 2050,
+                        height: 250,
                     },
                 ],
             },
@@ -120,7 +120,7 @@ export const categories: PlatformCategory[] = [
         ],
     },
     {
-        label: "1:1 Guidance & Career Coaching",
+        label: "1:1 Guidance & Career Coaching - Manohar Batra",
         items: [
             {
                 id: 1,
@@ -232,7 +232,7 @@ export const categories: PlatformCategory[] = [
                 color: "from-yellow-50 to-yellow-100",
             },
             {
-                id: 1,
+                id: 2,
                 type: "image",
                 img: "/images/techLogos/reactJS.png",
                 title: "Frontend 100% Interview Ready",
