@@ -10,24 +10,24 @@ export default function GamesPage() {
         {
             id: "sudoku",
             title: "Sudoku",
-            image: "/images/sudoku.jpg", // make sure this image exists in public/images
+            image: "/images/games/sudoku.jpg", // make sure this image exists in public/images
             description: "Solve Sudoku puzzles",
             path: "/games/sudoku",
         },
-        {
-            id: "crossword",
-            title: "Crossword",
-            image: "/images/crossword.jpg",
-            description: "Classic word puzzle fun",
-            path: "/games/crossword",
-        },
-        {
-            id: "puzzle",
-            title: "Jigsaw Puzzle",
-            image: "/images/puzzle.jpg",
-            description: "Assemble pieces to reveal the picture",
-            path: "/games/jigsaw",
-        },
+        // {
+        //     id: "crossword",
+        //     title: "Crossword",
+        //     image: "/images/crossword.jpg",
+        //     description: "Classic word puzzle fun",
+        //     path: "/games/crossword",
+        // },
+        // {
+        //     id: "puzzle",
+        //     title: "Jigsaw Puzzle",
+        //     image: "/images/puzzle.jpg",
+        //     description: "Assemble pieces to reveal the picture",
+        //     path: "/games/jigsaw",
+        // },
     ]
 
     return (
@@ -48,7 +48,7 @@ export default function GamesPage() {
                                 src={game.image}
                                 alt={game.title}
                                 fill
-                                className="object-cover"
+                                className="object-contain"
                             />
                         </div>
                         <div className="p-4">

@@ -1,52 +1,73 @@
 "use client"
-import React, { useState } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import toast from "react-hot-toast"
+import { sudokuPuzzles5x5 as puzzles } from "../sudokuPuzzles"
 
-// 5×5 Sudoku puzzles (0 = empty cell)
-const sudokuPuzzles5x5: number[][][] = [
-    [
-        [0, 2, 3, 0, 5],
-        [5, 0, 0, 3, 0],
-        [0, 3, 0, 0, 4],
-        [0, 0, 1, 0, 0],
-        [4, 0, 0, 2, 0],
-    ],
-    [
-        [1, 0, 0, 4, 0],
-        [0, 0, 5, 0, 3],
-        [0, 4, 0, 0, 0],
-        [0, 0, 2, 0, 5],
-        [5, 0, 0, 3, 0],
-    ],
-    [
-        [0, 0, 2, 0, 0],
-        [4, 0, 0, 1, 0],
-        [0, 1, 0, 0, 2],
-        [0, 0, 0, 0, 3],
-        [0, 5, 0, 2, 0],
-    ],
-]
+interface SudokuBoard5x5Props {
+    onPuzzleSolved?: (timeTaken: number, puzzleIndex: number) => void
+}
 
-export default function SudokuBoard5x5() {
+export default function SudokuBoard5x5({ onPuzzleSolved }: SudokuBoard5x5Props) {
+    const levelSize = 5
     const [puzzleIndex, setPuzzleIndex] = useState(0)
-    const [board, setBoard] = useState(
-        sudokuPuzzles5x5[puzzleIndex].map((row) => [...row])
-    )
+    const [board, setBoard] = useState(() => puzzles[0].map((r) => [...r]))
+    const [selectedCell, setSelectedCell] = useState<[number, number] | null>(null)
     const [showModal, setShowModal] = useState(false)
 
-    const handleChange = (row: number, col: number, value: string) => {
-        if (/^[1-5]?$/.test(value)) {
+    // ⏱ Timer
+    const [seconds, setSeconds] = useState(0)
+    const [finalTime, setFinalTime] = useState<number | null>(null)
+    const timerRef = useRef<NodeJS.Timeout | null>(null)
+
+    // Start timer on puzzle load
+    useEffect(() => {
+        if (timerRef.current) clearInterval(timerRef.current)
+        setSeconds(0)
+        setFinalTime(null)
+        timerRef.current = setInterval(() => setSeconds((s) => s + 1), 1000)
+        return () => {
+            if (timerRef.current) clearInterval(timerRef.current)
+        }
+    }, [puzzleIndex])
+
+    const formatTime = (secs: number) => {
+        const m = Math.floor(secs / 60)
+        const s = secs % 60
+        return `${m.toString().padStart(2, "0")}:${s.toString().padStart(2, "0")}`
+    }
+
+    const handleChange = (row: number, col: number, value: number) => {
+        if (value >= 0 && value <= levelSize) {
             const newBoard = board.map((r) => [...r])
-            newBoard[row][col] = value === "" ? 0 : parseInt(value, 10)
+            newBoard[row][col] = value
             setBoard(newBoard)
         }
     }
 
+    const handleNumberClick = (num: number) => {
+        if (!selectedCell) return
+        const [row, col] = selectedCell
+        if (puzzles[puzzleIndex][row][col] !== 0) return
+
+        const currentValue = board[row][col]
+        handleChange(row, col, currentValue === num ? 0 : num)
+    }
+
     const checkSolution = () => {
         const valid = validateSudoku5x5(board)
-        const complete = board.every((row) => row.every((n) => n >= 1 && n <= 5))
+        const complete = board.every((row) => row.every((n) => n >= 1 && n <= levelSize))
 
         if (valid && complete) {
+            // 🛑 Stop timer
+            if (timerRef.current) clearInterval(timerRef.current)
+
+            // ⏱ Freeze final time
+            setFinalTime(seconds)
+
+            // 🧩 Notify parent
+            onPuzzleSolved?.(seconds, puzzleIndex)
+
+            // 🎉 Show modal
             setShowModal(true)
         } else if (valid) {
             toast("✅ Looks good so far… keep going!", { icon: "🧠" })
@@ -57,58 +78,76 @@ export default function SudokuBoard5x5() {
 
     const loadNextPuzzle = () => {
         const nextIndex = puzzleIndex + 1
-        if (nextIndex < sudokuPuzzles5x5.length) {
+        if (nextIndex < puzzles.length) {
             setPuzzleIndex(nextIndex)
-            setBoard(sudokuPuzzles5x5[nextIndex].map((row) => [...row]))
+            setBoard(puzzles[nextIndex].map((r) => [...r]))
+            setSelectedCell(null)
         }
     }
 
     const resetBoard = () => {
-        setBoard(sudokuPuzzles5x5[puzzleIndex].map((row) => [...row]))
+        setBoard(puzzles[puzzleIndex].map((r) => [...r]))
+        setSelectedCell(null)
+        setSeconds(0)
+        setFinalTime(null)
         toast("♻️ Board reset!")
     }
 
     return (
         <>
             <div className='flex flex-col items-center mt-10'>
-                <h1 className='text-3xl font-bold mb-4'>
+                <h1 className='text-3xl font-bold mb-2'>
                     🧠 5×5 Sudoku #{puzzleIndex + 1}
                 </h1>
+                <div className='text-gray-600 mb-4 text-lg'>
+                    Time:{" "}
+                    <span className='font-mono'>
+                        {finalTime !== null ? formatTime(finalTime) : formatTime(seconds)}
+                    </span>
+                </div>
 
+                {/* Sudoku Grid */}
                 <div className='grid grid-cols-5 gap-[2px] border-4 border-black'>
                     {board.map((row, rowIndex) =>
-                        row.map((cell, colIndex) => (
-                            <input
-                                key={`${rowIndex}-${colIndex}`}
-                                className={`w-14 h-14 text-center text-xl border border-gray-400 ${
-                                    sudokuPuzzles5x5[puzzleIndex][rowIndex][
-                                        colIndex
-                                    ] !== 0
-                                        ? "bg-gray-200 font-bold"
-                                        : ""
-                                }`}
-                                value={cell === 0 ? "" : cell}
-                                onChange={(e) =>
-                                    handleChange(
-                                        rowIndex,
-                                        colIndex,
-                                        e.target.value
-                                    )
-                                }
-                                disabled={
-                                    sudokuPuzzles5x5[puzzleIndex][rowIndex][
-                                        colIndex
-                                    ] !== 0
-                                }
-                            />
-                        ))
+                        row.map((cell, colIndex) => {
+                            const isPreset = puzzles[puzzleIndex][rowIndex][colIndex] !== 0
+                            const isSelected =
+                                selectedCell &&
+                                selectedCell[0] === rowIndex &&
+                                selectedCell[1] === colIndex
+                            return (
+                                <div
+                                    key={`${rowIndex}-${colIndex}`}
+                                    onClick={() => !isPreset && setSelectedCell([rowIndex, colIndex])}
+                                    className={`w-14 h-14 flex items-center justify-center border text-xl cursor-pointer select-none 
+                                        ${isPreset ? "bg-gray-200 font-bold" : "bg-white"}
+                                        ${isSelected ? "outline-2 outline-blue-500" : ""}`}
+                                >
+                                    {cell !== 0 ? cell : ""}
+                                </div>
+                            )
+                        })
                     )}
                 </div>
 
+                {/* Number Buttons */}
+                <div className='mt-4 flex gap-2 flex-wrap justify-center'>
+                    {Array.from({ length: levelSize }, (_, i) => i + 1).map((num) => (
+                        <button
+                            key={num}
+                            onClick={() => handleNumberClick(num)}
+                            className='w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded hover:bg-blue-700 text-lg font-semibold'
+                        >
+                            {num}
+                        </button>
+                    ))}
+                </div>
+
+                {/* Actions */}
                 <div className='mt-4 flex gap-4'>
                     <button
                         onClick={checkSolution}
-                        className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700'
+                        className='bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700'
                     >
                         Check
                     </button>
@@ -121,25 +160,19 @@ export default function SudokuBoard5x5() {
                 </div>
             </div>
 
-            {/* Modal */}
+            {/* 🎉 Modal */}
             {showModal && (
                 <div className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50'>
                     <div className='bg-white rounded-2xl p-8 max-w-md text-center shadow-lg animate-fadeIn'>
-                        <h2 className='text-2xl font-bold mb-3'>
-                            🎉 Sudoku Solved!
-                        </h2>
-                        {puzzleIndex === sudokuPuzzles5x5.length - 1 ? (
-                            <p className='text-gray-700 mb-6'>
-                                Congrats! You solved <b>all puzzles</b> 👑
-                            </p>
-                        ) : (
-                            <p className='text-gray-700 mb-6'>
-                                Great job! Ready for the next one?
-                            </p>
-                        )}
-
+                        <h2 className='text-2xl font-bold mb-3'>🎉 Sudoku Solved!</h2>
+                        <p className='text-gray-700 mb-6'>
+                            Time taken:{" "}
+                            <b className='font-mono text-lg'>
+                                {formatTime(finalTime ?? seconds)}
+                            </b>
+                        </p>
                         <div className='flex justify-center gap-4'>
-                            {puzzleIndex !== sudokuPuzzles5x5.length - 1 && (
+                            {puzzleIndex !== puzzles.length - 1 && (
                                 <button
                                     onClick={() => {
                                         setShowModal(false)
@@ -164,22 +197,18 @@ export default function SudokuBoard5x5() {
     )
 }
 
-// ✅ Validation for 5×5
+// ✅ Validation for 5×5 (rows + columns)
 function validateSudoku5x5(board: number[][]) {
     const isValidSet = (nums: number[]) => {
         const filtered = nums.filter((n) => n !== 0)
         return new Set(filtered).size === filtered.length
     }
 
-    // Rows and Columns
     for (let i = 0; i < 5; i++) {
         const row = board[i]
         const col = board.map((r) => r[i])
         if (!isValidSet(row) || !isValidSet(col)) return false
     }
-
-    // Optional: block validation (here, just row-blocks for simplicity)
-    // Could be customized for special 5x5 sudoku variants if needed.
 
     return true
 }

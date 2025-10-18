@@ -108,6 +108,13 @@ export const categories: PlatformCategory[] = [
                     "Where I expose influencers and reveal behind-the-scenes truths.",
                 link: "https://www.instagram.com/career.manoharbatrayt",
                 color: "from-pink-50 to-pink-100",
+                testimonials: [
+                    {
+                        name: "insta1",
+                        src: "/images/fansMessages/insta/insta1.jpeg",
+                        height: 2050,
+                    },
+                ],
             },
             // … more socials
         ],
@@ -206,7 +213,7 @@ export const categories: PlatformCategory[] = [
                 description:
                     "1:1 Guidance or Mock Interview on Java, Springboot, Kafka, System Design, and career.",
                 link: "https://topmate.io/naveen_metta",
-                color: "from-blue-50 to-blue-100",
+                color: "from-green-50 to-green-100",
             },
         ],
     },
@@ -222,7 +229,7 @@ export const categories: PlatformCategory[] = [
                 description:
                     "700+ Companies List (inclding Remote) where my subscribers are placed at 50+ LPA packages too",
                 link: "https://www.topmate.io/manohar",
-                color: "from-blue-50 to-blue-100",
+                color: "from-yellow-50 to-yellow-100",
             },
             {
                 id: 1,
@@ -231,9 +238,9 @@ export const categories: PlatformCategory[] = [
                 title: "Frontend 100% Interview Ready",
                 followers: "2.5k+ Bookings",
                 description:
-                    "Frontend, React, System Design, GenAI - Interview + Topics",
+                    "React, System Design, DSA - Interview Questions + Topics + Real Resumes for reference",
                 link: "https://topmate.io/manohar_batra/1587369?utm_source=public_profile&utm_campaign=manohar_batra",
-                color: "from-blue-50 to-blue-100",
+                color: "from-yellow-50 to-yellow-100",
             },
             {
                 id: 3,
@@ -242,9 +249,9 @@ export const categories: PlatformCategory[] = [
                 title: "Java Backend 100% Interview Ready",
                 followers: "70+ Followers",
                 description:
-                    "Articles on Java, Springboot, Kafka - Detailed Topic and Interview Questions",
+                    "Java, Springboot, Kafka - Detailed Articles and Interview Questions + Real Resumes for reference",
                 link: "https://topmate.io/manohar_batra/1751070?utm_source=public_profile&utm_campaign=manohar_batra",
-                color: "from-purple-50 to-purple-100",
+                color: "from-yellow-50 to-yellow-100",
             },
             {
                 id: 4,
@@ -265,7 +272,18 @@ export const categories: PlatformCategory[] = [
                 description:
                     "Interview Prep for Top 15 Service-Based Companies",
                 link: "https://topmate.io/manohar_batra/1623127?utm_source=public_profile&utm_campaign=manohar_batra",
-                color: "from-blue-50 to-blue-100",
+                color: "from-purple-50 to-purple-100",
+            },
+            {
+                id: 6,
+                type: "image",
+                img: "/images/topmate.jpg",
+                title: "Resume Template - FREE",
+                followers: "1k+ Bookings",
+                description:
+                    "Resume Template (Overleaf) for Software Engineers",
+                link: "https://topmate.io/manohar/1776869?utm_source=public_profile&utm_campaign=manohar",
+                color: "from-purple-50 to-purple-100",
             },
             // e-docs platforms
         ],
@@ -309,7 +327,7 @@ export const categories: PlatformCategory[] = [
                 type: "component",
                 icon: <FaMedium className='text-black text-4xl' />,
                 title: "Medium",
-                followers: "31+ Followers",
+                followers: "40+ Followers",
                 description:
                     "Articles on React.js System Design, Frontend - Detailed Topic and Interview Questions",
                 link: "https://medium.com/@contactmanoharbatra",
