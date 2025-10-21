@@ -25,6 +25,15 @@ export const collegeTopics = [
                     },
                 ],
             },
+            {
+                title: "How to get Job in College",
+                links: [
+                    {
+                        label: "Get 10LPA job as a fresher",
+                        url: "https://www.youtube.com/watch?v=a_ssrnrTopQ",
+                    },
+                ],
+            },
         ],
     },
 ]
@@ -52,8 +61,38 @@ export const corporateTopics = [
                 ],
             },
             {
+                title: "Handle Interview Questions like Pro",
+                links: [
+                    {
+                        label: "Why you swicthed job frequently?",
+                        url: "https://www.youtube.com/watch?v=qq0bSQtuslg",
+                    },
+                ],
+            },
+            {
+                title: "Multiple Job Offers",
+                links: [
+                    {
+                        label: "20 LPA vs 30 LPA: Video-1",
+                        url: "https://www.youtube.com/watch?v=ZJCvjq1xkq0",
+                    },
+                    {
+                        label: "33 LPA vs 40 LPA: Video-2",
+                        url: "https://www.youtube.com/watch?v=peWyKIufNFM&t=1s",
+                    },
+                ],
+            },
+            {
                 title: "Background Verification",
                 links: [
+                    {
+                        label: "Why Background Verification fails?",
+                        url: "https://www.youtube.com/watch?v=YxOQRRoTXRM",
+                    },
+                    {
+                        label: "Absconding Video-1",
+                        url: "https://www.youtube.com/watch?v=mlriEZCj_p4",
+                    },
                     {
                         label: "Dual Employment Video-1",
                         url: "https://www.youtube.com/watch?v=cO3PE7h3ByE",
@@ -61,6 +100,15 @@ export const corporateTopics = [
                     {
                         label: "Dual Employment Video-2",
                         url: "https://youtu.be/mlriEZCj_p4",
+                    },
+                ],
+            },
+            {
+                title: "Corporate Growth",
+                links: [
+                    {
+                        label: "How Networking brings more opportunities",
+                        url: "https://www.youtube.com/watch?v=Dn_EMkRhOsk",
                     },
                 ],
             },
@@ -78,6 +126,28 @@ export const corporateTopics = [
                     {
                         label: "Video-2",
                         url: "hhttps://youtu.be/hsQpAPWKwO8",
+                    },
+                ],
+            },
+            {
+                title: "Career Mistakes to Avoid",
+                links: [
+                    {
+                        label: "Career Mistakes - Video-1",
+                        url: "https://www.youtube.com/watch?v=sRkF5v1Avig",
+                    },
+                    {
+                        label: "10 years in 10 minutes",
+                        url: "https://www.youtube.com/watch?v=zNUBXlaBZRA",
+                    },
+                ],
+            },
+            {
+                title: "Change Technology/Domain",
+                links: [
+                    {
+                        label: "Support to Development",
+                        url: "https://www.youtube.com/watch?v=v7dOG88umvQ",
                     },
                 ],
             },
