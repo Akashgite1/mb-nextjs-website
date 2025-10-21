@@ -6,6 +6,7 @@ export interface TechnicalCourse {
   connect?: string
   testimonials?: string
   successStories?: string
+  articles?: string
 }
 
 export interface RoadmapData {
@@ -18,8 +19,9 @@ export const roadmapData: RoadmapData = {
       name: "React Interview Ready",
       link: "https://topmate.io/manohar_batra/1587369?utm_source=public_profile&utm_campaign=manohar_batra",
       author: "Manohar Batra",
-      linkedIn: "https://linkedin.com/in/johndoe",
-      connect: "https://linkedin.com/in/johndoe",
+      linkedIn: "https://www.linkedin.com/in/manoharbatra/",
+      connect: "https://topmate.io/manohar",
+      articles: "https://medium.com/@contactmanoharbatra",
     //   testimonials: "https://reactcourse.com/testimonials",
     //   successStories: "https://reactcourse.com/success-stories",
     },

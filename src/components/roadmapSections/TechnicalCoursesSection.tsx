@@ -12,6 +12,7 @@ export default function TechnicalCoursesSection() {
             <th className="px-4 py-2 border-b">Course Name</th>
             <th className="px-4 py-2 border-b">Author</th>
             <th className="px-4 py-2 border-b">Need Guidance?</th>
+            <th className="px-4 py-2 border-b">Free/Paid Technical Articles</th>
             <th className="px-4 py-2 border-b">Link</th>
           </tr>
         </thead>
@@ -75,6 +76,22 @@ export default function TechnicalCoursesSection() {
                     className="text-blue-600 underline"
                   >
                     Connect
+                  </a>
+                ) : (
+                  "—"
+                )}
+              </td>
+
+              {/* Technical Articles */}
+              <td className="px-4 py-2">
+                {course.articles ? (
+                  <a
+                    href={course.articles}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 underline"
+                  >
+                    View Articles
                   </a>
                 ) : (
                   "—"

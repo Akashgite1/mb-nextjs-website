@@ -40,6 +40,9 @@ export const topics: TopicCategory[] = [
                                 url: "https://medium.com/@contactmanoharbatra/js-reverse-a-string-1fb6539e0597",
                             },
                         ],
+                        articles: [
+                            "https://medium.com/@contactmanoharbatra/js-reverse-a-string-1fb6539e0597",
+                        ],
                     },
                 ],
             },
