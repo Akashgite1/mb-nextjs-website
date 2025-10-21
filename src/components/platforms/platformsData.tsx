@@ -172,7 +172,7 @@ export const categories: PlatformCategory[] = [
                 title: "Corporate Coaching + Whatsapp",
                 followers: "80+ Members",
                 description:
-                    "Raw content with whatsapp group support for career growth, referrals, and interview prep.",
+                    "Career growth, salary insights, referrals - Whatsapp group",
                 link: "https://collegetocorporate.akamai.net.in/new-courses/2-working-professionals-career-guide",
                 color: "from-red-50 to-red-100",
                 testimonials: [
@@ -195,7 +195,7 @@ export const categories: PlatformCategory[] = [
                 title: "College Coaching + Whatsapp",
                 followers: "2+ Members",
                 description:
-                    "Raw content with whatsapp group support for jobs, referrals, and interview prep.",
+                    "Jobs, Genuine Group guidance - Whatsapp group",
                 link: "https://collegetocorporate.akamai.net.in/new-courses/1-college-students-career-guide",
                 color: "from-red-50 to-red-100",
             },
@@ -218,74 +218,35 @@ export const categories: PlatformCategory[] = [
         ],
     },
     {
-        label: "Courses & E-Docs",
+        label: "Companies which are HIRING !!!",
         items: [
             {
                 id: 1,
                 type: "image",
                 img: "/images/topmate.jpg",
-                title: "Companies Hiring in 2025",
+                title: "700+ Companies Hiring now!!",
                 followers: "4k+ Bookings",
                 description:
                     "700+ Companies List (inclding Remote) where my subscribers are placed at 50+ LPA packages too",
                 link: "https://www.topmate.io/manohar",
                 color: "from-yellow-50 to-yellow-100",
             },
+        ],
+    },
+    {
+        label: "Technical Courses - FREE and PAID",
+        items: [
             {
                 id: 2,
                 type: "image",
                 img: "/images/techLogos/reactJS.png",
-                title: "Frontend 100% Interview Ready",
+                title: "Tech Section - Interview Ready",
                 followers: "2.5k+ Bookings",
                 description:
-                    "React, System Design, DSA - Interview Questions + Topics + Real Resumes for reference",
-                link: "https://topmate.io/manohar_batra/1587369?utm_source=public_profile&utm_campaign=manohar_batra",
-                color: "from-yellow-50 to-yellow-100",
-            },
-            {
-                id: 3,
-                type: "image",
-                img: "/images/techLogos/java.jpg",
-                title: "Java Backend 100% Interview Ready",
-                followers: "70+ Followers",
-                description:
-                    "Java, Springboot, Kafka - Detailed Articles and Interview Questions + Real Resumes for reference",
-                link: "https://topmate.io/manohar_batra/1751070?utm_source=public_profile&utm_campaign=manohar_batra",
-                color: "from-yellow-50 to-yellow-100",
-            },
-            {
-                id: 4,
-                type: "component",
-                icon: <FaUsers className='text-red-600 text-4xl' />,
-                title: "DSA for FREE",
-                followers: "100+ Followers",
-                description: "Practise DSA with Manish",
-                link: "https://manishdsa.netlify.app/",
-                color: "from-purple-50 to-purple-100",
-            },
-            {
-                id: 5,
-                type: "image",
-                img: "/images/topmate.jpg",
-                title: "College Students - Interview Pkg - FREE",
-                followers: "2k+ Bookings",
-                description:
-                    "Interview Prep for Top 15 Service-Based Companies",
-                link: "https://topmate.io/manohar_batra/1623127?utm_source=public_profile&utm_campaign=manohar_batra",
-                color: "from-purple-50 to-purple-100",
-            },
-            {
-                id: 6,
-                type: "image",
-                img: "/images/topmate.jpg",
-                title: "Resume Template - FREE",
-                followers: "1k+ Bookings",
-                description:
-                    "Resume Template (Overleaf) for Software Engineers",
-                link: "https://topmate.io/manohar/1776869?utm_source=public_profile&utm_campaign=manohar",
-                color: "from-purple-50 to-purple-100",
-            },
-            // e-docs platforms
+                    "Check out different tech stack covered - Interview Questions",
+                link: "/courses/technical",
+                color: "from-red-50 to-red-100",
+            }
         ],
     },
     {

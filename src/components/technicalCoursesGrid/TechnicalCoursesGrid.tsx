@@ -1,59 +1,50 @@
-"use client" // ✅ required because we use framer-motion animations
+"use client"
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { categories } from "./platformsData"
 import Image from "next/image"
+import { technicalCourses } from "./TechnicalCoursesGridData"
 import CategoryCardsGrid from "../categoryCardsGrid/CategoryCardsGrid"
 
-export default function Platforms() {
+export default function TechnicalCoursesGrid() {
     const [selectedTestimonials, setSelectedTestimonials] = useState<
-        | {
-              name: string
-              src: string
-              width?: number
-              height?: number | undefined
-          }[]
-        | null
+        { name: string; src: string; width?: number; height?: number }[] | null
     >(null)
 
     return (
-        <section
-            id='home'
-            className='min-h-screen bg-gradient-to-b from-white to-gray-100 text-gray-900'
-        >
-            <header className='text-center pt-0 pr-10 pb-2 pl-6 px-6'>
+        <section className='min-h-screen bg-gradient-to-b from-white to-gray-100 text-gray-900 px-6 py-4'>
+            <header className='text-center mb-6'>
                 <motion.h1
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className='text-4xl md:text-5xl font-bold mb-4'
+                    className='text-2xl md:text-3xl font-bold mb-2'
                 >
-                    Trusted by 150K+ learners worldwide. 🚀
+                    Technical Courses 🚀
                 </motion.h1>
+                <p className='text-gray-600 text-lg'>
+                    Learn the exact skills companies are hiring for in 2025.
+                </p>
             </header>
 
             {/* Reusable Grid Component */}
             <CategoryCardsGrid
-                data={categories}
+                data={technicalCourses}
                 onOpenTestimonials={(t) => setSelectedTestimonials(t)}
             />
 
-            {/* Modal */}
+            {/* Testimonials modal */}
             {selectedTestimonials && (
                 <div className='fixed inset-0 bg-black/50 flex items-center justify-center z-50'>
                     <div className='bg-white rounded-lg p-6 w-[90%] md:w-[80%] max-h-[80vh] overflow-y-auto relative'>
-                        {/* Close */}
                         <button
                             className='absolute top-3 right-3 text-gray-600 hover:text-black'
                             onClick={() => setSelectedTestimonials(null)}
                         >
                             ✕
                         </button>
-
                         <h2 className='text-lg font-bold mb-6'>Testimonials</h2>
 
-                        {/* Flex container for images */}
                         <div className='flex flex-wrap gap-4 justify-center'>
                             {selectedTestimonials.map((t, i) => (
                                 <div
@@ -71,7 +62,7 @@ export default function Platforms() {
                                     <Image
                                         src={t.src}
                                         alt={t.name}
-                                        fill // makes Image fill the parent div
+                                        fill
                                         className='object-contain'
                                     />
                                 </div>
