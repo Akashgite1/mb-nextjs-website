@@ -29,7 +29,7 @@ export const technicalCourses: PlatformCategory[] = [
                 followers: "2.5k+ Bookings",
                 description:
                     "React, System Design, DSA - Interview Questions + Topics + Real Resumes for reference",
-                link: "https://topmate.io/manohar_batra/1587369?utm_source=public_profile&utm_campaign=manohar_batra",
+                link: "https://topmate.io/manohar_batra/1587369",
                 color: "from-yellow-50 to-yellow-100",
             },
         ],
@@ -45,7 +45,7 @@ export const technicalCourses: PlatformCategory[] = [
                 followers: "70+ Followers",
                 description:
                     "Java, Springboot, Kafka - Detailed Articles and Interview Questions + Real Resumes for reference",
-                link: "https://topmate.io/manohar_batra/1751070?utm_source=public_profile&utm_campaign=manohar_batra",
+                link: "https://topmate.io/manohar_batra/1751070",
                 color: "from-yellow-50 to-yellow-100",
             },
         ],

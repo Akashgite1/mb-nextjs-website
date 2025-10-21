@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { companiesList } from "@/utils/companiesList"
 import { saleConfig } from "@/utils/constants"
 import Image from "next/image"
 import Link from "next/link"
@@ -10,28 +11,50 @@ import Gallery from "@/components/gallery/Gallery"
 import CorporateAppreciation from "@/components/corporateAppreciation/CorporateAppreciation"
 import FAQ from "@/components/faq/FAQ"
 import FansFeedback from "@/components/fansFeedback/FansFeedback"
-import { X } from "lucide-react" // ✅ lightweight close icon
+import { X } from "lucide-react"
 
 export default function Home() {
     const [showPromo, setShowPromo] = useState(false)
+    const [todayCompany, setTodayCompany] = useState<{
+        name: string
+        link: string
+        index: number
+        dayNumber: number
+    } | null>(null)
 
     useEffect(() => {
         const today = new Date()
-        const start = new Date(saleConfig.activeFrom)
-        const end = new Date(saleConfig.activeTill)
+        const startRotation = new Date(saleConfig.startRotationDate)
 
-        // Show promo only within date range
-        if (today >= start && today <= end) {
-            setShowPromo(true)
-        }
+        // Calculate number of days since start
+        const diffDays = Math.floor(
+            (today.getTime() - startRotation.getTime()) / (1000 * 60 * 60 * 24)
+        )
+
+        const totalCompanies = companiesList.length / 2
+        const currentIndex = diffDays % totalCompanies
+
+        const name = companiesList[currentIndex * 2]
+        const link = companiesList[currentIndex * 2 + 1]
+
+        setTodayCompany({
+            name,
+            link,
+            index: currentIndex + 1, // for Job #1..n
+            dayNumber: diffDays + 1, // for Day count
+        })
+
+        setShowPromo(true)
     }, [])
+
+    if (!todayCompany) return null
 
     return (
         <div className='relative'>
-            {/* 🎯 Modal Promo Banner */}
+            {/* 🎯 Promo Modal */}
             {showPromo && (
                 <div className='fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50'>
-                    <div className='relative bg-white rounded-2xl shadow-2xl overflow-hidden w-[90%] max-w-xl animate-fadeIn'>
+                    <div className='relative bg-white rounded-2xl shadow-2xl overflow-hidden w-[90%] max-w-2xl animate-fadeIn'>
                         {/* Close Icon */}
                         <button
                             onClick={() => setShowPromo(false)}
@@ -45,34 +68,53 @@ export default function Home() {
                         <Image
                             src={saleConfig.imageUrl}
                             alt='Sale Banner'
-                            className='w-full object-cover max-h-[400px]'
-                            width={700}
-                            height={600}
+                            className='w-full object-cover max-h-[200px]'
+                            width={800}
+                            height={300}
                         />
 
                         {/* Text Section */}
                         <div className='p-6 pt-4 text-center'>
-                            <h2 className='text-2xl md:text-3xl font-bold text-gray-900'>
+                            {/* Job Counter */}
+                            <p className='text-gray-600 text-sm mb-1'>
+                                Job #{todayCompany.index} of{" "}
+                                {companiesList.length / 2} ( Day{" "}
+                                {todayCompany.dayNumber})
+                            </p>
+
+                            <h2 className='text-2xl md:text-3xl font-bold text-gray-900 mb-3'>
                                 {saleConfig.title}
                             </h2>
-                            <div
-                                className='text-gray-700 mt-4 text-lg leading-relaxed text-left md:text-left'
-                                dangerouslySetInnerHTML={{
-                                    __html: saleConfig.subtitle,
-                                }}
-                            />
 
-                            {/* Centered Button with Proper Spacing */}
-                            <div className='mt-4 flex justify-center'>
-                                {" "}
-                                <Link
-                                    href='https://www.linkedin.com/company/blueyonder/jobs/'
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                    className='px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition transform hover:scale-105 duration-200'
-                                >
-                                    Check Jobs Now
-                                </Link>
+                            {/* Company Section */}
+                            <div className='mb-6 text-center'>
+                                <p className='text-gray-900 font-semibold text-lg'>
+                                    Company:{" "}
+                                    <Link
+                                        href={todayCompany.link}
+                                        target='_blank'
+                                        rel='noopener noreferrer'
+                                        className='text-blue-600 hover:underline'
+                                    >
+                                        {todayCompany.name} — Click here
+                                    </Link>
+                                </p>
+                            </div>
+
+                            {/* Subtitles */}
+                            <div className='text-gray-700 text-lg leading-relaxed space-y-2 text-left'>
+                                {saleConfig.subtitles.map((item, idx) => (
+                                    <p key={idx}>
+                                        <Link
+                                            href={item.link}
+                                            target='_blank'
+                                            rel='noopener noreferrer'
+                                            className='text-blue-600 hover:underline font-medium'
+                                        >
+                                            {item.text}
+                                        </Link>
+                                    </p>
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -87,7 +129,6 @@ export default function Home() {
                 <CorporateAppreciation />
                 <FAQ />
                 <FansFeedback />
-                {/* <Testimonials /> */}
             </div>
         </div>
     )
