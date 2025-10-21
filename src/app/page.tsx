@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { X } from "lucide-react"
 import { companiesList } from "@/utils/companiesList"
 import { saleConfig } from "@/utils/constants"
 import Image from "next/image"
@@ -11,7 +12,9 @@ import Gallery from "@/components/gallery/Gallery"
 import CorporateAppreciation from "@/components/corporateAppreciation/CorporateAppreciation"
 import FAQ from "@/components/faq/FAQ"
 import FansFeedback from "@/components/fansFeedback/FansFeedback"
-import { X } from "lucide-react"
+
+import YouTubeMembers from "@/components/youTubeMembers/YouTubeMembers"
+import { youTubeMembersList } from "@/utils/youTubeMembersList"
 
 export default function Home() {
     const [showPromo, setShowPromo] = useState(false)
@@ -128,6 +131,7 @@ export default function Home() {
                 <Gallery />
                 <CorporateAppreciation />
                 <FAQ />
+                <YouTubeMembers sponsors={youTubeMembersList}/>
                 <FansFeedback />
             </div>
         </div>
