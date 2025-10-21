@@ -50,11 +50,10 @@ export default function Home() {
                         <Image
                             src={saleConfig.imageUrl}
                             alt='Sale Banner'
-                            className='w-full object-contain max-h-[500px]'
-                            width={600}
-                            height={800}
+                            className='w-full object-cover max-h-[300px]'
+                            width={700}
+                            height={400}
                         />
-
 
                         {/* Text Section */}
                         <div className='p-6 text-center'>

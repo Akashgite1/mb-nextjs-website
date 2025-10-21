@@ -1,5 +1,5 @@
 export const saleConfig = {
-    imageUrl: "/images/popupBanner/diwali1.png", // update with your actual image
+    imageUrl: "/images/popupBanner/diwali1.jpeg", // update with your actual image
     title: "🎉 It’s Celebrated Across Religions",
     subtitle: `
         🕉️ Hindus celebrate it as the return of Lord Rama or Goddess Lakshmi’s birth.<br/>
