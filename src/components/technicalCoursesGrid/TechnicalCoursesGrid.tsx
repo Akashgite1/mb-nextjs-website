@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { technicalCourses } from "./TechnicalCoursesGridData"
 import CategoryCardsGrid from "../categoryCardsGrid/CategoryCardsGrid"
+import TechnicalCoursesSection from "../roadmapSections/TechnicalCoursesSection"
 
 export default function TechnicalCoursesGrid() {
     const [selectedTestimonials, setSelectedTestimonials] = useState<
@@ -27,6 +28,7 @@ export default function TechnicalCoursesGrid() {
                 </p>
             </header>
 
+            <TechnicalCoursesSection />
             {/* Reusable Grid Component */}
             <CategoryCardsGrid
                 data={technicalCourses}

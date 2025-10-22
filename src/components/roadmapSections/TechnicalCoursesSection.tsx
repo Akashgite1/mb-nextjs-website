@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa"
 
 export default function TechnicalCoursesSection() {
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto mb-8">
       <table className="min-w-full border border-gray-300 rounded-lg">
         <thead>
           <tr className="bg-gray-100 text-left">

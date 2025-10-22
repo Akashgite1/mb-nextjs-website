@@ -126,10 +126,10 @@ export const categories: PlatformCategory[] = [
                 id: 1,
                 type: "image",
                 img: "/images/topmate.jpg",
-                title: "Career Guidance",
+                title: "Career + React Guidance",
                 followers: "2k+ Bookings",
                 description:
-                    "1:1 Guidance on Career Growth, Politics, Job Switch and Multiple Job Offers.",
+                    "1:1 Guidance on frontend, career, and corporate insights.",
                 link: "https://www.topmate.io/manohar",
                 color: "from-blue-50 to-blue-100",
                 testimonials: [
@@ -199,35 +199,13 @@ export const categories: PlatformCategory[] = [
                 link: "https://collegetocorporate.akamai.net.in/new-courses/1-college-students-career-guide",
                 color: "from-red-50 to-red-100",
             },
-            {
-                id: 3,
-                type: "image",
-                img: "/images/topmate.jpg",
-                title: "700+ Companies Hiring now!!",
-                followers: "4k+ Bookings",
-                description:
-                    "700+ Companies List (inclding Remote) where my subscribers are placed at 50+ LPA packages too",
-                link: "https://www.topmate.io/manohar",
-                color: "from-yellow-50 to-yellow-100",
-            },
         ],
     },
     {
-        label: "1:1 Technical Guidance",
+        label: "1:1 Guidance in other Technologies",
         items: [
             {
                 id: 1,
-                type: "image",
-                img: "/images/topmate.jpg",
-                title: "1:1 in Frontend (React.js)",
-                followers: "10+ Bookings",
-                description:
-                    "1:1 Guidance or Mock Interview on React + System Design",
-                link: "https://topmate.io/manohar_batra/1584098",
-                color: "from-green-50 to-green-100",
-            },
-            {
-                id: 2,
                 type: "image",
                 img: "/images/topmate.jpg",
                 title: "1:1 in Java Backend",
@@ -236,6 +214,22 @@ export const categories: PlatformCategory[] = [
                     "1:1 Guidance or Mock Interview on Java, Springboot, Kafka, System Design, and career.",
                 link: "https://topmate.io/naveen_metta",
                 color: "from-green-50 to-green-100",
+            },
+        ],
+    },
+    {
+        label: "Companies which are HIRING !!!",
+        items: [
+            {
+                id: 1,
+                type: "image",
+                img: "/images/topmate.jpg",
+                title: "700+ Companies Hiring now!!",
+                followers: "4k+ Bookings",
+                description:
+                    "700+ Companies List (inclding Remote) where my subscribers are placed at 50+ LPA packages too",
+                link: "https://www.topmate.io/manohar",
+                color: "from-yellow-50 to-yellow-100",
             },
         ],
     },
