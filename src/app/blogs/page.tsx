@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import {
     FaFacebook,
@@ -11,15 +11,14 @@ import {
 import { blogsData } from "./blogsData"
 import { IblogsData } from "./types"
 
-// --- Helper: icon renderer (safe for undefined) ---
 function RenderIcon({ name }: { name?: string }) {
     switch (name) {
         case "facebook":
-            return <FaFacebook className='w-4 h-4' />
+            return <FaFacebook className="w-4 h-4" />
         case "twitter":
-            return <FaTwitter className='w-4 h-4' />
+            return <FaTwitter className="w-4 h-4" />
         default:
-            return <FaExternalLinkAlt className='w-4 h-4' />
+            return <FaExternalLinkAlt className="w-4 h-4" />
     }
 }
 
@@ -27,37 +26,38 @@ export default function BlogsPage() {
     const [selectedCategory, setSelectedCategory] = useState("All")
     const [expandedSection, setExpandedSection] = useState<string | null>(null)
 
-    // Dynamic category list
-    const categories = [
-        "All",
-        ...new Set(blogsData.map((item) => item.mainHeader)),
-    ]
+    const categories = ["All", ...new Set(blogsData.map((item) => item.mainHeader))]
 
-    // Filtered data
     const filtered =
         selectedCategory === "All"
             ? blogsData
             : blogsData.filter((s) => s.mainHeader === selectedCategory)
 
+    // ✅ Auto-open accordion for non-All category
+    useEffect(() => {
+        if (selectedCategory !== "All") {
+            setExpandedSection(selectedCategory)
+        } else {
+            setExpandedSection(null)
+        }
+    }, [selectedCategory])
+
     return (
-        <div className='max-w-5xl mx-auto p-6'>
-            <h1 className='text-4xl font-bold mb-2 text-center'>
+        <div className="max-w-5xl mx-auto p-6">
+            <h1 className="text-4xl font-bold mb-2 text-center">
                 Interview Question Blogs
             </h1>
-            <h3 className='text-xl font-bold mb-2 text-center'>
-                Detailed explanation of each topics and interview questions is
-                in course
+            <h3 className="text-xl font-bold mb-2 text-center">
+                Detailed explanation of each topic and interview questions is
+                in the course
             </h3>
 
             {/* Category Buttons */}
-            <div className='flex gap-3 flex-wrap justify-center mb-8'>
+            <div className="flex gap-3 flex-wrap justify-center mb-8">
                 {categories.map((category) => (
                     <button
                         key={category}
-                        onClick={() => {
-                            setSelectedCategory(category)
-                            setExpandedSection(null)
-                        }}
+                        onClick={() => setSelectedCategory(category)}
                         className={`px-4 py-2 rounded-md text-sm font-medium border transition ${
                             selectedCategory === category
                                 ? "bg-blue-600 text-white border-blue-600 shadow"
@@ -76,41 +76,34 @@ export default function BlogsPage() {
                 return (
                     <div
                         key={section.mainHeader}
-                        className='mb-4 border rounded-lg overflow-hidden'
+                        className="mb-4 border rounded-lg overflow-hidden"
                     >
-                        {/* Header */}
-                        <div className='flex items-center justify-between px-4 py-3 bg-gray-50'>
-                            <div className='flex items-center gap-3'>
-                                <span className='font-semibold text-lg'>
-                                    {section.mainHeader} {""} {"("}
+                        <div className="flex items-center justify-between px-4 py-3 bg-gray-50">
+                            <div className="flex items-center gap-3">
+                                <span className="font-semibold text-lg">
+                                    {section.mainHeader} {" ("}
                                     {section.rowData.length}
                                     {")"}
                                 </span>
 
-                                {/* ✅ External Links (Safe Rendering) */}
                                 {section.externalLinks?.length > 0 && (
-                                    <div className='flex items-center gap-2'>
-                                        {section.externalLinks.map(
-                                            (link, idx) => (
-                                                <a
-                                                    key={idx}
-                                                    href={link?.href || "#"}
-                                                    target='_blank'
-                                                    rel='noreferrer'
-                                                    className='p-1 rounded hover:bg-gray-100'
-                                                    title={link?.href || ""}
-                                                >
-                                                    <RenderIcon
-                                                        name={link?.icon}
-                                                    />
-                                                </a>
-                                            )
-                                        )}
+                                    <div className="flex items-center gap-2">
+                                        {section.externalLinks.map((link, idx) => (
+                                            <a
+                                                key={idx}
+                                                href={link?.href || "#"}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="p-1 rounded hover:bg-gray-100"
+                                                title={link?.href || ""}
+                                            >
+                                                <RenderIcon name={link?.icon} />
+                                            </a>
+                                        ))}
                                     </div>
                                 )}
                             </div>
 
-                            {/* Arrow Toggle */}
                             <button
                                 aria-expanded={isOpen}
                                 onClick={() =>
@@ -118,7 +111,7 @@ export default function BlogsPage() {
                                         isOpen ? null : section.mainHeader
                                     )
                                 }
-                                className='p-2 rounded hover:bg-gray-100'
+                                className="p-2 rounded hover:bg-gray-100"
                             >
                                 <motion.span
                                     animate={{ rotate: isOpen ? 180 : 0 }}
@@ -128,53 +121,50 @@ export default function BlogsPage() {
                                         damping: 30,
                                     }}
                                 >
-                                    <FaChevronDown className='w-4 h-4' />
+                                    <FaChevronDown className="w-4 h-4" />
                                 </motion.span>
                             </button>
                         </div>
 
-                        {/* Collapsible Table */}
                         <AnimatePresence initial={false}>
                             {isOpen && (
                                 <motion.div
                                     initial={{ height: 0, opacity: 0 }}
                                     animate={{ height: "auto", opacity: 1 }}
                                     exit={{ height: 0, opacity: 0 }}
-                                    className='p-4 border-t bg-white'
+                                    className="p-4 border-t bg-white"
                                 >
-                                    <table className='min-w-full border text-sm'>
-                                        <thead className='bg-gray-100'>
+                                    <table className="min-w-full border text-sm">
+                                        <thead className="bg-gray-100">
                                             <tr>
-                                                <th className='px-4 py-2 text-left'>
+                                                <th className="px-4 py-2 text-left">
                                                     Company
                                                 </th>
-                                                <th className='px-4 py-2 text-left'>
+                                                <th className="px-4 py-2 text-left">
                                                     Link
                                                 </th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {section.rowData?.map(
-                                                (row, index) => (
-                                                    <tr
-                                                        key={index}
-                                                        className='border-t hover:bg-gray-50 transition'
-                                                    >
-                                                        <td className='px-4 py-2'>
-                                                            {row.company}
-                                                        </td>
-                                                        <td className='px-4 py-2 text-blue-600 underline'>
-                                                            <a
-                                                                href={row.link}
-                                                                target='_blank'
-                                                                rel='noreferrer'
-                                                            >
-                                                                {row.link}
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                )
-                                            )}
+                                            {section.rowData?.map((row, index) => (
+                                                <tr
+                                                    key={index}
+                                                    className="border-t hover:bg-gray-50 transition"
+                                                >
+                                                    <td className="px-4 py-2">
+                                                        {row.company}
+                                                    </td>
+                                                    <td className="px-4 py-2 text-blue-600 underline">
+                                                        <a
+                                                            href={row.link}
+                                                            target="_blank"
+                                                            rel="noreferrer"
+                                                        >
+                                                            {row.link}
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            ))}
                                         </tbody>
                                     </table>
                                 </motion.div>
