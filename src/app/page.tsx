@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { X } from "lucide-react"
 import { companiesList } from "@/utils/companiesList"
 import { saleConfig } from "@/utils/constants"
+import { youTubeMembersList } from "@/utils/youTubeMembersList"
 import Image from "next/image"
 import Link from "next/link"
 import HeroBanner from "@/components/heroBanner/HeroBanner"
@@ -12,9 +13,8 @@ import Gallery from "@/components/gallery/Gallery"
 import CorporateAppreciation from "@/components/corporateAppreciation/CorporateAppreciation"
 import FAQ from "@/components/faq/FAQ"
 import FansFeedback from "@/components/fansFeedback/FansFeedback"
-
 import YouTubeMembers from "@/components/youTubeMembers/YouTubeMembers"
-import { youTubeMembersList } from "@/utils/youTubeMembersList"
+import AboutMe from "@/components/aboutMe/AboutMe"
 
 export default function Home() {
     const [showPromo, setShowPromo] = useState(false)
@@ -133,6 +133,7 @@ export default function Home() {
                 <FAQ />
                 <YouTubeMembers sponsors={youTubeMembersList}/>
                 <FansFeedback />
+                <AboutMe />
             </div>
         </div>
     )

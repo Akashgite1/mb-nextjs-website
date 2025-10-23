@@ -30,7 +30,7 @@ export default function FansFeedback() {
                 What People Say
             </h2>
       {/* 3 Column Layout */}
-      <div className="grid grid-cols-3 gap-4 h-[100vh] overflow-y-auto">
+      <div className="grid grid-cols-3 gap-4 h-[50vh] overflow-y-auto">
         
         {/* Left column */}
         <div className="flex flex-col gap-4">
@@ -40,7 +40,7 @@ export default function FansFeedback() {
                 src={item.img}
                 alt={item.source}
                 width={800}
-                height={item.height || 600}
+                height={item.height || 400}
                 className="w-full rounded-lg shadow object-contain"
               />
             </div>
