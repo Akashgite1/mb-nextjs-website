@@ -240,18 +240,29 @@ export const categories: PlatformCategory[] = [
         ],
     },
     {
-        label: "Technical Courses - FREE and PAID",
+        label: "All Technical Courses - FREE and PAID",
         items: [
             {
-                id: 2,
-                type: "image",
-                img: "/images/techLogos/reactJS.png",
-                title: "Tech Section - Interview Ready",
+                id: 1,
+                type: "component",
+                icon: <FaUsers className='text-red-600 text-4xl' />,
+                title: "Check all Interview Ready Courses",
                 followers: "2.5k+ Bookings",
                 description:
                     "Check out different tech stack covered - Interview Questions",
                 link: "/courses",
                 color: "from-red-50 to-red-100",
+            },
+            {
+                id: 2,
+                type: "component",
+                icon: <FaUsers className='text-red-600 text-4xl' />,
+                title: "Credly - My Technical Certifications",
+                followers: "",
+                description:
+                    "Check out my all technical certifications on different tech stacks",
+                link: "https://www.credly.com/users/manohar-batra/badges",
+                color: "from-pink-50 to-pink-100",
             }
         ],
     },
