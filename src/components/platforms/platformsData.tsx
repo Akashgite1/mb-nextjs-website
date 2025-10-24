@@ -163,6 +163,12 @@ export const categories: PlatformCategory[] = [
                         width: 400,
                         height: 150,
                     },
+                    {
+                        name: "topmatemsg6",
+                        src: "/images/fansMessages/topmatemsg6.png",
+                        width: 400,
+                        height: 150,
+                    },
                 ],
             },
             {
@@ -209,6 +215,18 @@ export const categories: PlatformCategory[] = [
                     "700+ Companies List (inclding Remote) where my subscribers are placed at 50+ LPA packages too",
                 link: "https://www.topmate.io/manohar",
                 color: "from-yellow-50 to-yellow-100",
+                testimonials: [
+                    {
+                        name: "feedbackcompanieslist1",
+                        src: "/images/fansMessages/feedbackcompanieslist1.png",
+                    },
+                    {
+                        name: "feedbackcompanieslist1",
+                        src: "/images/fansMessages/feedbackcompanieslist1.png",
+                        width: 400,
+                        height: 180,
+                    },
+                ],
             },
         ],
     },
