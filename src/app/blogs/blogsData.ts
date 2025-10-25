@@ -33,6 +33,14 @@ export const blogsData: IblogsData[]  = [
         company: "#2 Interview Questions",
         link: "https://medium.com/@contactmanoharbatra/reactjs-interview-questions-91c720acd9db",
       },
+      {
+        company: "1000+ Interview Questions",
+        link: "https://github.com/sudheerj/javascript-interview-questions"
+      },
+      {
+        company: "JS Challenges",
+        link: "https://jscodechallenges.vercel.app/"
+      }
     ],
   },
   {
