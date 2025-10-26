@@ -34,12 +34,32 @@ export const blogsData: IblogsData[]  = [
         link: "https://medium.com/@contactmanoharbatra/reactjs-interview-questions-91c720acd9db",
       },
       {
-        company: "1000+ Interview Questions",
+        company: "#3 JS Interview Questions",
+        link: "https://medium.com/@contactmanoharbatra/javascript-important-questions-d3543f1a66b5",
+      },
+      {
+        company: "#4 JS Interview Questions",
+        link: "https://www.toptal.com/javascript/interview-questions",
+      },
+      {
+        company: "Github - Javascript Interview Questions",
         link: "https://github.com/sudheerj/javascript-interview-questions"
+      },
+      {
+        company: "GitHub - ReactJS Interview Questions",
+        link: "https://github.com/sudheerj/reactjs-interview-questions"
       },
       {
         company: "JS Challenges",
         link: "https://jscodechallenges.vercel.app/"
+      },
+      {
+        company: "Frontend Interview Knowledge",
+        link: "https://medium.com/@contactmanoharbatra/frontend-interview-knowledge-1238411e625e"
+      },
+      {
+        company: "30 seconds of interview",
+        link: "https://30secondsofinterviews.org/"
       }
     ],
   },
@@ -49,6 +69,10 @@ export const blogsData: IblogsData[]  = [
       // { icon: "facebook", href: "https://facebook.com" },
     ],
     rowData: [
+      {
+        company: "Design Patterns - JAVA",
+        link: "https://docs.google.com/document/d/1Qva-gMi_P_Qutw_BaBAqmMvJ9t8uDx_6BrPmBwJz4WQ/edit?usp=sharing"
+      },
       {
         company: "JWT - JSON Web Token",
         link: "https://medium.com/@contactmanoharbatra/jwt-f876287f18e6",

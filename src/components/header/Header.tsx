@@ -17,7 +17,8 @@ export default function Header() {
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex gap-3">
-                {["Courses", "Blogs", "Gallery", "FAQ", "Roadmap", "News", "Games"].map((item) => (
+                {/* {["Courses", "Blogs", "Gallery", "FAQ", "Roadmap", "News", "Games"].map((item) => ( */}
+                {["Blogs", "Gallery", "FAQ", "Roadmap", "News", "Games"].map((item) => (
                     <Link
                         key={item}
                         href={`/${item.toLowerCase()}`}
@@ -40,7 +41,7 @@ export default function Header() {
             {/* Mobile Menu Dropdown */}
             {isOpen && (
                 <div className="absolute top-full right-0 bg-blue-600 w-full flex flex-col items-center md:hidden shadow-lg">
-                    {["Courses", "Blogs", "Gallery", "FAQ", "Roadmap", "News", "Games"].map((item) => (
+                    {["Blogs", "Gallery", "FAQ", "Roadmap", "News", "Games"].map((item) => (
                         <Link
                             key={item}
                             href={`/${item.toLowerCase()}`}
