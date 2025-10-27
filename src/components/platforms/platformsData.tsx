@@ -306,22 +306,22 @@ export const categories: PlatformCategory[] = [
                 link: "https://topmate.io/manohar_batra/1751070",
                 color: "from-yellow-50 to-yellow-100",
             },
-            {
-                id: 4,
-                type: "image",
-                img: "/images/techLogos/reactJS.png",
-                title: "System Design Interview Ready",
-                followers: "2.5k+ Bookings",
-                description:
-                    "React, System Design, DSA - Interview Questions + Topics + Real Resumes for reference",
-                link: "https://topmate.io/manohar_batra/1587369?utm_source=public_profile&utm_campaign=manohar_batra",
-                color: "from-yellow-50 to-yellow-100",
-            },
+            // {
+            //     id: 4,
+            //     type: "image",
+            //     img: "/images/techLogos/reactJS.png",
+            //     title: "System Design Interview Ready",
+            //     followers: "2.5k+ Bookings",
+            //     description:
+            //         "React, System Design, DSA - Interview Questions + Topics + Real Resumes for reference",
+            //     link: "https://topmate.io/manohar_batra/1587369?utm_source=public_profile&utm_campaign=manohar_batra",
+            //     color: "from-yellow-50 to-yellow-100",
+            // },
             {
                 id: 5,
                 type: "component",
                 icon: <FaUsers className='text-red-600 text-4xl' />,
-                title: "DSA for FREE",
+                title: "DSA - FREE",
                 followers: "100+ Followers",
                 description: "Practise DSA with Manish",
                 link: "https://manishdsa.netlify.app/",
@@ -331,7 +331,7 @@ export const categories: PlatformCategory[] = [
                 id: 6,
                 type: "image",
                 img: "/images/topmate.jpg",
-                title: "Interview Questions",
+                title: "College - Service Based Interview - FREE",
                 followers: "2k+ Bookings",
                 description:
                     "Interview Prep for Top 15 Service-Based Companies",

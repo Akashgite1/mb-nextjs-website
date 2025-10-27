@@ -26,6 +26,10 @@ export const blogsData: IblogsData[]  = [
         link: "https://medium.com/@contactmanoharbatra/visa-frontend-interview-ques-a5c29e6c01a7",
       },
       {
+        company: "Atlassian Senior Frontend Interview Experience",
+        link: "https://medium.com/@contactmanoharbatra/atlassian-senior-frontend-interview-experience-6529f2a5e9ce",
+      },
+      {
         company: "#1 Interview Questions",
         link: "https://medium.com/@contactmanoharbatra/react-interview-questions-1-eb71bee6443b",
       },
