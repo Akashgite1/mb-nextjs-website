@@ -89,6 +89,10 @@ export const blogsData: IblogsData[]  = [
     ],
     rowData: [
       {
+        company: "All Interview Topics - PBC",
+        link: "https://medium.com/@contactmanoharbatra/sytem-design-all-interview-topics-6a06868bc7da?sk=44e0a6566364b696621fecf87e1bab57",
+      },
+      {
         company: "#1 Interview Questions",
         link: "https://medium.com/@contactmanoharbatra/system-design-ques-b739f7438f4d",
       },
