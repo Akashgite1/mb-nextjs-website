@@ -70,6 +70,15 @@ export const corporateTopics = [
                 ],
             },
             {
+                title: "Important Videos",
+                links: [
+                    {
+                        label: "Avoid joining MNC via 3rd party payroll",
+                        url: "https://youtu.be/GBh1WHPEBCo",
+                    },
+                ],
+            },
+            {
                 title: "Multiple Job Offers",
                 links: [
                     {
