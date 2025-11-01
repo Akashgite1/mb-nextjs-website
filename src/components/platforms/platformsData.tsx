@@ -74,27 +74,33 @@ export const categories: PlatformCategory[] = [
                 testimonials: [
                     {
                         name: "linkedinmsg1",
-                        src: "/images/fansMessages/linkedinmsg1.png",
+                        src: "/images/fansMessages/linkedin/1.png",
                         width: 400,
                         height: 100,
                     },
                     {
                         name: "linkedinmsg2",
-                        src: "/images/fansMessages/linkedinmsg2.png",
+                        src: "/images/fansMessages/linkedin/2.png",
                         width: 400,
                         height: 100,
                     },
                     {
                         name: "linkedinmsg3",
-                        src: "/images/fansMessages/linkedinmsg3.png",
+                        src: "/images/fansMessages/linkedin/3.png",
                         width: 400,
                         height: 130,
                     },
                     {
                         name: "linkedinmsg4",
-                        src: "/images/fansMessages/linkedinmsg4.png",
+                        src: "/images/fansMessages/linkedin/4.png",
                         width: 400,
                         height: 130,
+                    },
+                    {
+                        name: "linkedinmsg4",
+                        src: "/images/fansMessages/linkedin/5.png",
+                        width: 400,
+                        height: 100,
                     },
                 ],
             },

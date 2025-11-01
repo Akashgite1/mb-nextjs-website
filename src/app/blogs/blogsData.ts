@@ -14,6 +14,10 @@ export const blogsData: IblogsData[]  = [
         company: "One List for Job Seekers",
         link: "https://medium.com/@contactmanoharbatra/one-list-for-job-seekers-1465739a0e1f",
       },
+      {
+        company: "Documents You MUST Download Before Leaving Your Company",
+        link: "https://www.linkedin.com/posts/manoharbatra_careertips-jobswitch-corporatelife-activity-7386996640911400960-9olP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAooxIkB89bYoelfycAVz-RRPPdeElxaepA",
+      },
     ],
   },
   {

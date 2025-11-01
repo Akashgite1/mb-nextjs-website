@@ -84,4 +84,9 @@ export const faqData: FAQItem[] = [
         category: "Corporate Gyaan",
         visible: true,
     },
-]
+    {
+        question: "First make money to invest and then invest same money to make more money",
+        category: "Golden Words",
+        visible: true,
+    }
+];
