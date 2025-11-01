@@ -98,7 +98,7 @@ export const blogsData: IblogsData[]  = [
     rowData: [
       {
         company: "All Interview Topics - PBC",
-        link: "https://medium.com/@contactmanoharbatra/sytem-design-all-interview-topics-6a06868bc7da?sk=44e0a6566364b696621fecf87e1bab57",
+        link: "https://docs.google.com/spreadsheets/d/1B1vDOJl3LvUdWiodjgq2k29Fj5_l7q38j3DAPrOjOcY/edit?usp=sharing",
       },
       {
         company: "#1 Interview Questions",
