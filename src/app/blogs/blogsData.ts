@@ -7,6 +7,10 @@ export const blogsData: IblogsData[]  = [
     ],
     rowData: [
       {
+        company: "How to get a job - Easy Raodmap",
+        link: "https://medium.com/@contactmanoharbatra/how-to-get-a-job-in-6-easy-steps-ba8f85d0c178?sk=a5b57e29a641534a4961c040fc3048f1",
+      },
+      {
         company: "One List for Job Seekers",
         link: "https://medium.com/@contactmanoharbatra/one-list-for-job-seekers-1465739a0e1f",
       },
@@ -95,6 +99,17 @@ export const blogsData: IblogsData[]  = [
       {
         company: "#1 Interview Questions",
         link: "https://medium.com/@contactmanoharbatra/system-design-ques-b739f7438f4d",
+      },
+    ],
+  },
+  {
+    mainHeader: "Utilities/Tools",
+    externalLinks: [
+    ],
+    rowData: [
+      {
+        company: "JSON slicer",
+        link: "https://angstrom.vercel.app/json-slicer",
       },
     ],
   },

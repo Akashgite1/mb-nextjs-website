@@ -148,10 +148,10 @@ export default function BlogsPage() {
                                     <table className='min-w-full border text-sm'>
                                         <thead className='bg-gray-100'>
                                             <tr>
-                                                <th className='px-4 py-2 text-left'>
+                                                <th className='px-4 py-1 text-left'>
                                                     Company
                                                 </th>
-                                                <th className='px-4 py-2 text-left'>
+                                                <th className='px-4 py-1 text-left'>
                                                     Link
                                                 </th>
                                             </tr>
@@ -163,10 +163,10 @@ export default function BlogsPage() {
                                                         key={index}
                                                         className='border-t hover:bg-gray-50 transition'
                                                     >
-                                                        <td className='px-4 py-2'>
+                                                        <td className='px-4 py-1'>
                                                             {row.company}
                                                         </td>
-                                                        <td className='px-4 py-2 text-blue-600 underline'>
+                                                        <td className='px-4 py-1 text-blue-600 underline'>
                                                             <a
                                                                 href={row.link}
                                                                 target='_blank'
