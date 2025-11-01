@@ -265,7 +265,11 @@ export const podcastTopics = [
                 title: "Salesforce",
                 links: [
                     {
-                        label: "Video 1 - Gaurav",
+                        label: "Video 1 - Amit",
+                        url: "https://youtu.be/5XtUOTemB3s?si=kVxQCB3bGGYAcbqr",
+                    },
+                    {
+                        label: "Video 2 - Gaurav",
                         url: "https://youtu.be/K_lbAwgwzsc?si=4_x_8igeFsiR6-NA",
                     },
                 ],
