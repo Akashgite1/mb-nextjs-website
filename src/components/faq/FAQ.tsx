@@ -63,23 +63,24 @@ export default function FAQ() {
             </div>
 
             {/* FAQ List */}
-            <div className='space-y-6 max-h-[800px] overflow-y-auto'>
+            <div className='space-y-4 max-h-[800px] overflow-y-auto'>
                 {filteredFaqs.length > 0 ? (
                     filteredFaqs.map((faq, index) => (
                         <div
                             key={index}
-                            className='border rounded-lg p-4 shadow-sm bg-white'
+                            className='border rounded-lg p-4 shadow-sm bg-white leading-snug' // 👈 reduced line height
                         >
-                            <h3 className='font-semibold text-base sm:text-lg text-black'>
+                            <h3 className='font-semibold text-base sm:text-lg text-black leading-tight'>
                                 {faq.question}
                             </h3>
-                            <p className='text-gray-700 mt-2 text-sm sm:text-base'>
+                            <p className='text-gray-700 mt-1 text-sm sm:text-base leading-snug'>
                                 {faq.answer}
                             </p>
+
                             {faq.videos?.length ? (
-                                <div className='mt-3'>
-                                    <div className='flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-4'>
-                                        <h3 className='font-medium text-sm sm:text-base text-gray-600'>
+                                <div className='mt-2'>
+                                    <div className='flex flex-col sm:flex-row flex-wrap gap-1 sm:gap-3'>
+                                        <h3 className='font-medium text-sm sm:text-base text-gray-600 leading-tight'>
                                             Related Links:
                                         </h3>
                                         {faq.videos.map((video, vidIndex) => (
@@ -88,7 +89,7 @@ export default function FAQ() {
                                                 href={video.link}
                                                 target='_blank'
                                                 rel='noopener noreferrer'
-                                                className='text-blue-600 hover:underline text-sm sm:text-base'
+                                                className='text-blue-600 hover:underline text-sm sm:text-base leading-tight'
                                             >
                                                 {video.title}
                                             </a>

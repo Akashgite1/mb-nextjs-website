@@ -16,6 +16,7 @@ import FansFeedback from "@/components/fansFeedback/FansFeedback"
 import YouTubeMembers from "@/components/youTubeMembers/YouTubeMembers"
 import AboutMe from "@/components/aboutMe/AboutMe"
 import ContactMe from "@/components/contactMe/ContactMe"
+import BrandPartners from "@/components/brandPartners/BrandPartners"
 
 export default function Home() {
     const [showPromo, setShowPromo] = useState(false)
@@ -131,8 +132,9 @@ export default function Home() {
                 <Platforms />
                 <Gallery />
                 <CorporateAppreciation />
+                <BrandPartners />
                 <FAQ />
-                <YouTubeMembers sponsors={youTubeMembersList}/>
+                {/* <YouTubeMembers sponsors={youTubeMembersList}/> */}
                 <FansFeedback />
                 <AboutMe />
                 <ContactMe /> {/* 👈 Add this at the end */}
