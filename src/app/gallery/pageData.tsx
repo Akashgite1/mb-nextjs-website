@@ -13,30 +13,43 @@ export const creators: GalleryItem[] = [
     {
         src: "/images/creators/sumit_goyal.jpeg",
         name: "Sumit Goyal",
+        width: 200,
     },
     {
         src: "/images/creators/ajay_suneja.jpeg",
         name: "Ajay Suneja",
+        width: 220,
+    },
+    {
+        src: "/images/creators/anmol_garg.jpeg",
+        name: "Anmol Garg",
+        description: "Standup Comedian",
+        width: 180,
     },
     {
         src: "/images/creators/piyush.jpeg",
         name: "Piyush - Roadside Coder",
+        width: 190,
     },
     {
         src: "/images/creators/striver.jpeg",
         name: "Raj Vikramaditya",
+        width: 200,
     },
     {
         src: "/images/creators/harkirat.jpeg",
         name: "Harkirat",
+        width: 210,
     },
     {
         src: "/images/creators/ayushi_sharma.jpeg",
         name: "Ayushi Sharma",
+        width: 240,
     },
     {
         src: "/images/creators/saumya_sriv.jpeg",
         name: "Saumya",
+        width: 210,
     },
 ]
 
@@ -59,13 +72,14 @@ export const course_members: GalleryItem[] = [
         name: "Om Sharma",
         description: ".NET Full Stack Developer",
         logo: "/images/companyLogos/McGraw-Hill.png",
+        width: 230,
     },
     {
         src: "/images/corporateCourseMembers/manish_goyal.jpeg",
         name: "Manish Goyal",
         description: "SDE-2 Backend Developer",
         logo: "/images/companyLogos/linkedin.png",
-        height: 100,
+        width: 170,
     },
 ]
 

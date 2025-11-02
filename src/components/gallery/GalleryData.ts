@@ -12,11 +12,19 @@ export interface GalleryItem {
 export const creators: GalleryItem[] = [
   {
     src: "/images/creators/ajay_suneja.jpeg",
-    name: "Ajay Suneja"
+    name: "Ajay Suneja",
+    description: "6 Lakhs YouYube subscribers",
+  },
+  {
+    src: "/images/creators/anmol_garg.jpeg",
+    name: "Anmol Garg",
+    description: "Corporate Standup Comedian",
+    width: 200,
   },
   {
     src: "/images/creators/piyush.jpeg",
     name: "Piyush - Roadside Coder",
+    description: "2 Lakhs YouYube subscribers"
   },
   {
     src: "/images/corporate/prasanna.jpeg",
@@ -41,5 +49,6 @@ export const creators: GalleryItem[] = [
   {
     src: "/images/creators/striver.jpeg",
     name: "Raj Vikramaditya",
+    description: "10 Lakhs YouYube subscribers"
   },
 ]
