@@ -9,10 +9,10 @@ export default function TechnicalCoursesSection() {
       <table className="min-w-full border border-gray-300 rounded-lg">
         <thead>
           <tr className="bg-gray-100 text-left">
-            <th className="px-4 py-2 border-b">Course Name</th>
+            <th className="px-4 py-2 border-b">Course</th>
             <th className="px-4 py-2 border-b">Author</th>
             <th className="px-4 py-2 border-b">Need Guidance?</th>
-            <th className="px-4 py-2 border-b">Free/Paid Technical Articles</th>
+            {/* <th className="px-4 py-2 border-b">Free/Paid Technical Articles</th> */}
             <th className="px-4 py-2 border-b">Link</th>
           </tr>
         </thead>
@@ -83,7 +83,7 @@ export default function TechnicalCoursesSection() {
               </td>
 
               {/* Technical Articles */}
-              <td className="px-4 py-2">
+              {/* <td className="px-4 py-2">
                 {course.articles ? (
                   <a
                     href={course.articles}
@@ -96,7 +96,7 @@ export default function TechnicalCoursesSection() {
                 ) : (
                   "—"
                 )}
-              </td>
+              </td> */}
 
               {/* Course Link */}
               <td className="px-4 py-2">

@@ -215,10 +215,10 @@ export const categories: PlatformCategory[] = [
                 id: 3,
                 type: "image",
                 img: "/images/topmate.jpg",
-                title: "700+ Companies Hiring now!!",
+                title: "800+ Companies Hiring now!!",
                 followers: "4k+ Bookings",
                 description:
-                    "700+ Companies List (inclding Remote) where my subscribers are placed at 50+ LPA packages too",
+                    "800+ Companies List (inclding Remote) where my subscribers are placed at 50+ LPA packages too",
                 link: "https://www.topmate.io/manohar",
                 color: "from-yellow-50 to-yellow-100",
                 testimonials: [
@@ -235,6 +235,18 @@ export const categories: PlatformCategory[] = [
                         height: 180,
                     },
                 ],
+            },
+            {
+                id: 4,
+                type: "image",
+                img: "/images/topmate.jpg",
+                title: "Know YOur Worth",
+                followers: "10 Bookings",
+                description:
+                    "Real Salary Insights of IT Employees",
+                link: "https://topmate.io/manohar_batra/1801807",
+                color: "from-yellow-50 to-yellow-100",
+
             },
         ],
     },
