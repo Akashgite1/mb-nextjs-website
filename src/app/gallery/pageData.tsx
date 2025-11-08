@@ -132,6 +132,12 @@ export const random_places: GalleryItem[] = [
         description: "16-Sep-2025",
         // width: 320,
     },
+    {
+        src: "/images/randomPlaces/rajat_IBM.jpeg",
+        name: "Rajat - IBM Noida",
+        description: "07-Nov-2025",
+        // width: 320,
+    },
 ]
 
 export const company_events: GalleryItem[] = [
