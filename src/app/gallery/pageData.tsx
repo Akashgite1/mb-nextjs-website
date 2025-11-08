@@ -136,7 +136,7 @@ export const random_places: GalleryItem[] = [
         src: "/images/randomPlaces/rajat_IBM.jpeg",
         name: "Rajat - IBM Noida",
         description: "07-Nov-2025",
-        // width: 320,
+        width: 200,
     },
 ]
 
