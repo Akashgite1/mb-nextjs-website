@@ -3,8 +3,12 @@ export const saleConfig = {
   title: "🎉 Job of the Day",
   subtitles: [
     {
-      text: "✅ Check out 700+ companies hiring in 2025",
+      text: "✅ Check out 800+ companies hiring in 2025",
       link: "https://www.topmate.io/manohar",
+    },
+    {
+      text: "✅ Know Your Worth - Check how much other IT engineers are earning",
+      link: "https://topmate.io/manohar_batra/1801807",
     },
     {
       text: "✅ Explore Self Paced React.js, DSA, System Design, and Java-Spring Boot",

@@ -34,6 +34,15 @@ export const collegeTopics = [
                     },
                 ],
             },
+            {
+                title: "Job Scams",
+                links: [
+                    {
+                        label: "Fake Interview Calls",
+                        url: "https://youtu.be/Iq06jplhy04",
+                    },
+                ],
+            },
         ],
     },
 ]
@@ -157,6 +166,15 @@ export const corporateTopics = [
                     {
                         label: "Support to Development",
                         url: "https://www.youtube.com/watch?v=v7dOG88umvQ",
+                    },
+                ],
+            },
+            {
+                title: "Job Scams",
+                links: [
+                    {
+                        label: "Fake Interview Calls",
+                        url: "https://youtu.be/Iq06jplhy04",
                     },
                 ],
             },
