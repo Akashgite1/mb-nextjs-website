@@ -24,7 +24,7 @@ export default function TechnicalCoursesGrid() {
                     Technical Courses 🚀
                 </motion.h1>
                 <p className='text-gray-600 text-lg'>
-                    Learn the exact skills companies are hiring for in 2025.
+                    Learn the exact skills companies are hiring for in 2026.
                 </p>
             </header>
 

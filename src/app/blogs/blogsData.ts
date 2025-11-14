@@ -115,6 +115,10 @@ export const blogsData: IblogsData[]  = [
         company: "JSON slicer",
         link: "https://angstrom.vercel.app/json-slicer",
       },
+      {
+        company: "Text Compare",
+        link: "https://text-compare.com/",
+      }
     ],
   },
 ];

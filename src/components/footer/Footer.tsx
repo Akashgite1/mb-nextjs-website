@@ -9,7 +9,7 @@ export default function Footer() {
                     <div className='col-span-1'>
                         <div className='mb-4'>
                             <h2 className='text-xl font-bold'>
-                                Home for Corporate people
+                                Home for Corporate
                             </h2>
                         </div>
                         <p className='text-sm text-gray-400'>

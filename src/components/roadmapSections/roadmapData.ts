@@ -16,7 +16,7 @@ export interface RoadmapData {
 export const roadmapData: RoadmapData = {
   technicalCourses: [
     {
-      name: "100% Interview Ready - GenAI React System Design DSA",
+      name: "100% Interview Ready - GenAI + React + System Design + DSA + Sample Resumes",
       link: "https://topmate.io/manohar_batra/1587369",
       author: "Manohar Batra",
       linkedIn: "https://www.linkedin.com/in/manoharbatra/",
@@ -26,14 +26,14 @@ export const roadmapData: RoadmapData = {
     //   successStories: "https://reactcourse.com/success-stories",
     },
     {
-      name: "100% Java Springboot Interview Ready",
+      name: "100% Java Springboot Interview Ready + + Sample Resumes",
       link: "https://topmate.io/manohar_batra/1751070",
       author: "Naveen Metta",
       linkedIn: "https://www.linkedin.com/in/metta-naveen/",
       connect: "https://topmate.io/naveen_metta",
     },
     {
-      name: "Check how much IT Engineers are earning",
+      name: "Check how much IT Engineers are earning nowadays?",
       link: "https://topmate.io/manohar_batra/1801807",
       author: "Manohar Batra",
     },

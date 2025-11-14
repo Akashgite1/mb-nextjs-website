@@ -5,7 +5,7 @@ export const COURSE_LINK: Record<string, string> = {
 
 export interface LinkItem {
     label: string
-    url: string
+    url?: string
 }
 
 export interface RowDataItem {

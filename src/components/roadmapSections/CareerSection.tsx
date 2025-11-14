@@ -8,7 +8,7 @@ export default function CareerSection() {
             {/* College / Student Section */}
             <section>
                 <h2 className='text-xl font-semibold mb-4 text-red-700'>
-                    College / Student
+                    College Job Ready Bootcamp
                 </h2>
                 {collegeTopics.map((node, i) => (
                     <TreeNode key={i} node={node} />
@@ -17,8 +17,8 @@ export default function CareerSection() {
 
             {/* Corporate Section */}
             <section>
-                <h2 className='text-xl font-semibold mb-4 text-green-700'>
-                    Working Professionals
+                <h2 className='text-xl font-semibold mb-4 text-red-700'>
+                    Corporate Job Ready Bootcamp
                 </h2>
                 {corporateTopics.map((node, i) => (
                     <TreeNode key={i} node={node} />

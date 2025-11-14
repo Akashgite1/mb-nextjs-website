@@ -5,43 +5,56 @@ export const COURSE_LINK = {
 
 export const collegeTopics = [
     {
-        title: "Student – How to get a job",
-        children: [
+        title: "Internships",
+    },
+    {
+        title: "Get a Job in 3 months",
+        links: [
             {
-                title: "Resume Tips",
-                links: [
-                    {
-                        label: "ATS Friendly Resume",
-                        url: "https://www.youtube.com/watch?v=xiDsXxW3uWU",
-                    },
-                ],
+                label: "800+ Companies Complete List",
             },
             {
-                title: "LinkedIn Tips",
-                links: [
-                    {
-                        label: "Social Media is New Resume",
-                        url: "https://www.youtube.com/watch?v=JdzYJZTLrxo",
-                    },
-                ],
+                label: "Resume Hacks - ATS Friendly",
             },
             {
-                title: "How to get Job in College",
-                links: [
-                    {
-                        label: "Get 10LPA job as a fresher",
-                        url: "https://www.youtube.com/watch?v=a_ssrnrTopQ",
-                    },
-                ],
+                label: "Naukri Hacks",
             },
             {
-                title: "Job Scams",
-                links: [
-                    {
-                        label: "Fake Interview Calls",
-                        url: "https://youtu.be/Iq06jplhy04",
-                    },
-                ],
+                label: "LinkedIn Hacks",
+            },
+            {
+                label: "Handwritten Technical Notes",
+            },
+        ],
+    },
+    {
+        title: "Get Self Paced Courses",
+        links: [
+            {
+                label: "GenAI",
+            },
+            {
+                label: "React + Javascript",
+            },
+            {
+                label: "DSA",
+            },
+            {
+                label: "System Design",
+            },
+        ],
+    },
+    {
+        title: "Whatsapp Groups",
+        links: [
+            {
+                label: "General Guidance",
+            },
+            {
+                label: "Jobs/Referrals",
+            },
+            {
+                label: "Technical Discussion",
             },
         ],
     },
@@ -49,266 +62,156 @@ export const collegeTopics = [
 
 export const corporateTopics = [
     {
-        title: "Corporate",
-        children: [
+        title: "Switch Job Package",
+        links: [
             {
-                title: "Resume Tips",
-                links: [
-                    {
-                        label: "ATS Friendly Resume",
-                        url: "https://www.youtube.com/watch?v=xiDsXxW3uWU",
-                    },
-                ],
+                label: "Resume Tips & Tricks - ATS Friendly",
             },
             {
-                title: "LinkedIn Tips",
-                links: [
-                    {
-                        label: "Social Media is New Resume",
-                        url: "https://www.youtube.com/watch?v=JdzYJZTLrxo",
-                    },
-                ],
+                label: "800+ Companies Complete List",
             },
             {
-                title: "Handle Interview Questions like Pro",
-                links: [
-                    {
-                        label: "Why you swicthed job frequently?",
-                        url: "https://www.youtube.com/watch?v=qq0bSQtuslg",
-                    },
-                ],
+                label: "Naukri Tips & Tricks",
             },
             {
-                title: "Important Videos",
-                links: [
-                    {
-                        label: "Avoid joining MNC via 3rd party payroll",
-                        url: "https://youtu.be/GBh1WHPEBCo",
-                    },
-                ],
+                label: "LinkedIn Tips & Tricks",
             },
             {
-                title: "Multiple Job Offers",
-                links: [
-                    {
-                        label: "20 LPA vs 30 LPA: Video-1",
-                        url: "https://www.youtube.com/watch?v=ZJCvjq1xkq0",
-                    },
-                    {
-                        label: "33 LPA vs 40 LPA: Video-2",
-                        url: "https://www.youtube.com/watch?v=peWyKIufNFM&t=1s",
-                    },
-                ],
+                label: "Referrals - WhatsApp Groups",
             },
             {
-                title: "Background Verification",
-                links: [
-                    {
-                        label: "Why Background Verification fails?",
-                        url: "https://www.youtube.com/watch?v=YxOQRRoTXRM",
-                    },
-                    {
-                        label: "Absconding Video-1",
-                        url: "https://www.youtube.com/watch?v=mlriEZCj_p4",
-                    },
-                    {
-                        label: "Dual Employment Video-1",
-                        url: "https://www.youtube.com/watch?v=cO3PE7h3ByE",
-                    },
-                    {
-                        label: "Dual Employment Video-2",
-                        url: "https://youtu.be/mlriEZCj_p4",
-                    },
-                ],
+                label: "Roadmap to crack Product Based Companies",
             },
             {
-                title: "Corporate Growth",
-                links: [
-                    {
-                        label: "How Networking brings more opportunities",
-                        url: "https://www.youtube.com/watch?v=Dn_EMkRhOsk",
-                    },
-                ],
+                label: "Reduce 90 days Notice Period like Pro",
             },
             {
-                title: "Corporate Politics",
-                links: [
-                    {
-                        label: "Video-1",
-                        url: "https://www.youtube.com/watch?v=ZEfUwTdMlXU",
-                    },
-                    {
-                        label: "Video-2",
-                        url: "https://youtu.be/dbC0qbGyqm4",
-                    },
-                    {
-                        label: "Video-2",
-                        url: "hhttps://youtu.be/hsQpAPWKwO8",
-                    },
-                ],
+                label: "Salary Negotiation",
             },
             {
-                title: "Career Mistakes to Avoid",
-                links: [
-                    {
-                        label: "Career Mistakes - Video-1",
-                        url: "https://www.youtube.com/watch?v=sRkF5v1Avig",
-                    },
-                    {
-                        label: "10 years in 10 minutes",
-                        url: "https://www.youtube.com/watch?v=zNUBXlaBZRA",
-                    },
-                ],
+                label: "Multiple Job Offers",
             },
             {
-                title: "Change Technology/Domain",
-                links: [
-                    {
-                        label: "Support to Development",
-                        url: "https://www.youtube.com/watch?v=v7dOG88umvQ",
-                    },
-                ],
+                label: "Documents to download before leaving Current Company",
             },
             {
-                title: "Job Scams",
-                links: [
-                    {
-                        label: "Fake Interview Calls",
-                        url: "https://youtu.be/Iq06jplhy04",
-                    },
-                ],
+                label: "Background Verification",
+            },
+            {
+                label: "Get Job Switch in 2 months Detailed Roadmap",
             },
         ],
     },
-]
-
-export const podcastTopics = [
     {
-        title: "Podcast",
-        children: [
+        title: "Corporate – Career Growth",
+        links: [
             {
-                title: "Product Based Companies",
-                links: [
-                    {
-                        label: "Video 1 - Chirag",
-                        url: "https://youtu.be/kQ-7jTU_h00?si=1Szai0sfcFrFYKaa",
-                    },
-                    {
-                        label: "Video 2 - Manish Goyal",
-                        url: "https://youtu.be/JweC6Rg8s4U?si=QbOFxQki9Fq0gHfr",
-                    },
-                ],
+                label: "Corporate Growth",
             },
             {
-                title: "Full Stack",
-                // links: [
-                //   { label: "Playlist", url: "https://www.youtube.com/watch?v=axhdyEs1WR4&list=PL2YCMAeLwTfHX5jpIrhd-0DNxblSm1cPl" },
-                // ],
-                children: [
-                    {
-                        title: "Frontend", // 👈 New nested node
-                        links: [
-                            {
-                                label: "Video 1 - Piyush Roadside Coder",
-                                url: "https://youtu.be/9hd34sAB-jQ?si=msj3GexMJYElmS3m",
-                            },
-                            {
-                                label: "Video 2 - Semicolon Guy",
-                                url: "https://youtu.be/STy0LcUKA8M?si=p216ngoPOhirlVXj",
-                            },
-                            {
-                                label: "Video 3 - Bhaskar - Code4Education",
-                                url: "https://youtu.be/TstctXzKFpg?si=k0QvLCYvYdKmiRbl",
-                            },
-                            {
-                                label: "Video 4 - Aman",
-                                url: "https://youtu.be/Yab3lQMzs4I",
-                            },
-                        ],
-                    },
-                ],
+                label: "Corporate Politics",
             },
             {
-                title: "Manual & Automation Testing",
-                links: [
-                    {
-                        label: "Video 1- Sumit Goyal",
-                        url: "https://youtu.be/muOoLbAEGwI?si=nl1wrIqlBFmeo_QU",
-                    },
-                ],
+                label: "Career Mistakes to Avoid",
             },
             {
-                title: "Data",
-                links: [
-                    {
-                        label: "Playlist",
-                        url: "https://www.youtube.com/watch?v=axhdyEs1WR4&list=PL2YCMAeLwTfHX5jpIrhd-0DNxblSm1cPl",
-                    },
-                ],
-                children: [
-                    {
-                        title: "Data Scientist", // 👈 New nested node
-                        links: [
-                            {
-                                label: "Video 1 - Ashutosh",
-                                url: "https://youtu.be/TzvxmrxTOXo?si=lomEY0Xagd1-xgSO",
-                            },
-                            {
-                                label: "Video 2 - Priyojit",
-                                url: "https://youtu.be/F_untHUPz2Q?si=_ztXNJURohbmd6wO",
-                            },
-                        ],
-                    },
-                    {
-                        title: "Data Engineer", // 👈 New nested node
-                        links: [
-                            {
-                                label: "Video 1 - Anurag",
-                                url: "https://youtu.be/axhdyEs1WR4?si=SJM51jVlRkTP0EPA",
-                            },
-                        ],
-                    },
-                    {
-                        title: "Data Analyst",
-                        links: [
-                            {
-                                label: "Video-1 Waquar Ahmed",
-                                url: "https://youtu.be/emPzBKKDxQQ?si=SGk9ThLRTymIB2AR",
-                            },
-                        ],
-                    },
-                ],
+                label: "Job Scams",
+            },
+        ],
+    },
+    {
+        title: "Change Technology/Domain",
+        links: [
+            {
+                label: "Non IT to IT",
             },
             {
-                title: "Salesforce",
-                links: [
-                    {
-                        label: "Video 1 - Amit",
-                        url: "https://youtu.be/5XtUOTemB3s?si=kVxQCB3bGGYAcbqr",
-                    },
-                    {
-                        label: "Video 2 - Gaurav",
-                        url: "https://youtu.be/K_lbAwgwzsc?si=4_x_8igeFsiR6-NA",
-                    },
-                ],
+                label: "Support to Development",
+            },
+        ],
+    },
+    {
+        title: "Job Market",
+        links: [
+            {
+                label: "Current Job Market Analysis",
             },
             {
-                title: "UI/UX Designer",
-                links: [
-                    {
-                        label: "Video-1 Mansukh Singh",
-                        url: "https://youtu.be/mGTFtfRjO6U?si=WylVQ4vX1LIXDlUq",
-                    },
-                ],
+                label: "Future Job Market Predictions",
             },
             {
-                title: "DevOps & Cloud",
-                links: [
-                    {
-                        label: "Video-1 Praveen",
-                        url: "https://youtu.be/aBVgkwmuZ1s?si=2fcIc1AWU0CSYwg0",
-                    },
-                ],
+                label: "Top Skills in Demand",
+            },
+            {
+                label: "Emerging Technologies",
+            },
+            {
+                label: "Industry Trends",
+            },
+        ],
+    },
+    {
+        title: "Salary Insights",
+        links: [
+            {
+                label: "How much other IT employees are earning?",
+            },
+        ],
+    },
+    {
+        title: "Career Gap",
+        links: [
+            {
+                label: "<2 years Gap",
+            },
+            {
+                label: ">2 years Gap / Fake Experience",
+            },
+        ],
+    },
+    {
+        title: "Other Employees Real Experiences",
+    },
+    {
+        title: "Freelancing",
+    },
+    {
+        title: "Onsite H1B",
+    },
+    {
+        title: "Job Abroad",
+    },
+    {
+        title: "How I bought house worth 1 cr by paying 35k EMI per month only",
+    },
+    {
+        title: "Get Self Paced Courses",
+        links: [
+            {
+                label: "GenAI",
+            },
+            {
+                label: "React + Javascript",
+            },
+            {
+                label: "DSA",
+            },
+            {
+                label: "System Design",
+            },
+        ],
+    },
+    {
+        title: "Whatsapp Groups",
+        links: [
+            {
+                label: "General Guidance",
+            },
+            {
+                label: "Jobs/Referrals",
+            },
+            {
+                label: "Technical Discussion",
             },
         ],
     },

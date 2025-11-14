@@ -241,7 +241,7 @@ export default function PodcastsSection() {
   return (
     <div className="max-w-5xl mx-auto">
       {/* Category Buttons */}
-      <div className="flex gap-3 flex-wrap justify-center mb-6">
+      <div className="flex gap-3 flex-wrap justify-center mb-6 mt-4">
         {categories.map((category) => (
           <button
             key={category}
