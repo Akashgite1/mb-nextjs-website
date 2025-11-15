@@ -65,16 +65,16 @@ export const corporateTopics = [
         title: "Switch Job Package",
         links: [
             {
-                label: "Resume Tips & Tricks - ATS Friendly",
+                label: "Resume Hacks - ATS Friendly",
             },
             {
                 label: "800+ Companies Complete List",
             },
             {
-                label: "Naukri Tips & Tricks",
+                label: "Naukri Hacks",
             },
             {
-                label: "LinkedIn Tips & Tricks",
+                label: "LinkedIn Hacks",
             },
             {
                 label: "Referrals - WhatsApp Groups",
@@ -100,6 +100,9 @@ export const corporateTopics = [
             {
                 label: "Get Job Switch in 2 months Detailed Roadmap",
             },
+            {
+                label: "How to get project asap on bench",
+            }
         ],
     },
     {
@@ -117,6 +120,9 @@ export const corporateTopics = [
             {
                 label: "Job Scams",
             },
+            {
+                label: "How to make network in Corporate",
+            }
         ],
     },
     {
