@@ -11,24 +11,24 @@ export const collegeTopics = [
         title: "Get a Job in 3 months",
         links: [
             {
-                label: "800+ Companies Complete List",
+                label: "800+ Companies Complete List ✅",
             },
             {
-                label: "Resume Hacks - ATS Friendly",
+                label: "Resume Hacks - ATS Friendly ✅",
             },
             {
-                label: "Naukri Hacks",
+                label: "Naukri Hacks ✅",
             },
             {
-                label: "LinkedIn Hacks",
+                label: "LinkedIn Hacks ✅",
             },
             {
-                label: "Handwritten Technical Notes",
+                label: "Handwritten Technical Notes ✅",
             },
         ],
     },
     {
-        title: "Get Self Paced Courses",
+        title: "Get Self Paced Courses ✅",
         links: [
             {
                 label: "GenAI",
@@ -45,7 +45,7 @@ export const collegeTopics = [
         ],
     },
     {
-        title: "Whatsapp Groups",
+        title: "Whatsapp Groups ✅",
         links: [
             {
                 label: "General Guidance",
@@ -65,19 +65,19 @@ export const corporateTopics = [
         title: "Switch Job Package",
         links: [
             {
-                label: "Resume Hacks - ATS Friendly",
+                label: "800+ Companies Complete List ✅",
             },
             {
-                label: "800+ Companies Complete List",
+                label: "Resume Hacks - ATS Friendly ✅",
             },
             {
-                label: "Naukri Hacks",
+                label: "Naukri Hacks ✅",
             },
             {
-                label: "LinkedIn Hacks",
+                label: "LinkedIn Hacks ✅",
             },
             {
-                label: "Referrals - WhatsApp Groups",
+                label: "Referrals - WhatsApp Groups ✅",
             },
             {
                 label: "Roadmap to crack Product Based Companies",
