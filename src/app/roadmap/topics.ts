@@ -102,7 +102,7 @@ export const corporateTopics = [
             },
             {
                 label: "How to get project asap on bench",
-            }
+            },
         ],
     },
     {
@@ -122,7 +122,7 @@ export const corporateTopics = [
             },
             {
                 label: "How to make network in Corporate",
-            }
+            },
         ],
     },
     {
@@ -186,6 +186,11 @@ export const corporateTopics = [
     },
     {
         title: "Job Abroad",
+        links: [
+            {
+                label: "Find job in Germany ✅",
+            },
+        ],
     },
     {
         title: "How I bought house worth 1 cr by paying 35k EMI per month only",
