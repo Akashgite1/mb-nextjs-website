@@ -112,7 +112,7 @@ export const corporateTopics = [
                 label: "Corporate Growth",
             },
             {
-                label: "Corporate Politics",
+                label: "Corporate Politics ✅",
             },
             {
                 label: "Career Mistakes to Avoid",
