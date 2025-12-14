@@ -80,9 +80,6 @@ export const corporateTopics = [
                 label: "Referrals - WhatsApp Groups ✅",
             },
             {
-                label: "Roadmap to crack Product Based Companies",
-            },
-            {
                 label: "Reduce 90 days Notice Period like Pro",
             },
             {
@@ -103,6 +100,14 @@ export const corporateTopics = [
             {
                 label: "How to get project asap on bench",
             },
+        ],
+    },
+    {
+        title: "Roadmap to crack Product Based Companies",
+        links: [
+            {
+                label: "Video with Naveen Metta ✅",
+            }
         ],
     },
     {
