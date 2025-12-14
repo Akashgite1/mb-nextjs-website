@@ -160,7 +160,7 @@ export const corporateTopics = [
         title: "Salary Insights",
         links: [
             {
-                label: "How much other IT employees are earning?",
+                label: "How much other IT employees are earning? ✅",
             },
         ],
     },
@@ -216,13 +216,13 @@ export const corporateTopics = [
         title: "Whatsapp Groups",
         links: [
             {
-                label: "General Guidance",
+                label: "General Guidance ✅",
             },
             {
-                label: "Jobs/Referrals",
+                label: "Jobs/Referrals ✅",
             },
             {
-                label: "Technical Discussion",
+                label: "Technical Discussion ✅",
             },
         ],
     },
