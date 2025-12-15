@@ -92,10 +92,10 @@ export const corporateTopics = [
                 label: "Documents to download before leaving Current Company",
             },
             {
-                label: "Background Verification",
+                label: "Background Verification - Dual Employment ✅",
             },
             {
-                label: "Get Job Switch in 2 months Detailed Roadmap",
+                label: "Get Job Switch in 2 months Detailed Roadmap ✅",
             },
             {
                 label: "How to get project asap on bench",
@@ -145,7 +145,7 @@ export const corporateTopics = [
         title: "Job Market",
         links: [
             {
-                label: "Current Job Market Analysis",
+                label: "Current Job Market Timely update ✅",
             },
             {
                 label: "Future Job Market Predictions",
@@ -201,7 +201,7 @@ export const corporateTopics = [
         title: "How I bought house worth 1 cr by paying 35k EMI per month only",
     },
     {
-        title: "Get Self Paced Courses",
+        title: "Get Self Paced Courses ✅",
         links: [
             {
                 label: "GenAI",
@@ -218,16 +218,16 @@ export const corporateTopics = [
         ],
     },
     {
-        title: "Whatsapp Groups",
+        title: "Whatsapp Groups ✅",
         links: [
             {
-                label: "General Guidance ✅",
+                label: "General Guidance",
             },
             {
-                label: "Jobs/Referrals ✅",
+                label: "Jobs/Referrals",
             },
             {
-                label: "Technical Discussion ✅",
+                label: "Technical Discussion",
             },
         ],
     },
