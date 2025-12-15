@@ -1,3 +1,5 @@
+import { label } from "framer-motion/client"
+
 export const COURSE_LINK = {
     ReactJS: "www.link1.com",
     Javascript: "www.link2.com",
@@ -106,8 +108,15 @@ export const corporateTopics = [
         title: "Roadmap to crack Product Based Companies",
         links: [
             {
-                label: "Video with Naveen Metta ✅",
-            }
+                label: "Manish Tiwari - Got 1 CR Offer from Amazon ✅",
+            },
+            
+            {
+                label: "Manish - SDE @LinkedIn ✅",
+            },
+            {
+                label: "Naveen Metta - 5 Offers from PBC ✅",
+            },
         ],
     },
     {
