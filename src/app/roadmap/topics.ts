@@ -1,5 +1,3 @@
-import { label } from "framer-motion/client"
-
 export const COURSE_LINK = {
     ReactJS: "www.link1.com",
     Javascript: "www.link2.com",
@@ -210,33 +208,27 @@ export const corporateTopics = [
         title: "How I bought house worth 1 cr by paying 35k EMI per month only",
     },
     {
-        title: "Get Self Paced Courses ✅",
+        title: "Technical Docs",
         links: [
             {
-                label: "GenAI",
+                label: "GenAI + React + DSA + System Design ✅",
             },
             {
-                label: "React + Javascript",
-            },
-            {
-                label: "DSA",
-            },
-            {
-                label: "System Design",
-            },
+                label: "AZ-900 & AI-900 ✅",
+            }
         ],
     },
     {
-        title: "Whatsapp Groups ✅",
+        title: "Whatsapp Groups (100+ Members)",
         links: [
             {
-                label: "General Guidance",
+                label: "General Guidance ✅",
             },
             {
-                label: "Jobs/Referrals",
+                label: "Jobs/Referrals ✅",
             },
             {
-                label: "Technical Discussion",
+                label: "Technical Discussion ✅",
             },
         ],
     },
