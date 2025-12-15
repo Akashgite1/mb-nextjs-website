@@ -4,7 +4,7 @@ import TechnicalCoursesGrid from "@/components/technicalCoursesGrid/TechnicalCou
 export default function TechnicalCoursesPage() {
     return (
         <>
-            <main className='pl-26 pr-6 pb-6 pt-4 max-w-4xl mx-auto'>
+            <main className='pl-26 pr-6 pb-6 pt-4 max-w-5xl mx-auto'>
                 <CareerSection />
             </main>
             <TechnicalCoursesGrid />
