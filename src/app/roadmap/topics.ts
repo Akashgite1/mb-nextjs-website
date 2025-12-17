@@ -86,10 +86,10 @@ export const corporateTopics = [
                 label: "Salary Negotiation",
             },
             {
-                label: "Multiple Job Offers",
+                label: "Multiple Job Offers ✅",
             },
             {
-                label: "Documents to download before leaving Current Company",
+                label: "Documents to download before leaving Company",
             },
             {
                 label: "Background Verification - Dual Employment ✅",
