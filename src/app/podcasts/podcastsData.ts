@@ -22,6 +22,14 @@ export const podcastsData: PodcastSectionType[] = [
       {
         youtubeId: "JweC6Rg8s4U",
         link: "https://youtu.be/JweC6Rg8s4U?si=QbOFxQki9Fq0gHfr",
+      },
+      {
+        youtubeId: "jCbO8UrALU8",
+        link: "https://youtu.be/jCbO8UrALU8?si=IvYPWN9xxKwyltoM"
+      },
+      {
+        youtubeId: "t2gduV_KLew",
+        link: "https://youtu.be/t2gduV_KLew?si=EK_-BY78MCz0ncRU",
       }
     ],
   },

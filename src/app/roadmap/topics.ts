@@ -214,6 +214,9 @@ export const corporateTopics = [
                 label: "GenAI + React + DSA + System Design ✅",
             },
             {
+                label: "Java Springboot",
+            },
+            {
                 label: "AZ-900 & AI-900 ✅",
             }
         ],
