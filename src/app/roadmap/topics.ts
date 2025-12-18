@@ -83,7 +83,7 @@ export const corporateTopics = [
                 label: "Reduce 90 days Notice Period like Pro",
             },
             {
-                label: "Salary Negotiation",
+                label: "Salary Negotiation ✅",
             },
             {
                 label: "Multiple Job Offers ✅",
