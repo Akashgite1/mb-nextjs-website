@@ -83,6 +83,9 @@ export const corporateTopics = [
                 label: "Reduce 90 days Notice Period like Pro",
             },
             {
+                label: "Managerial & HR Tricky Interview Questions ✅",
+            },
+            {
                 label: "Salary Negotiation ✅",
             },
             {
