@@ -13,8 +13,20 @@ export interface FAQItem {
 
 export const collegeQnA = [
     {
-        title: "General Questions",
+
+        title: "Background Verfication ✅",
         data: [
+            {
+                question: "I worked in one company during college but I absconded",  
+            },
+        ],
+    },
+    {
+        title: "General Questions ✅",
+        data: [
+            {
+                question: "Is TCS NQT biased?",
+            },
             {
                 question: "Should I accept sales or marketing job as they are offering 8.5 LPA?",
             },
@@ -26,6 +38,9 @@ export const collegeQnA = [
             },
             {
                 question: "I am doing BCA, should I accept job offer from TCS, Infosys, Deloitte or go ahead with MCA",
+            },
+            {
+                question: "Tier-3 college se startup job milegi?",
             }
         ],
     },
