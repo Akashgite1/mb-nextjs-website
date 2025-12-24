@@ -2,6 +2,8 @@
 import TreeNode from "@/components/treeNode/TreeNode"
 import { collegeTopics, corporateTopics } from "@/app/roadmap/topics"
 import SearchCard from "../searchCard/SearchCard"
+import { collegeQnA } from "@/components/faq/faqData"
+import { corporateQnA } from "@/components/faq/faqData"
 
 export default function CareerSection() {
     return (
@@ -12,7 +14,7 @@ export default function CareerSection() {
                     College Job Ready Bootcamp - All Answers in Course
                 </h2>
                 <div className='h-full flex flex-col'>
-                    <SearchCard />
+                    <SearchCard sections={collegeQnA} />
                 </div>
                 {/* {collegeTopics.map((node, i) => (
                     <TreeNode key={i} node={node} />
@@ -28,6 +30,9 @@ export default function CareerSection() {
                     {corporateTopics.map((node, i) => (
                         <TreeNode key={i} node={node} />
                     ))}
+                    <div className='my-4'>
+                        <SearchCard sections={corporateQnA} />
+                    </div>
                 </div>
             </section>
         </div>

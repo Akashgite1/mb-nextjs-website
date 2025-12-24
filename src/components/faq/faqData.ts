@@ -46,6 +46,17 @@ export const collegeQnA = [
     },
 ]
 
+export const corporateQnA = [
+    {
+        title: "Hike/Appraisal ✅",
+        data: [
+            {
+                question: "How to talk to manager if you don't get hike?",  
+            },
+        ],
+    },
+]
+
 export const faqData: FAQItem[] = [
     {
         question: "How to design Instagram? System Design Interview Question",

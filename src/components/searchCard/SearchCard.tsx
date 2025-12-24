@@ -1,29 +1,29 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { collegeQnA } from "@/components/faq/faqData"
 
-export default function SearchCard() {
+type CollegeSection = {
+    title: string
+    data: { question: string }[]
+}
+
+export default function SearchCard({ sections }: { sections?: CollegeSection[] }) {
     const [query, setQuery] = useState("")
-
-    type CollegeSection = {
-        title: string
-        data: { question: string }[]
-    }
 
     const filtered = useMemo(() => {
         const q = query.trim().toLowerCase()
-        // if no query, return all sections
-        if (!q) return collegeQnA as CollegeSection[]
+        const source = sections ?? []
+        // if no query, return all provided sections
+        if (!q) return source
 
         // filter questions within each section
-        return (collegeQnA as CollegeSection[])
+        return source
             .map((section) => ({
                 ...section,
                 data: section.data.filter((d) => d.question.toLowerCase().includes(q)),
             }))
             .filter((s) => s.data && s.data.length > 0)
-    }, [query])
+    }, [query, sections])
 
     return (
         <section className="w-full">

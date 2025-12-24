@@ -7,7 +7,7 @@ export default function TechnicalCoursesPage() {
         <>
             <main className='pb-6 pt-4 w-9/10 mx-auto'>
                 <CareerSection />
-                <SearchCard />
+                {/* <SearchCard /> */}
             </main>
             <TechnicalCoursesGrid />
         </>
