@@ -1,3 +1,5 @@
+import { title } from "process"
+
 export const COURSE_LINK = {
     ReactJS: "www.link1.com",
     Javascript: "www.link2.com",
@@ -127,13 +129,16 @@ export const corporateTopics = [
         title: "Corporate – Career Growth",
         links: [
             {
-                label: "Corporate Growth",
+                label: "Achieve 100% Corporate Growth ✅",
             },
             {
-                label: "Corporate Politics ✅",
+                label: "Become Pro in Corporate Politics ✅",
             },
             {
-                label: "Career Mistakes to Avoid",
+                label: "New to Corporate World ✅",
+            },
+            {
+                label: "Avoid Career Mistakes",
             },
             {
                 label: "Job Scams",
