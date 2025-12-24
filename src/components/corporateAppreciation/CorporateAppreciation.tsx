@@ -8,6 +8,14 @@ import { motion, AnimatePresence } from "framer-motion"
 // ✅ JSON array of gallery items (added organization key)
 const galleryItems = [
     {
+        img: "/images/corporate/awards/shubha_holla_1.jpeg",
+        date: "2025-12-17",
+        title: "Shubha Holla",
+        description: "Senior Project Manager",
+        logo: "/images/companyLogos/ibm.jpg",
+        organization: "IBM",
+    },
+    {
         img: "/images/corporate/awards/rob_wood.jpeg",
         date: "2025-10-15",
         title: "Rob Wood",
@@ -38,7 +46,7 @@ const galleryItems = [
         description: "Associate Partner | Enterprise Architect",
         logo: "/images/companyLogos/ibm.jpg",
         organization: "IBM",
-    },
+    }
 ]
 
 export default function CorporateAppreciation() {
