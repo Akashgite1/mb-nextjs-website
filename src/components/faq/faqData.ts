@@ -48,6 +48,29 @@ export const collegeQnA = [
 
 export const corporateQnA = [
     {
+        title: "LinkedIn - Do's & Don'ts ✅",
+        data: [
+            {
+                question: "How to ask for a referral",  
+            },
+            {
+                question: "What to add while sending Connection request",  
+            },
+            {
+                question: "How your Linkedin profile should be",  
+            },
+            {
+                question: "How to get jobs from Linkedin",  
+            },
+            {
+                question: "LinkedIn Scams",
+            },
+            {
+                question: "Cover Letter/Email"
+            }
+        ],
+    },
+    {
         title: "Hike/Appraisal ✅",
         data: [
             {
