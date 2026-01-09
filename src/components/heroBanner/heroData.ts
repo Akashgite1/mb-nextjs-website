@@ -37,10 +37,24 @@ export const heroData = [
 
 export const communityData = [
   {
+    href: "https://www.topmate.io/manohar",
+    img: "/images/topmate.jpg",
+    value: "Talk to Me",
+    label: "3k+ 1:1 Calls",
+    color: "text-red-500",
+  },
+  {
     href: "https://www.youtube.com/@ManoharBatra",
     icon: FaYoutube,
     value: "97k+",
-    label: "Subscribers",
+    label: "College To Corporate",
+    color: "text-red-500",
+  },
+  {
+    href: "https://www.youtube.com/@CodeAndTechWithMB",
+    icon: FaYoutube,
+    value: "2k+",
+    label: "Code & Tech",
     color: "text-red-500",
   },
   {

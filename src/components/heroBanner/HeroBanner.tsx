@@ -56,9 +56,19 @@ export default function HeroBanner() {
                                 >
                                     <div className="flex items-center gap-3 bg-white/90 px-4 py-2 rounded-full shadow-md transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl min-w-[130px]">
 
-                                        {/* ICON */}
+                                        {/* ICON OR IMAGE */}
                                         <div className={`text-2xl ${item.color} transition-transform duration-300 group-hover:scale-110`}>
-                                            <Icon />
+                                            {Icon ? (
+                                                <Icon />
+                                            ) : item.img ? (
+                                                <Image
+                                                    src={item.img}
+                                                    alt={item.value ?? item.label ?? "icon"}
+                                                    width={24}
+                                                    height={24}
+                                                    className="w-6 h-6 rounded-full object-cover"
+                                                />
+                                            ) : null}
                                         </div>
 
                                         {/* TEXT */}
