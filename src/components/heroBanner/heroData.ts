@@ -37,46 +37,45 @@ export const heroData = [
 
 export const communityData = [
   {
-    href: "https://www.youtube.com/@akshaymarch7",
+    href: "https://www.youtube.com/@ManoharBatra",
     icon: FaYoutube,
-    value: "2M+",
+    value: "97k+",
     label: "Subscribers",
     color: "text-red-500",
   },
   {
-    href: "https://www.linkedin.com/company/namastedev/",
+    href: "https://www.linkedin.com/in/manoharbatra/",
     icon: FaLinkedin,
-    value: "700K+",
+    value: "37k+",
     label: "Followers",
     color: "text-blue-600",
   },
+  // {
+  //   href: "https://discord.gg/AGWng6gTxQ",
+  //   icon: FaDiscord,
+  //   value: "70K+",
+  //   label: "Community",
+  //   color: "text-indigo-500",
+  // },
   {
-    href: "https://discord.gg/AGWng6gTxQ",
-    icon: FaDiscord,
-    value: "70K+",
-    label: "Community",
-    color: "text-indigo-500",
-  },
-
-  {
-    href: "https://www.instagram.com/namastedevofficial/",
+    href: "https://www.instagram.com/career.manoharbatrayt/",
     icon: FaInstagram,
-    value: "50K+",
+    value: "4K+",
     label: "Followers",
     color: "text-pink-500",
   },
 
   {
-    href: "https://medium.com/@yourprofile",
+    href: "https://medium.com/@contactmanoharbatra",
     icon: FaMedium,
-    value: "15K+",
+    value: "60+",
     label: "Followers",
     color: "text-gray-800",
   },
   {
-    href: "https://github.com/yourprofile",
+    href: "https://github.com/manoharbatra",
     icon: FaGithub,
-    value: "10K+",
+    value: "70+",
     label: "Followers",
     color: "text-gray-900",
   },
