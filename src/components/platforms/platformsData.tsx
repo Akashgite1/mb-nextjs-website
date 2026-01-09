@@ -41,12 +41,12 @@ export const categories: PlatformCategory[] = [
         ],
     },
     {
-        label: "Most Downloads",
+        label: "Most Popular Downloads",
         items: [
             {
                 id: 1,
                 type: "image",
-                img: "/images/course_banner/companies_list.jpeg",
+                img: "/images/course_banner/companies_list.png",
                 title: "800+ Companies Hiring now!!",
                 followers: "4k+ Bookings",
                 description:
@@ -56,32 +56,32 @@ export const categories: PlatformCategory[] = [
                 price: 199,
                 oldPrice: 499,
             },
-            // {
-            //     id: 2,
-            //     type: "image",
-            //     img: "/images/topmate.jpg",
-            //     title: "Self Paced Frontend Course",
-            //     followers: "200+ Bookings",
-            //     description:
-            //         "1:1 Guidance or Mock Interview on React + System Design",
-            //     link: "https://topmate.io/manohar_batra/1584098",
-            //     color: "from-green-50 to-green-100",
-            //     price: 250,
-            //     oldPrice: 750,
-            // },
-            // {
-            //     id: 3,
-            //     type: "image",
-            //     img: "/images/topmate.jpg",
-            //     title: "Self Paced Java Backend Course",
-            //     followers: "100+ Bookings",
-            //     description:
-            //         "1:1 Guidance or Mock Interview on Java, Springboot, Kafka, System Design, and career.",
-            //     link: "https://topmate.io/naveen_metta",
-            //     color: "from-green-50 to-green-100",
-            //     price: 250,
-            //     oldPrice: 750,
-            // },
+            {
+                id: 2,
+                type: "image",
+                img: "/images/course_banner/frontend.png",
+                title: "Self Paced Frontend Course",
+                followers: "200+ Bookings",
+                description:
+                    "1:1 Guidance or Mock Interview on React + System Design",
+                link: "https://topmate.io/manohar_batra/1584098",
+                color: "from-green-50 to-green-100",
+                price: 250,
+                oldPrice: 750,
+            },
+            {
+                id: 3,
+                type: "image",
+                img: "/images/course_banner/backend.png",
+                title: "Self Paced Java Backend Course",
+                followers: "100+ Bookings",
+                description:
+                    "1:1 Guidance or Mock Interview on Java, Springboot, Kafka, System Design, and career.",
+                link: "https://topmate.io/naveen_metta",
+                color: "from-green-50 to-green-100",
+                price: 250,
+                oldPrice: 750,
+            },
         ],
     },
 ]
