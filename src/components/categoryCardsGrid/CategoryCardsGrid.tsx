@@ -78,12 +78,12 @@ export default function CategoryCardsGrid({
                     <div className="flex justify-between items-center text-sm mt-1">
                       <span className="text-gray-600">{p.followers}</span>
 
-                      <button
+                      {/* <button
                         onClick={() => setActiveItem(p)}
                         className="text-primary underline font-medium"
                       >
                         View details
-                      </button>
+                      </button> */}
                     </div>
 
                     {/* Pricing */}

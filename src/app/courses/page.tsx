@@ -9,7 +9,7 @@ export default function TechnicalCoursesPage() {
                 <CareerSection />
                 {/* <SearchCard /> */}
             </main>
-            <TechnicalCoursesGrid />
+            {/* <TechnicalCoursesGrid /> */}
         </>
     )
 }

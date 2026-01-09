@@ -25,6 +25,14 @@ export default function CareerSection() {
             <section>
                 <h2 className='text-xl font-semibold mb-4 text-red-700'>
                     Corporate Job Ready Bootcamp
+                    <a
+                        href="https://collegetocorporate.akamai.net.in/new-courses/2-working-professionals-career-guide"
+                        className="ml-2 text-blue-600 hover:underline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Enroll Now
+                    </a>
                 </h2>
                 <div className='h-full flex flex-col'>
                     {corporateTopics.map((node, i) => (

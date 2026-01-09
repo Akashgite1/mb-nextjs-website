@@ -134,7 +134,7 @@ export default function Home() {
                 <Gallery />
                 <CorporateAppreciation />
                 <BrandPartners />
-                <FAQ />
+                {/* <FAQ /> */}
                 {/* <YouTubeMembers sponsors={youTubeMembersList}/> */}
                 <FansFeedback />
                 <AboutMe />
