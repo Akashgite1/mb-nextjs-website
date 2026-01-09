@@ -58,14 +58,14 @@ export default function CategoryCardsGrid({
                   whileHover={{ scale: 1.04 }}
                   className="bg-white rounded-2xl shadow-md hover:shadow-lg transition overflow-hidden flex flex-col"
                 >
-                  {/* Image */}
                   {p.img && (
-                    <div className="relative w-full h-[180px]">
+                    <div className="relative w-full aspect-[16/9] overflow-hidden">
                       <Image
                         src={p.img}
                         alt={p.title}
                         fill
                         className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 33vw"
                       />
                     </div>
                   )}
