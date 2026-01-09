@@ -51,7 +51,7 @@ export default function CategoryCardsGrid({
           <div key={cat.label}>
             <h2 className="text-2xl font-bold mb-6">{cat.label}</h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {cat.items.map((p, index) => (
                 <motion.div
                   key={`${cat.label}-${p.id}-${index}`}
@@ -72,7 +72,7 @@ export default function CategoryCardsGrid({
 
                   {/* Content */}
                   <div className="p-4 flex flex-col flex-1">
-                    <h3 className="text-lg font-semibold">{p.title}</h3>
+                    <h4 className="text-lg font-semibold">{p.title}</h4>
 
                     {/* Followers + View details */}
                     <div className="flex justify-between items-center text-sm mt-1">
@@ -118,13 +118,13 @@ export default function CategoryCardsGrid({
                         rel="noopener noreferrer"
                       >
                         <button className="w-full mt-4 rounded-lg py-3 bg-slate-900 text-white hover:bg-slate-800 transition">
-                          Enroll Now
+                          Click Here
                         </button>
                       </a>
                     ) : (
                       <Link href={p.link}>
                         <button className="w-full mt-4 rounded-lg py-3 bg-slate-900 text-white hover:bg-slate-800 transition">
-                          Enroll Now
+                          Click Here
                         </button>
                       </Link>
                     )}
