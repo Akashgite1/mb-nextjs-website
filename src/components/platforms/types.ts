@@ -19,6 +19,11 @@ type Platform = {
   link: string;
   color: string;
   testimonials?: ITestimonial[]
+  isFree?: boolean;
+  price?: number;
+  oldPrice?: number;
+  techStack?: string[];
+
 };
 
 export type PlatformCategory = {
