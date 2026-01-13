@@ -37,14 +37,9 @@ export const categories: PlatformCategory[] = [
                         height: 180,
                     },
                 ],
-            }
-        ],
-    },
-    {
-        label: "Most Popular Downloads",
-        items: [
+            },
             {
-                id: 1,
+                id: 2,
                 type: "image",
                 img: "/images/course_banner/companies_list.png",
                 title: "800+ Companies Hiring now!!",
@@ -57,17 +52,48 @@ export const categories: PlatformCategory[] = [
                 oldPrice: 499,
             },
             {
+                id: 3,
+                type: "image",
+                img: "/images/course_banner/know_your_worth.png",
+                title: "Know Your Worth",
+                followers: "100+ Bookings",
+                description:
+                    "Real Salary Insights of IT Employees",
+                link: "https://topmate.io/manohar_batra/1801807",
+                color: "from-green-50 to-green-100",
+                price: 150,
+                oldPrice: 450,
+            },
+        ],
+    },
+    {
+        label: "Most Popular Downloads",
+        items: [
+            {
+                id: 1,
+                type: "image",
+                img: "/images/course_banner/companyWise.png",
+                title: "100% Genuine Company wise Frontend Interview Q&A",
+                followers: "100+ Bookings",
+                description:
+                    "100% Genuine Interview Q&A shared by my subscribers from 50+ companies",
+                link: "https://collegetocorporate.akamai.net.in/new-courses/4-unlimited-companies-wise-frontend-interview-qna",
+                color: "from-green-50 to-green-100",
+                price: 599,
+                oldPrice: 1999,
+            },
+            {
                 id: 2,
                 type: "image",
                 img: "/images/course_banner/frontend.png",
-                title: "100% Interview Ready",
+                title: "JS/React/DSA/System Design 100% Interview Ready",
                 followers: "200+ Bookings",
                 description:
                     "1:1 Guidance or Mock Interview on React + System Design",
                 link: "https://topmate.io/manohar_batra/1584098",
                 color: "from-green-50 to-green-100",
-                price: 250,
-                oldPrice: 750,
+                price: 249,
+                oldPrice: 990,
             },
             {
                 id: 3,
@@ -81,19 +107,6 @@ export const categories: PlatformCategory[] = [
                 color: "from-green-50 to-green-100",
                 price: 199,
                 oldPrice: 499,
-            },
-            {
-                id: 4,
-                type: "image",
-                img: "/images/course_banner/know_your_worth.png",
-                title: "Know Your Worth",
-                followers: "100+ Bookings",
-                description:
-                    "Real Salary Insights of IT Employees",
-                link: "https://topmate.io/manohar_batra/1801807",
-                color: "from-green-50 to-green-100",
-                price: 150,
-                oldPrice: 450,
             },
         ],
     },

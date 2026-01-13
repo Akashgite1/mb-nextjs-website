@@ -7,6 +7,7 @@ import {
   FaFacebook,
   FaMedium,
   FaGithub,
+  FaWhatsapp,
 } from "react-icons/fa6"
 
 
@@ -92,5 +93,12 @@ export const communityData = [
     value: "70+",
     label: "Followers",
     color: "text-gray-900",
+  },
+  {
+    href: "https://chat.whatsapp.com/LfsYDSr4rBL3TA8Y11Vc4V",
+    icon: FaWhatsapp,
+    value: "400+",
+    label: "Members",
+    color: "text-green-500",
   },
 ]
