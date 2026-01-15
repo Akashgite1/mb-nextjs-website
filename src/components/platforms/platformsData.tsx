@@ -20,7 +20,7 @@ export const categories: PlatformCategory[] = [
                 img: "/images/course_banner/corporate.png",
                 icon: <FaUsers className='text-red-600 text-4xl' />,
                 title: "Corporate Coaching + Whatsapp",
-                followers: "80+ Members",
+                followers: "110+ Members",
                 description:
                     "Career growth, salary insights, referrals - Whatsapp group",
                 link: "https://collegetocorporate.akamai.net.in/new-courses/2-working-professionals-career-guide",
@@ -56,7 +56,7 @@ export const categories: PlatformCategory[] = [
                 type: "image",
                 img: "/images/course_banner/know_your_worth.png",
                 title: "Know Your Worth",
-                followers: "100+ Bookings",
+                followers: "1k+ Bookings",
                 description:
                     "Real Salary Insights of IT Employees",
                 link: "https://topmate.io/manohar_batra/1801807",
@@ -74,12 +74,12 @@ export const categories: PlatformCategory[] = [
                 type: "image",
                 img: "/images/course_banner/companyWise.png",
                 title: "100% Genuine Company wise Frontend Interview Q&A",
-                followers: "100+ Bookings",
+                followers: "1k+ Bookings",
                 description:
                     "100% Genuine Interview Q&A shared by my subscribers from 50+ companies",
                 link: "https://collegetocorporate.akamai.net.in/new-courses/4-unlimited-companies-wise-frontend-interview-qna",
                 color: "from-green-50 to-green-100",
-                price: 599,
+                price: 499,
                 oldPrice: 1999,
             },
             {
@@ -87,20 +87,20 @@ export const categories: PlatformCategory[] = [
                 type: "image",
                 img: "/images/course_banner/frontend.png",
                 title: "JS/React/DSA/System Design 100% Interview Ready",
-                followers: "200+ Bookings",
+                followers: "500+ Bookings",
                 description:
                     "1:1 Guidance or Mock Interview on React + System Design",
                 link: "https://topmate.io/manohar_batra/1584098",
                 color: "from-green-50 to-green-100",
-                price: 249,
-                oldPrice: 990,
+                price: 199,
+                oldPrice: 499,
             },
             {
                 id: 3,
                 type: "image",
                 img: "/images/course_banner/backend.png",
                 title: "100% Interview Ready",
-                followers: "100+ Bookings",
+                followers: "800+ Bookings",
                 description:
                     "1:1 Guidance or Mock Interview on Java, Springboot, Kafka, System Design, and career.",
                 link: "https://topmate.io/manohar_batra/1751070",

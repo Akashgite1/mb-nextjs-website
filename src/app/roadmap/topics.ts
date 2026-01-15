@@ -147,7 +147,7 @@ export const corporateTopics = [
                 label: "Job Scams",
             },
             {
-                label: "How to make network in Corporate",
+                label: "How to make network in Corporate ✅",
             },
         ],
     },
