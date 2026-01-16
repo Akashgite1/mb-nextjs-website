@@ -17,7 +17,7 @@ export const categories: PlatformCategory[] = [
             {
                 id: 1,
                 type: "component",
-                img: "/images/course_banner/corporate.png",
+                img: "/images/course_banner/corporate_course.png",
                 icon: <FaUsers className='text-red-600 text-4xl' />,
                 title: "Corporate Coaching + Whatsapp",
                 followers: "110+ Members",
