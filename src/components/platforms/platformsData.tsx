@@ -42,7 +42,7 @@ export const categories: PlatformCategory[] = [
                 id: 2,
                 type: "image",
                 img: "/images/course_banner/companiess_list.png",
-                title: "800+ Companies Hiring now!!",
+                title: "1000+ Companies Hiring now!!",
                 followers: "4k+ Bookings",
                 description:
                     "800+ Companies List (inclding Remote) where my subscribers are placed at 50+ LPA packages too",
