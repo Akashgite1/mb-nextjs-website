@@ -89,8 +89,8 @@ export const categories: PlatformCategory[] = [
                 title: "JS/React/DSA/System Design 100% Interview Ready",
                 followers: "500+ Bookings",
                 description:
-                    "1:1 Guidance or Mock Interview on React + System Design",
-                link: "https://topmate.io/manohar_batra/1584098",
+                    "Important Topics with detailed explanation",
+                link: "https://topmate.io/manohar_batra/1587369",
                 color: "from-green-50 to-green-100",
                 price: 199,
                 oldPrice: 499,
