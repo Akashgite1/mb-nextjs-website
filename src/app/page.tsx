@@ -133,7 +133,7 @@ export default function Home() {
                 <Platforms />
                 <Gallery />
                 <CorporateAppreciation />
-                <BrandPartners />
+                {/* <BrandPartners /> */}
                 {/* <FAQ /> */}
                 {/* <YouTubeMembers sponsors={youTubeMembersList}/> */}
                 <FansFeedback />

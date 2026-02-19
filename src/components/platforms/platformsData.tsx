@@ -69,19 +69,19 @@ export const categories: PlatformCategory[] = [
     {
         label: "Most Popular Downloads",
         items: [
-            // {
-            //     id: 1,
-            //     type: "image",
-            //     img: "/images/course_banner/companyWise.png",
-            //     title: "100% Genuine Company wise Frontend Interview Q&A",
-            //     followers: "1k+ Bookings",
-            //     description:
-            //         "100% Genuine Interview Q&A shared by my subscribers from 50+ companies",
-            //     link: "https://collegetocorporate.akamai.net.in/new-courses/4-unlimited-companies-wise-frontend-interview-qna",
-            //     color: "from-green-50 to-green-100",
-            //     price: 99,
-            //     oldPrice: 1999,
-            // },
+            {
+                id: 1,
+                type: "image",
+                img: "/images/course_banner/microfrontend.png",
+                title: "Microfrontend with React",
+                followers: "",
+                description:
+                    "Microfrontend with React",
+                link: "https://topmate.io/manohar/1965102",
+                color: "from-green-50 to-green-100",
+                price: 59,
+                oldPrice: 499,
+            },
             // {
             //     id: 2,
             //     type: "image",

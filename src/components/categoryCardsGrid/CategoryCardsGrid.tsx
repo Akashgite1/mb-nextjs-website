@@ -79,7 +79,7 @@ export default function CategoryCardsGrid({
                                         </h4>
 
                                         {/* Followers + View details */}
-                                        <div className='flex justify-between items-center text-sm mt-1'>
+                                        <div className='flex justify-between items-center text-sm'>
                                             <span className='text-gray-600'>
                                                 {p.followers}
                                             </span>
@@ -93,7 +93,7 @@ export default function CategoryCardsGrid({
                                         </div>
 
                                         {/* Pricing */}
-                                        <div className='mt-2'>
+                                        <div>
                                             {p.isFree ? (
                                                 <span className='text-green-600 font-semibold'>
                                                     FREE

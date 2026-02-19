@@ -6,10 +6,10 @@ export default function TechnicalCoursesPage() {
     return (
         <>
             <main className='pb-6 pt-4 w-9/10 mx-auto'>
-                <CareerSection />
+                {/* <CareerSection /> */}
                 {/* <SearchCard /> */}
             </main>
-            {/* <TechnicalCoursesGrid /> */}
+            <TechnicalCoursesGrid />
         </>
     )
 }
