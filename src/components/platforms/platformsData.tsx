@@ -23,7 +23,7 @@ export const categories: PlatformCategory[] = [
                 followers: "110+ Members",
                 description:
                     "Career growth, salary insights, referrals - Whatsapp group",
-                link: "https://collegetocorporate.akamai.net.in/new-courses/2-working-professionals-career-guide",
+                link: "https://topmate.io/manohar/1964588",
                 color: "from-red-50 to-red-100",
                 testimonials: [
                     {
