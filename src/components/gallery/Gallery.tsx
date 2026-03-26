@@ -2,10 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react"
 import Image from "next/image"
-import {
-    creators,
-    type GalleryItem
-} from "./GalleryData"
+import { creators, type GalleryItem } from "./GalleryData"
 import "./Gallery.css"
 
 function GallerySection({
@@ -53,91 +50,125 @@ function GallerySection({
     }
     const onTouchEnd = () => setIsDragging(false)
 
-    // ----- Infinite Auto Scroll -----
-    useEffect(() => {
+    // // ----- Infinite Auto Scroll -----
+    // useEffect(() => {
+    //     if (!sliderRef.current) return
+    //     const slider = sliderRef.current
+    //     const speed = 1
+    //     let rafId: number
+
+    //     const step = () => {
+    //         if (!isDragging) {
+    //             slider.scrollLeft += speed
+
+    //             // Reset position to middle clone for seamless loop
+    //             const totalWidth = slider.scrollWidth
+    //             const singleLoopWidth = totalWidth / 3
+    //             if (slider.scrollLeft >= singleLoopWidth * 2) {
+    //                 slider.scrollLeft -= singleLoopWidth
+    //             }
+    //         }
+    //         rafId = requestAnimationFrame(step)
+    //     }
+
+    //     rafId = requestAnimationFrame(step)
+    //     return () => cancelAnimationFrame(rafId)
+    // }, [isDragging])
+
+    const scroll = (direction: "left" | "right") => {
         if (!sliderRef.current) return
-        const slider = sliderRef.current
-        const speed = 1
-        let rafId: number
 
-        const step = () => {
-            if (!isDragging) {
-                slider.scrollLeft += speed
-
-                // Reset position to middle clone for seamless loop
-                const totalWidth = slider.scrollWidth
-                const singleLoopWidth = totalWidth / 3
-                if (slider.scrollLeft >= singleLoopWidth * 2) {
-                    slider.scrollLeft -= singleLoopWidth
-                }
-            }
-            rafId = requestAnimationFrame(step)
-        }
-
-        rafId = requestAnimationFrame(step)
-        return () => cancelAnimationFrame(rafId)
-    }, [isDragging])
+        const scrollAmount = 260 // card width + gap
+        sliderRef.current.scrollBy({
+            left: direction === "left" ? -scrollAmount : scrollAmount,
+            behavior: "smooth",
+        })
+    }
 
     return (
         <section className='w-full py-10 overflow-hidden'>
             <h1 className='text-2xl sm:text-3xl font-bold mb-4 text-center text-black'>
                 {title}
             </h1>
-            <div
-                ref={sliderRef}
-                className='flex gap-4 overflow-x-hidden cursor-grab touch-pan-x'
-                onMouseDown={onMouseDown}
-                onMouseUp={onMouseUp}
-                onMouseLeave={onMouseLeave}
-                onMouseMove={onMouseMove}
-                onTouchStart={onTouchStart}
-                onTouchMove={onTouchMove}
-                onTouchEnd={onTouchEnd}
-                style={{ scrollBehavior: isDragging ? "auto" : "smooth" }}
-            >
-                {loopItems.map((item, i) => (
-                    <div
-                        key={i}
-                        style={{ width: item?.width || 220 }}
-                        className='flex-none bg-white shadow-md rounded-xl p-3 flex flex-col items-center'
-                    >
-                        <Image
-                            src={item.src}
-                            alt={item.name}
-                            width={item?.width || 220}
-                            height={140}
-                            className='rounded-lg object-cover'
-                        />
-                        <div className='mt-2 text-center'>
-                            <p className='font-semibold text-black'>{item.name}</p>
-                            {item?.description && (
-                                <p className='text-sm text-gray-600'>{item.description}</p>
+
+            <div className='relative'>
+                {/* LEFT BUTTON */}
+                <button
+                    onClick={() => scroll("left")}
+                    className='absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-md rounded-full px-3 py-2'
+                >
+                    ◀
+                </button>
+
+                {/* SLIDER */}
+                <div
+                    ref={sliderRef}
+                    className='flex gap-4 overflow-x-hidden cursor-grab touch-pan-x'
+                    onMouseDown={onMouseDown}
+                    onMouseUp={onMouseUp}
+                    onMouseLeave={onMouseLeave}
+                    onMouseMove={onMouseMove}
+                    onTouchStart={onTouchStart}
+                    onTouchMove={onTouchMove}
+                    onTouchEnd={onTouchEnd}
+                    // style={{ scrollBehavior: isDragging ? "auto" : "smooth" }}
+                >
+                    {loopItems.map((item, i) => (
+                        <div
+                            key={i}
+                            style={{ width: item?.width || 220 }}
+                            className='flex-none bg-white shadow-md rounded-xl p-3 flex flex-col items-center'
+                        >
+                            <Image
+                                src={item.src}
+                                alt={item.name}
+                                width={item?.width || 220}
+                                height={140}
+                                className='rounded-lg object-cover'
+                            />
+                            <div className='mt-2 text-center'>
+                                <p className='font-semibold text-black'>
+                                    {item.name}
+                                </p>
+                                {item?.description && (
+                                    <p className='text-sm text-gray-600'>
+                                        {item.description}
+                                    </p>
+                                )}
+                            </div>
+                            {item?.logo && (
+                                <div className='mt-2'>
+                                    <Image
+                                        src={item.logo}
+                                        alt={`${item.name} logo`}
+                                        width={80}
+                                        height={80}
+                                        className='object-contain'
+                                    />
+                                </div>
                             )}
                         </div>
-                        {item?.logo && (
-                            <div className='mt-2'>
-                                <Image
-                                    src={item.logo}
-                                    alt={`${item.name} logo`}
-                                    width={80}
-                                    height={80}
-                                    className='object-contain'
-                                />
-                            </div>
-                        )}
-                    </div>
-                ))}
+                    ))}
+                    {/* RIGHT BUTTON */}
+                    <button
+                        onClick={() => scroll("right")}
+                        className='absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-md rounded-full px-3 py-2'
+                    >
+                        ▶
+                    </button>
+                </div>
             </div>
         </section>
     )
 }
 
-
-
 export default function Gallery() {
     return (
         <main className='w-full'>
-            <GallerySection title='Badi baat cheet Industry ke logo se' items={creators} />
+            <GallerySection
+                title='Badi baat cheet Industry ke logo se'
+                items={creators}
+            />
         </main>
     )
 }

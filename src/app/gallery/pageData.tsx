@@ -51,6 +51,11 @@ export const creators: GalleryItem[] = [
         name: "Saumya",
         width: 210,
     },
+    {
+        src: "/images/creators/manas_chopra.jpeg",
+        name: "Manas Chopra",
+        width: 200,
+    }
 ]
 
 export const course_members: GalleryItem[] = [

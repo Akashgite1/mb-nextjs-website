@@ -2,23 +2,15 @@
 
 import React, { useRef, useState } from "react"
 import Image from "next/image"
-import {
-    creators,
-    course_members,
-    corporate_contacts,
-    type GalleryItem,
-    special_momemts,
-    random_places,
-    company_events,
-} from "./pageData"
-import "./Gallery.css"
+import { creators, type CollegeVisitsItem } from "./CollegeVisitsData"
+// import "./Gallery.css"
 
-function GallerySection({
+function CollegeVisitsSection({
     title,
     items,
 }: {
     title: string
-    items: GalleryItem[]
+    items: CollegeVisitsItem[]
 }) {
     const sliderRef = useRef<HTMLDivElement>(null)
     const [isDragging, setIsDragging] = useState(false)
@@ -58,31 +50,6 @@ function GallerySection({
     }
     const onTouchEnd = () => setIsDragging(false)
 
-    // ----- Infinite Auto Scroll -----
-    // useEffect(() => {
-    //     if (!sliderRef.current) return
-    //     const slider = sliderRef.current
-    //     const speed = 1
-    //     let rafId: number
-
-    //     const step = () => {
-    //         if (!isDragging) {
-    //             slider.scrollLeft += speed
-
-    //             // Reset position to middle clone for seamless loop
-    //             const totalWidth = slider.scrollWidth
-    //             const singleLoopWidth = totalWidth / 3
-    //             if (slider.scrollLeft >= singleLoopWidth * 2) {
-    //                 slider.scrollLeft -= singleLoopWidth
-    //             }
-    //         }
-    //         rafId = requestAnimationFrame(step)
-    //     }
-
-    //     rafId = requestAnimationFrame(step)
-    //     return () => cancelAnimationFrame(rafId)
-    // }, [isDragging])
-
     const scroll = (direction: "left" | "right") => {
         if (!sliderRef.current) return
 
@@ -95,9 +62,9 @@ function GallerySection({
 
     return (
         <section className='w-full py-10 overflow-hidden'>
-            <h2 className='text-2xl font-bold mb-4 text-center text-black'>
+            <h1 className='text-2xl sm:text-3xl font-bold mb-4 text-center text-black'>
                 {title}
-            </h2>
+            </h1>
 
             <div className='relative'>
                 {/* LEFT BUTTON */}
@@ -108,6 +75,7 @@ function GallerySection({
                     ◀
                 </button>
 
+                {/* SLIDER */}
                 <div
                     ref={sliderRef}
                     className='flex gap-4 overflow-x-hidden cursor-grab touch-pan-x'
@@ -130,20 +98,20 @@ function GallerySection({
                                 src={item.src}
                                 alt={item.name}
                                 width={item?.width || 220}
-                                height={item?.height || 140}
+                                height={140}
                                 className='rounded-lg object-cover'
                             />
                             <div className='mt-2 text-center'>
                                 <p className='font-semibold text-black'>
                                     {item.name}
                                 </p>
-                                {item?.description && (
+                                {/* {item?.description && (
                                     <p className='text-sm text-gray-600'>
                                         {item.description}
                                     </p>
-                                )}
+                                )} */}
                             </div>
-                            {item?.logo && (
+                            {/* {item?.logo && (
                                 <div className='mt-2'>
                                     <Image
                                         src={item.logo}
@@ -153,7 +121,7 @@ function GallerySection({
                                         className='object-contain'
                                     />
                                 </div>
-                            )}
+                            )} */}
                         </div>
                     ))}
                     {/* RIGHT BUTTON */}
@@ -169,28 +137,13 @@ function GallerySection({
     )
 }
 
-export default function GalleryPage() {
+export default function CollegeVisits() {
     return (
-        <main className='w-full p-6'>
-            {/* <h1 className='text-3xl font-bold mt-10 mb-8 text-center text-black'>
-                Image Gallery
-            </h1> */}
-
-            <GallerySection title='Creators' items={creators} />
-            <GallerySection
-                title='Badi baat cheet Corporate ke logo se'
-                items={corporate_contacts}
+        <main className='w-full'>
+            <CollegeVisitsSection
+                title='College Visits'
+                items={creators}
             />
-            <GallerySection
-                title='Course Members Success Stories'
-                items={course_members}
-            />
-            <GallerySection
-                title='Met subscribers at Random Places'
-                items={random_places}
-            />
-            <GallerySection title='Special Momemts' items={special_momemts} />
-            <GallerySection title='Company Events' items={company_events} />
         </main>
     )
 }
