@@ -21,7 +21,7 @@ const events: Event[] = [
     id: 1,
     title: 'Masterclass #1 - Job Switch Workshop',
     description: 'A workshop on transitioning careers and switching jobs successfully.',
-    image: '/images/events/jobSwitch2.png',
+    image: '/images/events/jobSwitch3.png',
     speaker: 'Manohar Batra',
     date: '2026-03-28',
     time: '11:00 AM',
