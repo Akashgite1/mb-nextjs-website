@@ -2,6 +2,7 @@
 import { useState } from "react"
 import { Menu, X } from "lucide-react" // icons for hamburger
 import Link from "next/link"
+import Testimonials from "../testimonials/Testimonials"
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false)
@@ -17,7 +18,7 @@ export default function Header() {
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex gap-3">
-                {["Courses", "Events", "Podcasts", "Gallery", "Blogs", "FAQ"].map((item) => (
+                {["Courses", "Events", "Testimonials", "Podcasts", "Gallery", "Blogs", "FAQ"].map((item) => (
                 // {["Blogs", "Gallery", "FAQ", "Roadmap", "News"].map((item) => (
                     <Link
                         key={item}
@@ -41,7 +42,7 @@ export default function Header() {
             {/* Mobile Menu Dropdown */}
             {isOpen && (
                 <div className="absolute top-full right-0 bg-blue-600 w-full flex flex-col items-center md:hidden shadow-lg">
-                    {["Courses", "Events", "Podcasts", "Gallery", "Blogs", "FAQ"].map((item) => (
+                    {["Courses", "Events", "Testimonials", "Podcasts", "Gallery", "Blogs", "FAQ"].map((item) => (
                         <Link
                             key={item}
                             href={`/${item.toLowerCase()}`}
