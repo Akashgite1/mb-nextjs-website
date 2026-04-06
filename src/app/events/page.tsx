@@ -36,14 +36,13 @@ const events: Event[] = [
     speaker: 'Manohar Batra',
     date: '2026-04-04',
     time: '11:00 AM',
-    registrations: 20,
-    link: 'https://topmate.io/manohar/2028342?coupon_code=BATCH2',
+    registrations: 37,
+    link: 'https://topmate.io/manohar',
   },
 ];
 
 export default function EventsPage() {
   const [activeTab, setActiveTab] = useState<'past' | 'future'>('future');
-  const router = useRouter();
 
   const now = new Date();
 

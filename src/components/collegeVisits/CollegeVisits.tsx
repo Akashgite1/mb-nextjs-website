@@ -92,7 +92,7 @@ function CollegeVisitsSection({
                         <div
                             key={i}
                             style={{ width: item?.width || 220 }}
-                            className='flex-none bg-white shadow-md rounded-xl p-3 flex flex-col items-center'
+                            className='flex-none bg-white shadow-md rounded-xl p-1 flex flex-col items-center'
                         >
                             <Image
                                 src={item.src}

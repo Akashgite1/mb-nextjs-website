@@ -6,212 +6,239 @@ import { FaChevronDown } from "react-icons/fa"
 import Image from "next/image"
 import { podcastsData } from "./podcastsData"
 
-/* --- helper: get youtube id from id or different url forms --- */
+/* --- helper: get youtube id --- */
 function getYouTubeId(input?: string) {
-  if (!input) return null
-  const idOnlyRegex = /^[A-Za-z0-9_-]{6,}$/ // loosely matches ids
-  if (idOnlyRegex.test(input)) return input
+    if (!input) return null
+    const idOnlyRegex = /^[A-Za-z0-9_-]{6,}$/
+    if (idOnlyRegex.test(input)) return input
 
-  // common URL patterns (watch?v=, youtu.be/, embed/, shorts/)
-  const regex =
-    /(?:youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{6,})/
-  const match = input.match(regex)
-  return match ? match[1] : null
+    const regex =
+        /(?:youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{6,})/
+    const match = input.match(regex)
+    return match ? match[1] : null
 }
 
-/* --- helper: returns best thumbnail URL (try maxres then fallback to hq) --- */
+/* --- helper: thumbnail urls --- */
 function youtubeThumbUrls(videoId: string) {
-  return {
-    max: `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
-    hq: `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
-  }
+    return {
+        max: `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
+        hq: `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
+    }
 }
 
-/* --- YouTube thumbnail component (grid cell friendly) --- */
+/* --- YouTube thumbnail --- */
 function YouTubeThumb({
-  idOrUrl,
-  title,
-  openOnClick = true,
-  link,
-  width = 320,
-  height = 180,
-  className = "",
+    idOrUrl,
+    title,
+    openOnClick = true,
+    link,
+    width = 320,
+    height = 180,
 }: {
-  idOrUrl: string
-  title?: string
-  openOnClick?: boolean
-  link?: string
-  width?: number
-  height?: number
-  className?: string
+    idOrUrl: string
+    title?: string
+    openOnClick?: boolean
+    link?: string
+    width?: number
+    height?: number
 }) {
-  const videoId = getYouTubeId(idOrUrl)
-  const fallbackImage = "/placeholder-video.png"
-  const { max, hq } = videoId ? youtubeThumbUrls(videoId) : { max: fallbackImage, hq: fallbackImage }
+    const videoId = getYouTubeId(idOrUrl)
+    const fallbackImage = "/placeholder-video.png"
+    const { max, hq } = videoId
+        ? youtubeThumbUrls(videoId)
+        : { max: fallbackImage, hq: fallbackImage }
 
-  const [src, setSrc] = useState<string>(max)
+    const [src, setSrc] = useState<string>(max)
 
-  useEffect(() => {
-    setSrc(max)
-  }, [max])
+    useEffect(() => {
+        setSrc(max)
+    }, [max])
 
-  const openTarget = link || (videoId ? `https://www.youtube.com/watch?v=${videoId}` : undefined)
+    const openTarget =
+        link ||
+        (videoId ? `https://www.youtube.com/watch?v=${videoId}` : undefined)
 
-  if (!videoId) {
+    if (!videoId) {
+        return (
+            <div className='w-full h-[180px] bg-gray-200 flex items-center justify-center rounded-md'>
+                <div className='text-sm text-gray-600'>No preview</div>
+            </div>
+        )
+    }
+
     return (
-      <div
-        className={`w-full h-[180px] bg-gray-200 flex items-center justify-center rounded-md ${className}`}
-        aria-label="No preview available"
-      >
-        <div className="text-sm text-gray-600">No preview</div>
-      </div>
+        <a
+            href={openOnClick ? openTarget : undefined}
+            target='_blank'
+            rel='noreferrer'
+            className='block w-full rounded-md overflow-hidden group'
+        >
+            <div className='relative w-full h-[180px] bg-black'>
+                <Image
+                    src={src}
+                    alt={title || "YouTube thumbnail"}
+                    className='object-cover w-full h-full group-hover:scale-105 transition'
+                    width={width}
+                    height={height}
+                    onError={() => {
+                        if (src !== hq) setSrc(hq)
+                        else setSrc(fallbackImage)
+                    }}
+                />
+
+                {/* Play button */}
+                <div className='absolute inset-0 flex items-center justify-center'>
+                    <div className='w-12 h-12 bg-black/60 rounded-full flex items-center justify-center'>
+                        ▶
+                    </div>
+                </div>
+            </div>
+        </a>
     )
-  }
-
-  return (
-    <a
-      href={openOnClick ? openTarget : undefined}
-      target={openOnClick ? "_blank" : undefined}
-      rel={openOnClick ? "noreferrer" : undefined}
-      onClick={(e) => {
-        if (!openOnClick) e.preventDefault()
-      }}
-      className={`block w-full rounded-md overflow-hidden group ${className}`}
-      aria-label={title || "Open video on YouTube"}
-    >
-      <div className="relative w-full h-[180px] bg-black">
-        <Image
-          src={src}
-          alt={title || "YouTube thumbnail"}
-          className="object-cover transition-transform group-hover:scale-105 w-full h-full"
-          width={width}
-          height={height}
-          sizes="(max-width: 640px) 100vw, 320px"
-          onError={() => {
-            // fallback if maxres doesn't exist
-            if (src !== hq) setSrc(hq)
-            else setSrc(fallbackImage)
-          }}
-        />
-
-        {/* Play button overlay */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="w-12 h-12 rounded-full bg-black/60 flex items-center justify-center transform transition group-hover:scale-105">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <path d="M8 5v14l11-7L8 5z" fill="white"></path>
-            </svg>
-          </div>
-        </div>
-
-        {/* small YouTube label (optional) */}
-        <div className="absolute bottom-2 right-2 text-white text-[10px] bg-black/40 px-2 py-0.5 rounded">
-          YouTube
-        </div>
-      </div>
-    </a>
-  )
 }
 
-/* --- Main PodcastsSection component (thumbnails in 3-column grid) --- */
+/* --- MAIN COMPONENT --- */
 export default function PodcastsPage() {
-  const [selectedCategory, setSelectedCategory] = useState("All")
-  const [expandedSection, setExpandedSection] = useState<string | null>(null)
+    const [selectedCategory, setSelectedCategory] = useState("All")
 
-  const categories = ["All", ...Array.from(new Set(podcastsData.map((p) => p.mainHeader)))]
-  const filtered =
-    selectedCategory === "All"
-      ? podcastsData
-      : podcastsData.filter((s) => s.mainHeader === selectedCategory)
+    // ✅ multiple expanded sections
+    const [expandedSections, setExpandedSections] = useState<string[]>(
+        podcastsData.map((s) => s.mainHeader),
+    )
 
-  useEffect(() => {
-    if (selectedCategory !== "All") setExpandedSection(selectedCategory)
-    else setExpandedSection(null)
-  }, [selectedCategory])
+    const categories = [
+        "All",
+        ...Array.from(new Set(podcastsData.map((p) => p.mainHeader))),
+    ]
 
-  // grid cell dimensions (keep these in sync with YouTubeThumb height)
-  const thumbWidth = 320
-  const thumbHeight = 180
+    const filtered =
+        selectedCategory === "All"
+            ? podcastsData
+            : podcastsData.filter((s) => s.mainHeader === selectedCategory)
 
-  return (
-    <div className="max-w-5xl mx-auto">
-      {/* Category Buttons */}
-      <div className="flex gap-3 flex-wrap justify-center mb-6 mt-4">
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 rounded-md text-sm font-medium border transition ${
-              selectedCategory === category
-                ? "bg-blue-600 text-white border-blue-600 shadow"
-                : "bg-white text-gray-700 border-gray-300 hover:bg-gray-50"
-            }`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+    /* ✅ handle category change */
+    useEffect(() => {
+        if (selectedCategory !== "All") {
+            setExpandedSections([selectedCategory])
+        } else {
+            // expand all again when back to "All"
+            setExpandedSections(podcastsData.map((s) => s.mainHeader))
+        }
+    }, [selectedCategory])
 
-      {/* Accordions */}
-      <div className="grid grid-cols-1 gap-0">
-        {filtered.map((section) => {
-          const isOpen = expandedSection === section.mainHeader
-          return (
-            <div key={section.mainHeader} className="mb-4 border rounded-lg overflow-hidden">
-              <div className="flex items-center justify-between px-4 py-3 bg-gray-50">
-                <div className="flex items-center gap-2">
-                  <span className="font-semibold text-lg">
-                    {section.mainHeader} {" ("}
-                    {section.rowData.length}
-                    {")"}
-                  </span>
-                </div>
-
-                <button
-                  aria-expanded={isOpen}
-                  onClick={() => setExpandedSection(isOpen ? null : section.mainHeader)}
-                  className="p-2 rounded hover:bg-gray-100"
-                >
-                  <motion.span
-                    animate={{ rotate: isOpen ? 180 : 0 }}
-                    transition={{ type: "spring", stiffness: 280, damping: 30 }}
-                  >
-                    <FaChevronDown className="w-4 h-4" />
-                  </motion.span>
-                </button>
-              </div>
-
-              <AnimatePresence initial={false}>
-                {isOpen && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    className="p-4 border-t bg-white"
-                  >
-                    <div className="mb-4">
-                      {/* 3-column grid for thumbnails (responsive) */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                        {section.rowData?.map((item, idx) => (
-                          <div key={idx} className="w-full">
-                            <div className="mb-2 text-sm font-medium line-clamp-2">{item.title}</div>
-                            <YouTubeThumb
-                              idOrUrl={item.youtubeId}
-                              title={item.title}
-                              link={item.link}
-                              width={thumbWidth}
-                              height={thumbHeight}
-                            />
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+    return (
+        <div className='max-w-5xl mx-auto'>
+            {/* Category Buttons */}
+            <div className='flex gap-3 flex-wrap justify-center mb-6 mt-4'>
+                {categories.map((category) => (
+                    <button
+                        key={category}
+                        onClick={() => setSelectedCategory(category)}
+                        className={`px-4 py-2 rounded-md text-sm font-medium border ${
+                            selectedCategory === category
+                                ? "bg-blue-600 text-white"
+                                : "bg-white text-gray-700"
+                        }`}
+                    >
+                        {category}
+                    </button>
+                ))}
             </div>
-          )
-        })}
-      </div>
-    </div>
-  )
+
+            {/* ✅ Expand / Collapse All Button */}
+            <div className='flex justify-center mb-4'>
+                <button
+                    onClick={() => {
+                        if (expandedSections.length === filtered.length) {
+                            setExpandedSections([]) // collapse all
+                        } else {
+                            setExpandedSections(
+                                filtered.map((s) => s.mainHeader),
+                            ) // expand all
+                        }
+                    }}
+                    className='px-5 py-2 rounded-md bg-black text-white text-sm hover:bg-gray-800'
+                >
+                    {expandedSections.length === filtered.length
+                        ? "Collapse All"
+                        : "Expand All"}
+                </button>
+            </div>
+
+            {/* Accordions */}
+            <div>
+                {filtered.map((section) => {
+                    const isOpen = expandedSections.includes(section.mainHeader)
+
+                    return (
+                        <div
+                            key={section.mainHeader}
+                            className='mb-4 border rounded-lg overflow-hidden'
+                        >
+                            {/* Header */}
+                            <div className='flex justify-between items-center px-4 py-3 bg-gray-50'>
+                                <span className='font-semibold'>
+                                    {section.mainHeader} (
+                                    {section.rowData.length})
+                                </span>
+
+                                <button
+                                    onClick={() => {
+                                        setExpandedSections((prev) =>
+                                            isOpen
+                                                ? prev.filter(
+                                                      (s) =>
+                                                          s !==
+                                                          section.mainHeader,
+                                                  )
+                                                : [...prev, section.mainHeader],
+                                        )
+                                    }}
+                                >
+                                    <motion.span
+                                        animate={{ rotate: isOpen ? 180 : 0 }}
+                                    >
+                                        <FaChevronDown />
+                                    </motion.span>
+                                </button>
+                            </div>
+
+                            {/* Content */}
+                            <AnimatePresence>
+                                {isOpen && (
+                                    <motion.div
+                                        initial={{ height: 0, opacity: 0 }}
+                                        animate={{ height: "auto", opacity: 1 }}
+                                        exit={{ height: 0, opacity: 0 }}
+                                        className='p-4 border-t'
+                                    >
+                                        {/* ✅ 4 items per row */}
+                                        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4'>
+                                            {section.rowData.map(
+                                                (item, idx) => (
+                                                    <div key={idx}>
+                                                        <div className='text-sm mb-2 line-clamp-2'>
+                                                            {item.title}
+                                                        </div>
+
+                                                        <YouTubeThumb
+                                                            idOrUrl={
+                                                                item.youtubeId
+                                                            }
+                                                            title={item.title}
+                                                            link={item.link}
+                                                        />
+                                                    </div>
+                                                ),
+                                            )}
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
+                    )
+                })}
+            </div>
+        </div>
+    )
 }

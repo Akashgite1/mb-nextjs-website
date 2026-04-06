@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { motion } from "framer-motion"
 import { X } from "lucide-react"
 import { companiesList } from "@/utils/companiesList"
 import { saleConfig } from "@/utils/constants"
@@ -18,6 +19,7 @@ import AboutMe from "@/components/aboutMe/AboutMe"
 import ContactMe from "@/components/contactMe/ContactMe"
 // import BrandPartners from "@/components/brandPartners/BrandPartners"
 import CollegeVisits from "@/components/collegeVisits/CollegeVisits"
+import Certifications from "@/components/certifications/Certifications"
 
 export default function Home() {
     const [showPromo, setShowPromo] = useState(false)
@@ -131,10 +133,21 @@ export default function Home() {
             {/* Main content */}
             <HeroBanner />
             <div className='flex-1 pl-6 pr-6 pb-6'>
-                <Platforms />
+                <header className='text-center pt-6 px-6 pb-4'>
+                <motion.h1
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className='text-4xl md:text-5xl font-bold mb-4'
+                >
+                    Trusted by 150K+ learners worldwide. 🚀
+                </motion.h1>
+            </header>
+                {/* <Platforms /> */}
                 <Gallery />
                 <CollegeVisits />
                 <CorporateAppreciation />
+                <Certifications />
                 {/* <BrandPartners /> */}
                 {/* <FAQ /> */}
                 {/* <YouTubeMembers sponsors={youTubeMembersList}/> */}
