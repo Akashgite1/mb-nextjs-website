@@ -21,14 +21,19 @@ export const testimonials: GalleryItem[] = [
         width: 200,
     },
     {
+        src: "/images/testimonials/pic9.png",
+        name: "Testimonial 9",
+        width: 400,
+    },
+    {
         src: "/images/testimonials/pic2.png",
         name: "Testimonial 2",
         width: 400,
-    },  
+    },
     {
         src: "/images/testimonials/pic3.png",
         name: "Testimonial 3",
-        width: 400
+        width: 400,
     },
     {
         src: "/images/testimonials/pic4.png",
