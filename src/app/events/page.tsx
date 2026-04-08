@@ -19,6 +19,18 @@ type Event = {
 
 const events: Event[] = [
     {
+        id: 3,
+        title: "Masterclass #3 - Career Growth & Corporate Politics",
+        description:
+            "Exploring career growth opportunities and corporate politics in the technology industry.",
+        image: "/images/events/corporateGrowth.png",
+        speaker: "Manohar Batra",
+        date: "2026-04-11",
+        time: "11:00 AM",
+        registrations: 0,
+        link: "https://topmate.io/manohar",
+    },
+    {
         id: 2,
         title: "Masterclass #2 - Impact of AI on IT Jobs",
         description:
