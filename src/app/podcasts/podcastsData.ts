@@ -111,4 +111,13 @@ export const podcastsData: PodcastSectionType[] = [
       },
     ],
   },
+  {
+    mainHeader: "Remote Jobs",
+    rowData: [
+      {
+        youtubeId: "-I_bI1ecmZg",
+        link: "https://youtu.be/-I_bI1ecmZg?si=NTwRJV7kUtx1dpw5"
+      },
+    ],
+  },
 ]
