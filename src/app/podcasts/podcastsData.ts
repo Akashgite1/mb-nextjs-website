@@ -30,12 +30,20 @@ export const podcastsData: PodcastSectionType[] = [
       {
         youtubeId: "t2gduV_KLew",
         link: "https://youtu.be/t2gduV_KLew?si=EK_-BY78MCz0ncRU",
+      },
+      {
+        youtubeId: "eP9OFMIXZM0",
+        link: "https://youtu.be/eP9OFMIXZM0?si=YwpugwTJO_DzvpdY",
       }
     ],
   },
   {
     mainHeader: "Full Stack",
     rowData: [
+      {
+        youtubeId: "Yab3lQMzs4I",
+        link: "https://youtu.be/Yab3lQMzs4I?si=OOAUaqloiqxhDsqg",
+      },
       {
         youtubeId: "9hd34sAB-jQ",
         link: "https://youtu.be/9hd34sAB-jQ?si=msj3GexMJYElmS3m",
