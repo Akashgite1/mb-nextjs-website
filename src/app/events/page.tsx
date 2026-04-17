@@ -27,7 +27,7 @@ const events: Event[] = [
         speaker: "Manohar Batra",
         date: "2026-04-18",
         time: "11:00 AM",
-        registrations: 0,
+        registrations: 20,
         link: "https://topmate.io/manohar/2050710",
     },
     // {
