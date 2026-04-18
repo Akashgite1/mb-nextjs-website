@@ -28,7 +28,10 @@ const events: Event[] = [
         date: "2026-04-18",
         time: "11:00 AM",
         registrations: 20,
-        link: "https://topmate.io/manohar/2050710",
+        link: "https://topmate.io/manohar",
+        eventImages: [
+            "/images/events/masterclass3/pic1.png"
+        ],
     },
     // {
     //     id: 3,
