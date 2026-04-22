@@ -16,7 +16,7 @@ export const creators: CollegeVisitsItem[] = [
     name: "IIEST, Shibpur, Kolkata"
   },
   {
-    src: "/images/collegeVisits/iiest2.jpeg",
-    name: "IIEST, Shibpur, Kolkata"
+    src: "/images/collegeVisits/IILM.jpg",
+    name: "IILM, Greater Noida"
   },
 ]
