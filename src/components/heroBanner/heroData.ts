@@ -15,22 +15,22 @@ import {
 export const heroData = [
   {
     row1: "Master Corporate Skills",
-    row2: "Learn Corporate Growth and Politics Insights",
-    row3: "Insider Tips",
+    row2: "Learn Corporate Growth, Salary Negotiation and more",
+    row3: "Insider Corporate Knowledge",
   },
   {
     row1: "Listen Real Experiences",
-    row2: "Stay updated with corporate and salary insights",
-    row3: "Real life stories",
+    row2: "Stay updated with corporate news and salary insights",
+    row3: "Real life experiences",
   },
   {
     row1: "Crack Interviews",
-    row2: "Learn In depth React, System Design and more",
-    row3: "Fun + Learning content",
+    row2: "Learn AI, React, System Design and more",
+    row3: "Technical content",
   },
   {
     row1: "Listen to Podcasts",
-    row2: "Stay updated with Tech, and Career Growth",
+    row2: "Stay updated with Tech and Career",
     row3: "Interviews with Industry Experts",
   }
 ];

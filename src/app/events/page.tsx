@@ -32,6 +32,9 @@ const events: Event[] = [
         eventImages: [
             "/images/events/masterclass3/pic1.png"
         ],
+        testimonials: [
+            "/images/testimonials/mc3-1.png"
+        ],
     },
     // {
     //     id: 3,
