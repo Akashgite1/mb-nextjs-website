@@ -36,6 +36,18 @@ const events: Event[] = [
             "/images/testimonials/mc3-1.png"
         ],
     },
+    {
+        id: 4,
+        title: "Masterclass #4 - AI use cases - Hands On",
+        description:
+            "Explore AI and grow in career",
+        image: "/images/events/linkedInJobSecurity.png",
+        speaker: "Manohar Batra",
+        date: "2026-04-26",
+        time: "11:00 AM",
+        registrations: 20,
+        link: "https://topmate.io/manohar",
+    },
     // {
     //     id: 3,
     //     title: "Masterclass #3 - Career Growth & Corporate Politics",
