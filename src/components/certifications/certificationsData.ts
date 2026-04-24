@@ -29,4 +29,18 @@ export const certifications: CertificationsItem[] = [
     width: 300,
     height: 250,
   },
+  {
+    src: "/images/certifications/IBM_genAI.jpeg",
+    name: "IBM Agentic AI Developer",
+    issuer: "IBM",
+    width: 300,
+    height: 250,
+  },
+  {
+    src: "/images/certifications/TC_Exp.jpeg",
+    name: "IBM: Technical Specialist",
+    issuer: "IBM",
+    width: 300,
+    height: 250,
+  },
 ]
