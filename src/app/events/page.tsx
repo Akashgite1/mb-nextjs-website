@@ -28,7 +28,7 @@ const events: Event[] = [
         date: "2026-04-26",
         time: "11:00 AM",
         registrations: 20,
-        link: "https://topmate.io/manohar",
+        link: "https://topmate.io/manohar/2062684",
     },
     {
         id: 3,
