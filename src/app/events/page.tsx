@@ -23,7 +23,7 @@ const events: Event[] = [
         title: "Masterclass #3 - How LinkedIn Can Help with LifeTime Job Security",
         description:
             "Exploring job security and career stability for professionals in their 30s and beyond.",
-        image: "/images/events/linkedInJobSecurity.png",
+        image: "/images/events/mc4-AI.png",
         speaker: "Manohar Batra",
         date: "2026-04-18",
         time: "11:00 AM",
