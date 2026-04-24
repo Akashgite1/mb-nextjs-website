@@ -19,11 +19,23 @@ type Event = {
 
 const events: Event[] = [
     {
+        id: 4,
+        title: "Masterclass #4 - AI use cases - Hands On",
+        description:
+            "Explore AI and grow in career",
+        image: "/images/events/mc4-AI.png",
+        speaker: "Manohar Batra",
+        date: "2026-04-26",
+        time: "11:00 AM",
+        registrations: 20,
+        link: "https://topmate.io/manohar",
+    },
+    {
         id: 3,
         title: "Masterclass #3 - How LinkedIn Can Help with LifeTime Job Security",
         description:
             "Exploring job security and career stability for professionals in their 30s and beyond.",
-        image: "/images/events/mc4-AI.png",
+        image: "/images/events/linkedInJobSecurity.png",
         speaker: "Manohar Batra",
         date: "2026-04-18",
         time: "11:00 AM",
@@ -35,18 +47,6 @@ const events: Event[] = [
         testimonials: [
             "/images/testimonials/mc3-1.png"
         ],
-    },
-    {
-        id: 4,
-        title: "Masterclass #4 - AI use cases - Hands On",
-        description:
-            "Explore AI and grow in career",
-        image: "/images/events/linkedInJobSecurity.png",
-        speaker: "Manohar Batra",
-        date: "2026-04-26",
-        time: "11:00 AM",
-        registrations: 20,
-        link: "https://topmate.io/manohar",
     },
     // {
     //     id: 3,
