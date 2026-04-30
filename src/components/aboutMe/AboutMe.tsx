@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 export default function AboutMe() {
     return (
         <section
-            className="relative mx-auto max-w-7xl rounded-3xl border border-gray-200 shadow-[0_10px_30px_rgba(0,0,0,0.08)] bg-white px-6 md:px-12 py-16 flex flex-col md:flex-row items-center justify-between gap-12 transition-transform duration-300 hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)]"
+            className='relative mx-auto max-w-7xl rounded-3xl border border-gray-200 shadow-[0_10px_30px_rgba(0,0,0,0.08)] bg-white px-6 md:px-12 py-16 flex flex-col md:flex-row items-center justify-between gap-12 transition-transform duration-300 hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)]'
             aria-labelledby='about-me-title'
         >
             {/* Left: Text content */}
@@ -28,16 +28,18 @@ export default function AboutMe() {
                     <span className='font-semibold text-indigo-500'>
                         Manohar Batra
                     </span>
-                    , a passionate Frontend Engineer with 10+ years of
-                    experience in crafting interactive, high-performance web
-                    applications using React and modern UI architecture
-                    principles.
+                    , — an AI Frontend Architect focused
+                    on building next-generation user experiences by combining
+                    scalable frontend architecture with AI-driven capabilities.
+                    With over a decade of experience in React and UI systems, I
+                    design intelligent, adaptive interfaces that integrate LLMs,
+                    automation, and real-time decisioning into modern web
+                    applications. 
                 </p>
                 <p className='text-lg leading-relaxed text-gray-600'>
-                    I love to share my technical and corporate experience which
-                    led him to start CollegeToCorporate — a platform that has
-                    helped thousands of college students and working
-                    professionals grow their careers.
+                    I also mentor aspiring engineers through
+                    CollegeToCorporate, helping them navigate careers in the
+                    evolving AI-first tech landscape.
                 </p>
             </motion.div>
 
