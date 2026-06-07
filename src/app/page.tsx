@@ -20,6 +20,8 @@ import ContactMe from "@/components/contactMe/ContactMe"
 // import BrandPartners from "@/components/brandPartners/BrandPartners"
 import CollegeVisits from "@/components/collegeVisits/CollegeVisits"
 import Certifications from "@/components/certifications/Certifications"
+// import FrontendInterviewBanner from "@/components/heroBanner/FrontendInterviewBanner"
+// import CohortPricingSection from "@/components/cohortpricing/CohortPricingSection"
 
 export default function Home() {
     const [showPromo, setShowPromo] = useState(false)
@@ -132,6 +134,8 @@ export default function Home() {
 
             {/* Main content */}
             <HeroBanner />
+            {/* <FrontendInterviewBanner />
+            <CohortPricingSection/> */}
             <div className='flex-1 pl-6 pr-6 pb-6'>
                 <header className='text-center pt-6 px-6 pb-4'>
                 <motion.h1
